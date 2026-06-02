@@ -16,46 +16,6 @@
 
 <body>
 
-  <!-- STATIC BACKGROUND BUTTERFLIES -->
-  <div class="bf-static" aria-hidden="true">
-    <span class="sbf sbf-1"></span>
-    <span class="sbf sbf-2"></span>
-    <span class="sbf sbf-3"></span>
-    <span class="sbf sbf-4"></span>
-    <span class="sbf sbf-5"></span>
-    <span class="sbf sbf-6"></span>
-    <span class="sbf sbf-7"></span>
-    <span class="sbf sbf-8"></span>
-    <span class="sbf sbf-9"></span>
-    <span class="sbf sbf-10"></span>
-    <span class="sbf sbf-11"></span>
-    <span class="sbf sbf-12"></span>
-  </div>
-
-  <!-- MOTION BUTTERFLIES -->
-  <div class="bf-motion" aria-hidden="true">
-    <span class="mbf" style="--x:12%; --y:10%; --sz:22px; --c:var(--bf-1); --d:16s;"></span>
-    <span class="mbf" style="--x:70%; --y:12%; --sz:18px; --c:var(--bf-2); --d:20s;"></span>
-    <span class="mbf" style="--x:24%; --y:30%; --sz:26px; --c:var(--bf-3); --d:18s;"></span>
-    <span class="mbf" style="--x:80%; --y:35%; --sz:16px; --c:var(--bf-4); --d:22s;"></span>
-    <span class="mbf" style="--x:10%; --y:60%; --sz:20px; --c:var(--bf-1); --d:19s;"></span>
-    <span class="mbf" style="--x:74%; --y:70%; --sz:24px; --c:var(--bf-2); --d:17s;"></span>
-    <span class="mbf" style="--x:40%; --y:80%; --sz:18px; --c:var(--bf-3); --d:21s;"></span>
-
-    <!-- Additional RED motion butterflies -->
-<span class="mbf" style="--x:18%; --y:14%; --sz:22px; --c:var(--bf-red1); --d:17s;"></span>
-<span class="mbf" style="--x:82%; --y:18%; --sz:20px; --c:var(--bf-red2); --d:21s;"></span>
-
-<span class="mbf" style="--x:30%; --y:46%; --sz:24px; --c:var(--bf-red1); --d:19s;"></span>
-<span class="mbf" style="--x:68%; --y:50%; --sz:18px; --c:var(--bf-red2); --d:23s;"></span>
-
-<span class="mbf" style="--x:14%; --y:72%; --sz:20px; --c:var(--bf-red1); --d:20s;"></span>
-<span class="mbf" style="--x:76%; --y:80%; --sz:22px; --c:var(--bf-red2); --d:18s;"></span>
-
-<span class="mbf" style="--x:44%; --y:22%; --sz:16px; --c:var(--bf-red1); --d:22s;"></span>
-<span class="mbf" style="--x:54%; --y:66%; --sz:26px; --c:var(--bf-red2); --d:24s;"></span>
-
-  </div>
 
   <!-- HEADER -->
   <header class="header">
@@ -75,6 +35,7 @@
       <nav class="nav">
         <a href="#about">About</a>
         <a href="#services">Services</a>
+        <a href="#saturday-class">Saturday Class</a>
         <a href="#how">How It Works</a>
         <a href="#faq">FAQ</a>
         <a class="btn btn--small" href="#contact">Book</a>
@@ -89,7 +50,7 @@
       <div class="container hero__grid">
 
         <div class="hero__content">
-          <p class="pill">Faith • Fitness • Nutrition</p>
+          <p class="pill">Faith • Fitness • Finance</p>
 
           <h1>
             The Butterfly Effect
@@ -114,6 +75,10 @@
             <div class="trust-card">
               <span class="trust-title">PN Nutrition</span>
               <span class="trust-sub">Nutrition Certified</span>
+            </div>
+            <div class="trust-card">
+              <span class="trust-title">Nationally Accredited</span>
+              <span class="trust-sub">Certified Coach</span>
             </div>
           </div>
         </div>
@@ -191,9 +156,10 @@
         </p>
 
         <ul class="bullets">
-          <li>ACE Certified</li>
-          <li>PN Nutrition Certified</li>
-          <li>Virtual &amp; in-person coaching</li>
+          <li>ACE Certified Personal Trainer</li>
+          <li>PN Certified Nutrition Coach</li>
+          <li>Nationally Accredited Coaching</li>
+          <li>Virtual &amp; In-Person Support</li>
         </ul>
 
         <a class="btn" href="#contact">Work With Kena</a>
@@ -210,11 +176,16 @@
           <p>Coaching options that meet you where you are.</p>
         </div>
 
-        <div class="grid-2">
+        <div class="services-grid">
 
           <div class="card">
             <h3>Functional Personal Training</h3>
             <p>Strength, mobility, fat loss, and confidence-building training tailored to your goals.</p>
+          </div>
+
+          <div class="card">
+            <h3>Group Fitness (Saturday Class)</h3>
+            <p>High-energy, supportive group workouts designed for all levels to build strength and community. <a href="#saturday-class" class="card-link">View details &rarr;</a></p>
           </div>
 
           <div class="card">
@@ -232,6 +203,63 @@
             <p>Holistic support for routines, mindset, and lifestyle transformation.</p>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- SATURDAY FITNESS CLASS DETAILED SECTION -->
+    <section id="saturday-class" class="section section--featured">
+      <div class="container saturday-grid">
+        <div class="saturday-card">
+          <p class="pill pill--light">Featured Class</p>
+          <span class="saturday-slogan">FEEL AMAZING BEFORE 10AM</span>
+          <h2>Saturday Fitness Class: Total Body Blast</h2>
+          <p class="saturday-intro">
+            Step into a workout that feels more like a celebration than a chore. Dive into a high-energy, 
+            total body session designed to make you sweat, laugh, and feel stronger from the inside out. 
+            We'll target every major muscle group, fire up your core, and keep the atmosphere fun, supportive, and active!
+          </p>
+          <div class="saturday-cta">
+            <a class="btn btn--secondary" href="#contact">Register Today</a>
+            <a class="btn btn--ghost-white" href="https://maps.google.com/?q=Boundary+Waters+Activity+Center+Douglasville+Ga+30135" target="_blank" rel="noopener">Get Directions</a>
+          </div>
+        </div>
+
+        <div class="saturday-details-card">
+          <h3>Class Details</h3>
+          <ul class="details-list">
+            <li>
+              <div class="details-icon">📅</div>
+              <div>
+                <strong>When:</strong>
+                <span>Saturdays from 9:00 AM – 10:00 AM</span>
+                <span class="details-sub">Beginning May 23, 2026 • All fitness levels welcome!</span>
+              </div>
+            </li>
+            <li>
+              <div class="details-icon">📍</div>
+              <div>
+                <strong>Where:</strong>
+                <span>Boundary Waters Activity Center</span>
+                <span class="details-sub">4996 Hwy 92/166, Douglasville, GA 30135</span>
+              </div>
+            </li>
+            <li>
+              <div class="details-icon">💰</div>
+              <div>
+                <strong>Price:</strong>
+                <span>Individual Session: $15.00 / person</span>
+                <span class="details-sub">Monthly Pass: $50.00 / person</span>
+              </div>
+            </li>
+            <li>
+              <div class="details-icon">🎒</div>
+              <div>
+                <strong>What to bring:</strong>
+                <span>Water, a towel, a fitness mat, and two 8lb. weights</span>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -319,14 +347,14 @@
           <div class="mini">
             <div class="mini__label">Email</div>
             <div class="mini__value">
-              <span>xxxx@xxxx.com</span>
+              <a href="mailto:KenaScott2231@gmail.com">KenaScott2231@gmail.com</a>
             </div>
           </div>
 
           <div class="mini">
             <div class="mini__label">Phone</div>
             <div class="mini__value">
-              <span>xxx-xxx-xxxx</span>
+              <a href="tel:4042174467">404.217.4467</a>
             </div>
           </div>
         </div>
