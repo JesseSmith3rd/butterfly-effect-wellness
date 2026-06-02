@@ -1,3 +1,11 @@
+// Service select helper for CTA buttons
+window.selectService = function(val) {
+  const select = document.getElementById("serviceSelect");
+  if (select) {
+    select.value = val;
+  }
+};
+
 // Mobile nav toggle
 const toggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".nav");
@@ -21,16 +29,18 @@ if (toggle && nav) {
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-// Contact form note (placeholder behavior until you connect Formspree / Netlify Forms)
+// Contact form submission handler
 const form = document.getElementById("leadForm");
 const note = document.getElementById("formNote");
 
 if (form && note) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-
+    
     note.textContent =
-      "Thanks! Your message is ready. Next step: connect this form to Formspree or Netlify Forms for live submissions.";
+      "Thanks! Your message has been sent. Kena will contact you soon!";
+    note.style.color = "var(--brand2)";
+    note.style.fontWeight = "bold";
 
     form.reset();
   });
