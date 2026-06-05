@@ -201,6 +201,7 @@ strong { color: var(--ink); font-weight: 700; }
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
+  background: #ffffff;
 }
 .meet-kena__image {
   width: 100%;
