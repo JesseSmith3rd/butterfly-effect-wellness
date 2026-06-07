@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book a Consultation | The Butterfly Effect Wellness</title>
+
+  <meta name="description" content="Get in touch with Kena D. Scott to book a personal training session, life coaching consultation, or register for Saturday Group Fitness." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html">
+        <svg class="brand__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="56" height="56" aria-label="The Butterfly Effect logo">
+          <defs>
+            <linearGradient id="bf-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00a859" />
+              <stop offset="100%" stop-color="#0055a5" />
+            </linearGradient>
+            <path id="top-arc" d="M 26 100 A 74 74 0 0 1 174 100" fill="none" />
+            <path id="bottom-arc" d="M 174 100 A 74 74 0 0 1 26 100" fill="none" />
+          </defs>
+          <circle cx="100" cy="100" r="85" fill="none" stroke="#00a859" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.6" />
+          <path d="M 100 95 C 96 75, 76 60, 56 60 C 48 60, 42 64, 38 70 C 32 80, 32 94, 40 106 C 46 116, 58 122, 72 122 C 80 122, 86 120, 92 116 L 100 110 L 108 116 C 114 120, 120 122, 128 122 C 142 122, 154 116, 160 106 C 168 94, 168 80, 162 70 C 158 64, 152 60, 144 60 C 124 60, 104 75, 100 95 Z" fill="url(#bf-grad)" />
+          <path d="M 100 90 C 99 82, 94 77, 95 75 C 96 73, 99 74, 98 77" fill="none" stroke="#0b1b3d" stroke-width="1.5" />
+          <path d="M 100 90 C 101 82, 106 77, 105 75 C 104 73, 101 74, 102 77" fill="none" stroke="#0b1b3d" stroke-width="1.5" />
+          <text font-family="Inter, sans-serif" font-size="11.5" font-weight="800" fill="#00a859" letter-spacing="2">
+            <textPath href="#top-arc" startOffset="50%" text-anchor="middle">THE BUTTERFLY EFFECT</textPath>
+          </text>
+          <text font-family="Inter, sans-serif" font-size="9.5" font-weight="800" fill="#00a859" letter-spacing="1">
+            <textPath href="#bottom-arc" startOffset="50%" text-anchor="middle">A WELLNESS EVOLUTION</textPath>
+          </text>
+        </svg>
+        <span class="brand__text">
+          <span class="brand__name">The Butterfly Effect</span>
+          <span class="brand__tag">A Wellness Evolution</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services &amp; Classes</a>
+        <a href="book.html" class="active btn btn--small">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <!-- BOOKING SECTION -->
+    <section class="section section--contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <span class="pill">Start Your Evolution</span>
+          <h2>How to Book</h2>
+          <p class="lead">Ready to emerge into your full potential?</p>
+          <p>
+            Please fill out our consultation request form to share your fitness goals, availability, 
+            or class registration. Kena will review your message and reach back within 24 hours.
+          </p>
+
+          <div class="mini-contact-cards">
+            <div class="mini-contact">
+              <div class="mini-icon">✉️</div>
+              <div class="mini-details">
+                <span class="mini-label">Email</span>
+                <a href="mailto:KenaScott2231@gmail.com">KenaScott2231@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="mini-contact">
+              <div class="mini-icon">📞</div>
+              <div class="mini-details">
+                <span class="mini-label">Phone</span>
+                <a href="tel:4042174467">404.217.4467</a>
+              </div>
+            </div>
+            
+            <div class="mini-contact">
+              <div class="mini-icon">📍</div>
+              <div class="mini-details">
+                <span class="mini-label">Location (Group Classes)</span>
+                <a href="https://maps.google.com/?q=Boundary+Waters+Activity+Center+Douglasville+Ga+30135" target="_blank" rel="noopener">Boundary Waters Activity Center</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="form booking-form" id="leadForm">
+          <div class="form-row">
+            <label>
+              Name
+              <input required type="text" placeholder="Your name" />
+            </label>
+            <label>
+              Email
+              <input required type="email" placeholder="you@example.com" />
+            </label>
+          </div>
+
+          <label>
+            I'm interested in:
+            <select id="serviceSelect" name="service">
+              <option value="General Inquiry">General Inquiry / Consultation</option>
+              <option value="Personal Training">Functional Personal Training</option>
+              <option value="Saturday Class">Saturday Class: Total Body Blast</option>
+              <option value="Wellness Coaching">Life Coaching / Wellness</option>
+              <option value="Nutrition Coaching">Nutrition Coaching</option>
+              <option value="Online Coaching">Online Coaching</option>
+            </select>
+          </label>
+
+          <label>
+            Message
+            <textarea rows="4" placeholder="Tell us about your fitness goals, experience, or any questions..."></textarea>
+          </label>
+
+          <button class="btn btn-submit" type="submit">Submit Request</button>
+          <p id="formNote"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© <span id="year"></span> The Butterfly Effect — A Wellness Evolution</p>
+        <p class="footer-pillars">Faith • Fitness • Finance</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

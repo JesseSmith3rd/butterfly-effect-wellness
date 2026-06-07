@@ -6,6 +6,18 @@ window.selectService = function(val) {
   }
 };
 
+// URL query parameter parsing on page load (for book.html)
+window.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const serviceParam = params.get("service");
+  if (serviceParam) {
+    // Small delay to ensure form is fully rendered
+    setTimeout(() => {
+      window.selectService(serviceParam);
+    }, 100);
+  }
+});
+
 // Mobile nav toggle
 const toggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".nav");

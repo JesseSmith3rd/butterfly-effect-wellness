@@ -720,3 +720,52 @@ strong { color: var(--ink); font-weight: 700; }
     color: white;
   }
 }
+
+/* ===== BIOGRAPHY QUOTE CARD STYLES ===== */
+.meet-kena__quote-card {
+  background: #ffffff;
+  border-left: 5px solid var(--brand2);
+  padding: 40px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  box-shadow: var(--shadow);
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+.quote-mark {
+  font-family: "Playfair Display", serif;
+  font-size: 80px;
+  line-height: 1;
+  color: rgba(0, 168, 89, 0.12);
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  pointer-events: none;
+}
+.meet-kena__quote-card blockquote {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  line-height: 1.6;
+  color: var(--brand);
+  margin: 0 0 20px 0;
+  font-style: italic;
+  position: relative;
+  z-index: 2;
+}
+.meet-kena__quote-card cite {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--brand2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-style: normal;
+  display: block;
+}
+
+/* Nav Active Link Highlight */
+.nav a.active {
+  color: var(--brand2);
+  font-weight: 700;
+}
+

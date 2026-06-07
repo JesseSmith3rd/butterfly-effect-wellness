@@ -19,25 +19,21 @@
   <!-- HEADER -->
   <header class="header">
     <div class="container header__inner">
-      <a class="brand" href="#about">
-        <!-- High-Precision SVG Logo matching business card -->
+      <a class="brand" href="index.html">
+        <!-- Circular SVG logo in top-left header -->
         <svg class="brand__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="56" height="56" aria-label="The Butterfly Effect logo">
           <defs>
             <linearGradient id="bf-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#00a859" /> <!-- Green -->
-              <stop offset="100%" stop-color="#0055a5" /> <!-- Blue -->
+              <stop offset="0%" stop-color="#00a859" />
+              <stop offset="100%" stop-color="#0055a5" />
             </linearGradient>
-            <!-- Paths for circular text -->
             <path id="top-arc" d="M 26 100 A 74 74 0 0 1 174 100" fill="none" />
             <path id="bottom-arc" d="M 174 100 A 74 74 0 0 1 26 100" fill="none" />
           </defs>
-          <!-- Symmetrical circular dots -->
           <circle cx="100" cy="100" r="85" fill="none" stroke="#00a859" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.6" />
-          <!-- Central Gradient Butterfly -->
           <path d="M 100 95 C 96 75, 76 60, 56 60 C 48 60, 42 64, 38 70 C 32 80, 32 94, 40 106 C 46 116, 58 122, 72 122 C 80 122, 86 120, 92 116 L 100 110 L 108 116 C 114 120, 120 122, 128 122 C 142 122, 154 116, 160 106 C 168 94, 168 80, 162 70 C 158 64, 152 60, 144 60 C 124 60, 104 75, 100 95 Z" fill="url(#bf-grad)" />
           <path d="M 100 90 C 99 82, 94 77, 95 75 C 96 73, 99 74, 98 77" fill="none" stroke="#0b1b3d" stroke-width="1.5" />
           <path d="M 100 90 C 101 82, 106 77, 105 75 C 104 73, 101 74, 102 77" fill="none" stroke="#0b1b3d" stroke-width="1.5" />
-          <!-- Circular text labels -->
           <text font-family="Inter, sans-serif" font-size="11.5" font-weight="800" fill="#00a859" letter-spacing="2">
             <textPath href="#top-arc" startOffset="50%" text-anchor="middle">THE BUTTERFLY EFFECT</textPath>
           </text>
@@ -56,20 +52,21 @@
       </button>
 
       <nav class="nav">
-        <a href="#about">Meet Kena</a>
-        <a href="#services">Services &amp; Classes</a>
-        <a href="#contact" class="btn btn--small">Book Now</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services &amp; Classes</a>
+        <a href="book.html" class="btn btn--small">Book Now</a>
       </nav>
     </div>
   </header>
 
   <main class="page">
 
-    <!-- SECTION 1: MEET KENA D. SCOTT -->
-    <section id="about" class="section section--meet-kena">
+    <!-- HERO SECTION -->
+    <section class="section section--hero">
       <div class="container meet-kena-grid">
         <div class="meet-kena__photo-container">
           <div class="meet-kena__photo-wrapper">
+            <!-- Circular logo image used as the main visual -->
             <img
               src="assets/images/logo.jpg"
               alt="The Butterfly Effect Wellness Logo"
@@ -80,16 +77,40 @@
 
         <div class="meet-kena__content">
           <p class="pill">Faith • Fitness • Finance</p>
-          <h1>Meet Kena D. Scott</h1>
+          <h1>Emerge Into Your Full Potential</h1>
           <p class="lead">
-            Emerge into your full potential through faith-centered wellness, functional training, 
-            nutrition coaching, and holistic wellness support.
+            Welcome to The Butterfly Effect Wellness. We believe that true wellness is an evolution, 
+            achieved through small, consistent, and intentional daily choices.
           </p>
           <p>
-            I believe that true wellness is an evolution. Real, sustainable transformation doesn't 
-            happen overnight—it happens through small, consistent habits supported by a plan that 
-            actually fits your life, your goals, and your schedule. Let's work together to build your 
-            strength, confidence, and routines.
+            Guided by Kena D. Scott—an ACE Certified Personal Trainer, Certified Life Coach, and 
+            Group Fitness Instructor—our programs combine physical conditioning, mindset adjustments, 
+            and practical nutrition to help you build strength, confidence, and habits that last a lifetime.
+          </p>
+
+          <div class="meet-kena__cta">
+            <a class="btn" href="services.html">Explore Programs</a>
+            <a class="btn btn--ghost" href="book.html">Book a Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEET KENA / BIO SECTION -->
+    <section class="section section--alt section--bio">
+      <div class="container meet-kena-grid">
+        <div class="meet-kena__content">
+          <span class="pill">Meet Kena D. Scott</span>
+          <h2>A Holistic Approach to Strength &amp; Growth</h2>
+          <p>
+            Hi, I'm Kena. My mission is to help you bridge the gap between where you are today and 
+            where you want to be. I don't believe in quick fixes, extreme restrictions, or one-size-fits-all 
+            rules. Instead, we focus on functional movement, sustainable nutrition habits, and mindset shifts.
+          </p>
+          <p>
+            With dual certifications in personal training and life coaching, plus specialization in precision 
+            nutrition and group fitness, I provide a whole-person support system that is faith-centered and 
+            designed to adapt to your busy schedule.
           </p>
 
           <div class="credentials-badges">
@@ -103,189 +124,36 @@
             <div class="cred-badge">
               <span class="cred-icon">✓</span>
               <div>
-                <strong>PN Certified</strong>
-                <span>Nutrition Coach</span>
+                <strong>Certified</strong>
+                <span>Life Coach</span>
               </div>
             </div>
             <div class="cred-badge">
               <span class="cred-icon">✓</span>
               <div>
-                <strong>Accredited</strong>
-                <span>Wellness Coaching</span>
+                <strong>Group Fitness</strong>
+                <span>Instructor</span>
               </div>
             </div>
-          </div>
-
-          <div class="meet-kena__cta">
-            <a class="btn" href="#contact">Book a Consultation</a>
-            <a class="btn btn--ghost" href="#services">View Services</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 2: SERVICES I OFFER -->
-    <section id="services" class="section section--services">
-      <div class="container">
-        <div class="section__head text-center">
-          <h2>Services &amp; Classes</h2>
-          <p>Coaching and training programs designed to support your wellness evolution.</p>
-        </div>
-
-        <div class="services-grid">
-          <div class="card service-card">
-            <div class="service-icon">🏋️‍♀️</div>
-            <h3>Functional Personal Training</h3>
-            <p>Purpose-driven strength, mobility, and fat-loss training built around your body's capabilities.</p>
-          </div>
-
-          <div class="card service-card">
-            <div class="service-icon">👥</div>
-            <h3>Group Fitness (Saturday Class)</h3>
-            <p>High-energy body blast workouts for all levels to build strength, mobility, and local community. <a href="#saturday-class" class="card-link-inline">View class details &rarr;</a></p>
-          </div>
-
-          <div class="card service-card">
-            <div class="service-icon">🥗</div>
-            <h3>Nutrition Coaching</h3>
-            <p>Practical eating strategies and portions guidance focused on consistency, not restriction.</p>
-          </div>
-
-          <div class="card service-card">
-            <div class="service-icon">💻</div>
-            <h3>Online Coaching</h3>
-            <p>Flexible scheduling, custom remote programming, and digital check-ins wherever you are.</p>
-          </div>
-
-          <div class="card service-card">
-            <div class="service-icon">🌱</div>
-            <h3>Wellness Coaching</h3>
-            <p>Holistic mindset coaching, routine structuring, and support for complete life integration.</p>
-          </div>
-        </div>
-
-        <!-- FEATURED SATURDAY CLASS DETAILS (FROM FLYER) -->
-        <div id="saturday-class" class="saturday-featured-card">
-          <div class="saturday-featured-grid">
-            <div class="saturday-featured__info">
-              <span class="featured-tag">Group Fitness</span>
-              <span class="saturday-featured__slogan">FEEL AMAZING BEFORE 10AM</span>
-              <h3>Saturday Fitness Class: Total Body Blast</h3>
-              <p>
-                Step into a workout that feels more like a celebration than a chore! Dive into a high-energy, 
-                total body session designed to make you sweat, laugh, and feel stronger from the inside out. 
-                We'll target every major muscle group, fire up your core, and keep the atmosphere fun and supportive. 
-                All fitness levels are welcome!
-              </p>
-              <div class="saturday-featured__cta">
-                <a class="btn btn--secondary" href="#contact" onclick="selectService('Saturday Class')">Register Today</a>
-                <a class="btn btn--ghost-white" href="https://maps.google.com/?q=Boundary+Waters+Activity+Center+Douglasville+Ga+30135" target="_blank" rel="noopener">Get Directions</a>
-              </div>
-            </div>
-            
-            <div class="saturday-featured__details">
-              <h4>Class Details</h4>
-              <ul class="class-details-list">
-                <li>
-                  <span class="detail-bullet">📅</span>
-                  <div>
-                    <strong>When:</strong>
-                    <span>Saturdays 9:00 AM – 10:00 AM</span>
-                    <span class="sub-detail">Beginning May 23, 2026 • All fitness levels welcome</span>
-                  </div>
-                </li>
-                <li>
-                  <span class="detail-bullet">📍</span>
-                  <div>
-                    <strong>Where:</strong>
-                    <span>Boundary Waters Activity Center</span>
-                    <span class="sub-detail">4996 Hwy 92/166, Douglasville, GA 30135</span>
-                  </div>
-                </li>
-                <li>
-                  <span class="detail-bullet">💰</span>
-                  <div>
-                    <strong>Pricing:</strong>
-                    <span>$15.00 Individual Session / $50.00 Monthly Pass</span>
-                  </div>
-                </li>
-                <li>
-                  <span class="detail-bullet">🎒</span>
-                  <div>
-                    <strong>What to bring:</strong>
-                    <span>Water, a towel, a fitness mat, and two 8lb. weights</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION 3: HOW TO BOOK -->
-    <section id="contact" class="section section--alt section--contact">
-      <div class="container contact-grid">
-        <div class="contact-info">
-          <h2>How to Book</h2>
-          <p class="lead">Ready to take the next step in your wellness evolution?</p>
-          <p>
-            Fill out the consultation request form to share your goals and availability, or register 
-            directly for our Saturday class. You can also reach out directly via email or phone.
-          </p>
-
-          <div class="mini-contact-cards">
-            <div class="mini-contact">
-              <div class="mini-icon">✉️</div>
-              <div class="mini-details">
-                <span class="mini-label">Email</span>
-                <a href="mailto:KenaScott2231@gmail.com">KenaScott2231@gmail.com</a>
-              </div>
-            </div>
-
-            <div class="mini-contact">
-              <div class="mini-icon">📞</div>
-              <div class="mini-details">
-                <span class="mini-label">Phone</span>
-                <a href="tel:4042174467">404.217.4467</a>
+            <div class="cred-badge">
+              <span class="cred-icon">✓</span>
+              <div>
+                <strong>PN Certified</strong>
+                <span>Nutrition Coach</span>
               </div>
             </div>
           </div>
         </div>
 
-        <form class="form booking-form" id="leadForm">
-          <div class="form-row">
-            <label>
-              Name
-              <input required type="text" placeholder="Your name" />
-            </label>
-            <label>
-              Email
-              <input required type="email" placeholder="you@example.com" />
-            </label>
+        <div class="meet-kena__photo-container">
+          <div class="meet-kena__quote-card">
+            <span class="quote-mark">“</span>
+            <blockquote>
+              Small changes. Big transformation — one consistent step at a time. This is your wellness evolution.
+            </blockquote>
+            <cite>— Kena D. Scott</cite>
           </div>
-
-          <label>
-            I'm interested in:
-            <select id="serviceSelect" name="service">
-              <option value="General Inquiry">General Inquiry / Consultation</option>
-              <option value="Personal Training">Functional Personal Training</option>
-              <option value="Saturday Class">Saturday Class: Total Body Blast</option>
-              <option value="Nutrition Coaching">Nutrition Coaching</option>
-              <option value="Online Coaching">Online Coaching</option>
-              <option value="Wellness Coaching">Wellness Coaching</option>
-            </select>
-          </label>
-
-          <label>
-            Message
-            <textarea rows="4" placeholder="Tell us about your fitness goals, experience, or any questions..."></textarea>
-          </label>
-
-          <button class="btn btn-submit" type="submit">Submit Request</button>
-          <p id="formNote"></p>
-        </form>
+        </div>
       </div>
     </section>
 
