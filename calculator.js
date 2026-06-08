@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Blueprint Calculation and Rendering
+  // Wellness Starting Point Calculation and Rendering
   if (submitBtn) {
     submitBtn.addEventListener("click", () => {
       // 1. Calculate Target Hydration (varies based on activity modifier)

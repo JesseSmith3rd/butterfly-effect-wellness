@@ -1288,3 +1288,128 @@ strong { color: var(--ink); font-weight: 700; }
   }
 }
 
+/* TARGET AUDIENCE SECTION: WHO THIS IS FOR */
+.section--who-for {
+  background: #ffffff;
+  position: relative;
+  border-bottom: 1px solid var(--line);
+}
+.who-for-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+  padding-bottom: 30px;
+}
+.who-for-card {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(11, 27, 61, 0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+/* Staggered asymmetric look for desktop viewports */
+@media (min-width: 951px) {
+  .who-for-card:nth-child(even) {
+    transform: translateY(20px);
+  }
+  .who-for-card:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    box-shadow: 0 20px 40px rgba(11, 27, 61, 0.08);
+    border-color: rgba(0, 168, 89, 0.25);
+  }
+  .who-for-card:nth-child(even):hover {
+    transform: translateY(12px) scale(1.02) !important;
+  }
+}
+@media (max-width: 950px) {
+  .who-for-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .who-for-card:nth-child(even) {
+    transform: translateY(0) !important;
+  }
+  .who-for-card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 12px 24px rgba(11, 27, 61, 0.06);
+    border-color: rgba(0, 168, 89, 0.25);
+  }
+}
+@media (max-width: 600px) {
+  .who-for-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+.who-for-card__icon {
+  font-size: 28px;
+  width: 56px;
+  height: 56px;
+  background: rgba(0, 168, 89, 0.06);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: background 0.3s ease;
+  color: var(--brand2);
+}
+.who-for-card:hover .who-for-card__icon {
+  background: rgba(0, 168, 89, 0.12);
+}
+.who-for-card h4 {
+  font-family: "Inter", sans-serif;
+  font-size: 19px;
+  color: var(--brand);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.who-for-card p {
+  font-size: 14.5px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* SERVICE CARD PRICING TIERS */
+.service-pricing {
+  margin-top: auto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.price-container {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.price-value {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--brand);
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.02em;
+}
+.price-unit {
+  font-size: 13.5px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.price-sub {
+  font-size: 12.5px;
+  color: var(--brand2);
+  font-weight: 700;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+
+
