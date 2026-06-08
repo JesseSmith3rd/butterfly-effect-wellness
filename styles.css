@@ -28,8 +28,8 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
-  font-family: "Playfair Display", serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", sans-serif;
   margin: 0 0 12px 0;
   letter-spacing: -0.02em;
   font-weight: 700;
@@ -48,7 +48,7 @@ strong { color: var(--ink); font-weight: 700; }
   margin: 0 auto;
 }
 
-.section { padding: 80px 0; }
+.section { padding: 5rem 0; }
 
 .section--alt {
   background: rgba(248, 250, 252, 0.65);
@@ -331,7 +331,7 @@ strong { color: var(--ink); font-weight: 700; }
   gap: 4px;
 }
 .matrix-card__title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 17px;
   font-weight: 700;
   color: var(--brand);
@@ -348,43 +348,75 @@ strong { color: var(--ink); font-weight: 700; }
 /* SECTION 2: SERVICES & CLASSES */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
   margin-top: 10px;
 }
 .service-card {
-  padding: 30px !important;
+  padding: 36px 30px !important;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.3s ease;
+  will-change: transform, box-shadow;
 }
 .service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(11, 27, 61, 0.08);
-  border-color: rgba(0, 168, 89, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 168, 89, 0.25);
 }
 .service-icon {
-  font-size: 32px;
-  margin-bottom: 16px;
-  line-height: 1;
+  width: 56px;
+  height: 56px;
+  background: rgba(0, 168, 89, 0.06);
+  border-radius: 12px;
+  color: var(--brand2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.service-svg {
+  width: 26px;
+  height: 26px;
+}
+.service-card:hover .service-icon {
+  background: var(--brand2);
+  color: #ffffff;
 }
 .service-card h3 {
-  font-size: 20px;
+  font-size: 21px;
   color: var(--brand);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+}
+.service-card p {
+  margin-bottom: 24px;
 }
 .card-link-inline {
   color: var(--brand2);
   text-decoration: none;
   font-weight: 700;
-  display: inline-block;
-  margin-left: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
   transition: color 0.2s ease;
 }
 .card-link-inline:hover {
   color: #008746;
-  text-decoration: underline;
+}
+.cta-arrow {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.service-card:hover .card-link-inline .cta-arrow {
+  transform: translateX(4px);
 }
 
 /* Saturday Featured Class Card Banner */
@@ -845,5 +877,364 @@ strong { color: var(--ink); font-weight: 700; }
 .nav a.active {
   color: var(--brand2);
   font-weight: 700;
+}
+
+/* Transformations Grid Section */
+.section--transformations {
+  background: rgba(248, 250, 252, 0.4);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.transformations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .transformations-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+.transformation-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 40px 36px;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.transformation-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 24px -5px rgba(0, 0, 0, 0.06), 0 8px 8px -5px rgba(0, 0, 0, 0.02);
+}
+.transformation-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-left: 3px solid var(--brand2);
+  padding-left: 14px;
+}
+.stat-number {
+  font-family: 'Inter', sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--brand2);
+  line-height: 1;
+}
+.stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+.transformation-quote {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  font-style: italic;
+  color: var(--ink);
+  margin: 0;
+}
+.transformation-client {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+.transformation-client strong {
+  font-size: 14px;
+  color: var(--brand);
+}
+.transformation-client span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Interactive Calculator styling */
+.calculator-wrapper {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+.calculator-container {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 48px;
+  box-shadow: 0 15px 35px rgba(11, 27, 61, 0.04);
+  max-width: 850px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .calculator-container {
+    padding: 32px 24px;
+  }
+}
+.calculator-header {
+  text-align: center;
+  margin-bottom: 36px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 24px;
+}
+.calculator-header h3 {
+  font-size: 28px;
+  color: var(--brand);
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+.calculator-steps {
+  position: relative;
+}
+.calculator-step {
+  display: none;
+  flex-direction: column;
+  gap: 24px;
+}
+.calculator-step.active {
+  display: flex;
+  animation: fadeInCalc 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes fadeInCalc {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.calculator-step h4 {
+  font-size: 20px;
+  color: var(--brand);
+  margin-bottom: 4px;
+}
+.step-desc {
+  font-size: 14.5px;
+  color: var(--muted);
+  margin: 0 0 8px 0;
+}
+
+/* Goal selector buttons */
+.goal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .goal-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+.goal-option {
+  background: #fafcfb;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+.goal-option:hover {
+  border-color: rgba(0, 168, 89, 0.3);
+  background: rgba(0, 168, 89, 0.01);
+  transform: translateY(-2px);
+}
+.goal-option.active {
+  border-color: var(--brand2);
+  background: rgba(0, 168, 89, 0.04);
+  box-shadow: 0 4px 12px rgba(0, 168, 89, 0.05);
+}
+.goal-option__icon {
+  font-size: 32px;
+}
+.goal-option__text strong {
+  display: block;
+  font-size: 15.5px;
+  color: var(--brand);
+  margin-bottom: 4px;
+  font-family: 'Inter', sans-serif;
+}
+.goal-option__text span {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* Range Slider styling */
+.range-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  width: 100%;
+}
+.calc-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  background: var(--line);
+  height: 8px;
+  border-radius: 99px;
+  outline: none;
+  cursor: pointer;
+}
+.calc-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--brand2);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  box-shadow: 0 4px 10px rgba(0, 168, 89, 0.3);
+}
+.calc-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+.range-readout {
+  font-family: 'Inter', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--brand);
+}
+.range-unit {
+  font-size: 18px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* Activity Level Buttons */
+.activity-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .activity-selector {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+.activity-option {
+  background: #fafcfb;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+.activity-option:hover {
+  border-color: rgba(0, 168, 89, 0.3);
+  background: rgba(0, 168, 89, 0.01);
+  transform: translateY(-2px);
+}
+.activity-option.active {
+  border-color: var(--brand2);
+  background: rgba(0, 168, 89, 0.04);
+  box-shadow: 0 4px 12px rgba(0, 168, 89, 0.05);
+}
+.activity-option strong {
+  font-size: 16px;
+  color: var(--brand);
+  display: block;
+  font-family: 'Inter', sans-serif;
+}
+.activity-option span {
+  font-size: 12px;
+  color: var(--muted);
+  display: block;
+}
+
+/* Nav elements */
+.calculator-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+.calculator-nav--results {
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Results Blueprint Display */
+.blueprint-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 16px 0;
+}
+@media (max-width: 768px) {
+  .blueprint-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+.blueprint-card {
+  background: #fafcfb;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+.blueprint-card h5 {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+.blueprint-stat {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--brand);
+  font-family: 'Inter', sans-serif;
+}
+.blueprint-desc {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0;
+}
+.water-progress-bar {
+  background: var(--line);
+  height: 12px;
+  border-radius: 99px;
+  overflow: hidden;
+  width: 100%;
+  margin: 4px 0;
+}
+.water-progress-fill {
+  background: #00a859;
+  background-image: linear-gradient(90deg, #00a859, #0081d6);
+  height: 100%;
+  width: 50%;
+  border-radius: 99px;
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 

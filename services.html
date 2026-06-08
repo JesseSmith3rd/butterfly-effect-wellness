@@ -71,38 +71,187 @@
 
         <div class="services-grid">
           <div class="card service-card">
-            <div class="service-icon">🏋️‍♀️</div>
+            <div class="service-icon">
+              <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="12" x2="22" y2="12"></line>
+                <line x1="2" y1="12" x2="6" y2="12"></line>
+                <line x1="6" y1="12" x2="18" y2="12"></line>
+                <rect x="18" y="5" width="2" height="14" rx="1"></rect>
+                <rect x="4" y="5" width="2" height="14" rx="1"></rect>
+              </svg>
+            </div>
             <h3>Functional Personal Training</h3>
             <p>Purpose-driven strength, mobility, and conditioning led by an ACE Certified Personal Trainer. Designed around your unique body's capabilities.</p>
-            <a href="book.html?service=Personal+Training" class="card-link-inline">Book Training &rarr;</a>
+            <a href="book.html?service=Personal+Training" class="card-link-inline">Book Training <span class="cta-arrow">&rarr;</span></a>
           </div>
 
           <div class="card service-card">
-            <div class="service-icon">👥</div>
+            <div class="service-icon">
+              <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
             <h3>Group Fitness (Saturday Class)</h3>
-            <p>High-energy group workouts designed for all levels to build strength, mobility, and community. <a href="#saturday-class" class="card-link-inline">View class details &rarr;</a></p>
-            <a href="book.html?service=Group+Fitness" class="card-link-inline">Book Group Fitness &rarr;</a>
+            <p>High-energy group workouts designed for all levels to build strength, mobility, and community. <a href="#saturday-class" class="card-link-inline">View class details <span class="cta-arrow">&rarr;</span></a></p>
+            <a href="book.html?service=Group+Fitness" class="card-link-inline">Book Group Fitness <span class="cta-arrow">&rarr;</span></a>
           </div>
 
           <div class="card service-card">
-            <div class="service-icon">🗣️</div>
+            <div class="service-icon">
+              <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+            </div>
             <h3>Life Coaching</h3>
             <p>Holistic mindset coaching, goal setting, routine structuring, and lifestyle design. Build positive habits and achieve clarity in your personal growth.</p>
-            <a href="book.html?service=Wellness+Coaching" class="card-link-inline">Book Life Coaching &rarr;</a>
+            <a href="book.html?service=Wellness+Coaching" class="card-link-inline">Book Life Coaching <span class="cta-arrow">&rarr;</span></a>
           </div>
 
           <div class="card service-card">
-            <div class="service-icon">🥗</div>
+            <div class="service-icon">
+              <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 0 8.5C17 15 15 20 11 20z"></path>
+                <path d="M19 2L9.8 11.2"></path>
+              </svg>
+            </div>
             <h3>Nutrition Coaching</h3>
             <p>Practical eating strategies and portions guidance focused on consistency, habit development, and sustainable choices—not restriction.</p>
-            <a href="book.html?service=Nutrition+Coaching" class="card-link-inline">Book Nutrition Coaching &rarr;</a>
+            <a href="book.html?service=Nutrition+Coaching" class="card-link-inline">Book Nutrition Coaching <span class="cta-arrow">&rarr;</span></a>
           </div>
 
           <div class="card service-card">
-            <div class="service-icon">💻</div>
+            <div class="service-icon">
+              <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="2" y1="20" x2="22" y2="20"></line>
+                <line x1="12" y1="17" x2="12" y2="20"></line>
+              </svg>
+            </div>
             <h3>Online Coaching</h3>
             <p>Flexible scheduling, custom remote programming, and digital check-ins. Keep up with your workouts and goals from anywhere in the world.</p>
-            <a href="book.html?service=Online+Coaching" class="card-link-inline">Book Online Coaching &rarr;</a>
+            <a href="book.html?service=Online+Coaching" class="card-link-inline">Book Online Coaching <span class="cta-arrow">&rarr;</span></a>
+          </div>
+        </div>
+
+        <!-- INTERACTIVE BASELINE CALCULATOR -->
+        <div class="calculator-wrapper">
+          <div class="calculator-container" id="wellness-calculator">
+            <div class="calculator-header">
+              <span class="pill">Interactive Tools</span>
+              <h3>Wellness Baseline Calculator</h3>
+              <p>Assess your primary fitness and wellness habits to construct your baseline growth blueprint.</p>
+            </div>
+            
+            <div class="calculator-steps">
+              <!-- STEP 1 -->
+              <div class="calculator-step active" data-step="1">
+                <h4>1. Define Your Primary Objective</h4>
+                <div class="goal-grid">
+                  <button class="goal-option active" data-value="Strength">
+                    <div class="goal-option__icon">💪</div>
+                    <div class="goal-option__text">
+                      <strong>Sustainable Strength</strong>
+                      <span>Strength training & muscle preservation</span>
+                    </div>
+                  </button>
+                  <button class="goal-option" data-value="Mindset">
+                    <div class="goal-option__icon">🧠</div>
+                    <div class="goal-option__text">
+                      <strong>Mindset &amp; Habits</strong>
+                      <span>Routine structuring & lifestyle coaching</span>
+                    </div>
+                  </button>
+                  <button class="goal-option" data-value="Movement">
+                    <div class="goal-option__icon">🏃‍♀️</div>
+                    <div class="goal-option__text">
+                      <strong>Functional Movement</strong>
+                      <span>Joint mobility & recovery focus</span>
+                    </div>
+                  </button>
+                </div>
+                <div class="calculator-nav">
+                  <button class="btn btn-calc-next">Next Step &rarr;</button>
+                </div>
+              </div>
+
+              <!-- STEP 2 -->
+              <div class="calculator-step" data-step="2">
+                <h4>2. Estimate Daily Hydration</h4>
+                <p class="step-desc">Hydration is critical for athletic recovery and energy levels.</p>
+                <div class="range-container">
+                  <input type="range" id="water-range" min="0" max="128" value="64" class="calc-slider" />
+                  <div class="range-readout">
+                    <span id="water-readout">64</span> <span class="range-unit">oz / day</span>
+                  </div>
+                </div>
+                <div class="calculator-nav">
+                  <button class="btn btn--ghost btn-calc-prev">&larr; Back</button>
+                  <button class="btn btn-calc-next">Next Step &rarr;</button>
+                </div>
+              </div>
+
+              <!-- STEP 3 -->
+              <div class="calculator-step" data-step="3">
+                <h4>3. Core Activity Level</h4>
+                <p class="step-desc">Select the option that best mirrors your typical weekly baseline.</p>
+                <div class="activity-selector">
+                  <button class="activity-option" data-value="Sedentary">
+                    <strong>Sedentary</strong>
+                    <span>Minimal physical exercise</span>
+                  </button>
+                  <button class="activity-option active" data-value="Moderate">
+                    <strong>Moderate</strong>
+                    <span>1-3 workouts per week</span>
+                  </button>
+                  <button class="activity-option" data-value="Active">
+                    <strong>Active</strong>
+                    <span>4+ strenuous workouts per week</span>
+                  </button>
+                </div>
+                <div class="calculator-nav">
+                  <button class="btn btn--ghost btn-calc-prev">&larr; Back</button>
+                  <button class="btn btn-calc-submit">Generate Blueprint</button>
+                </div>
+              </div>
+
+              <!-- RESULTS -->
+              <div class="calculator-step" data-step="results">
+                <h4>Your Wellness Blueprint Summary</h4>
+                <div class="blueprint-grid">
+                  <div class="blueprint-card">
+                    <h5>Hydration Target</h5>
+                    <div class="blueprint-visual">
+                      <div class="water-progress-bar">
+                        <div class="water-progress-fill" id="blueprint-water-fill"></div>
+                      </div>
+                    </div>
+                    <div class="blueprint-stat" id="blueprint-water-stat">96 oz</div>
+                    <p class="blueprint-desc" id="blueprint-water-feedback">You are close to baseline! Increase water consumption by 32 oz daily.</p>
+                  </div>
+                  
+                  <div class="blueprint-card">
+                    <h5>Recommended Movement</h5>
+                    <div class="blueprint-stat" id="blueprint-movement-stat">150 mins / week</div>
+                    <p class="blueprint-desc" id="blueprint-movement-feedback">Ensure moderate strength lifting and posture-focused stretching.</p>
+                  </div>
+
+                  <div class="blueprint-card">
+                    <h5>Habit Loop Advice</h5>
+                    <div class="blueprint-stat">Habit Stacking</div>
+                    <p class="blueprint-desc" id="blueprint-habit-feedback">Stack hydration goals immediately after your morning wake-up cue.</p>
+                  </div>
+                </div>
+                <div class="calculator-nav calculator-nav--results">
+                  <button class="btn btn--ghost btn-calc-reset">Recalculate</button>
+                  <a href="book.html" class="btn btn--secondary">Book Custom Assessment</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -169,6 +318,7 @@
   </main>
 
   <script src="script.js"></script>
+  <script src="calculator.js"></script>
 
 </body>
 </html>
