@@ -356,6 +356,8 @@ strong { color: var(--ink); font-weight: 700; }
   padding: 36px 30px !important;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   align-items: flex-start;
   background: var(--card);
   border: 1px solid var(--line);
@@ -396,7 +398,13 @@ strong { color: var(--ink); font-weight: 700; }
   margin-bottom: 12px;
 }
 .service-card p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-bottom: 24px;
+  height: 5.25em; /* 3 lines * 1.75 line-height */
 }
 .card-link-inline {
   color: var(--brand2);
@@ -912,51 +920,57 @@ strong { color: var(--ink); font-weight: 700; }
   transform: translateY(-4px);
   box-shadow: 0 16px 24px -5px rgba(0, 0, 0, 0.06), 0 8px 8px -5px rgba(0, 0, 0, 0.02);
 }
-.transformation-stats {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  border-left: 3px solid var(--brand2);
-  padding-left: 14px;
+.transformation-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 168, 89, 0.06);
+  border: 1px solid rgba(0, 168, 89, 0.18);
+  border-radius: 99px;
+  padding: 8px 16px;
+  align-self: flex-start;
 }
-.stat-number {
+.badge-icon {
+  font-size: 16px;
+}
+.badge-text {
   font-family: 'Inter', sans-serif;
-  font-size: 38px;
+  font-size: 12px;
   font-weight: 800;
-  color: var(--brand2);
-  line-height: 1;
-}
-.stat-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  color: var(--muted);
+  color: #007f42;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 700;
+  letter-spacing: 0.05em;
 }
-.transformation-quote {
+.transformation-anchor-quote {
   font-family: 'Inter', sans-serif;
-  font-size: 15px;
-  line-height: 1.65;
-  font-style: italic;
-  color: var(--ink);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--brand);
   margin: 0;
 }
-.transformation-client {
+.transformation-footer {
   margin-top: auto;
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--muted);
   border-top: 1px solid var(--line);
   padding-top: 16px;
 }
-.transformation-client strong {
-  font-size: 14px;
+.client-name {
+  font-weight: 700;
   color: var(--brand);
 }
-.transformation-client span {
-  font-size: 12px;
-  color: var(--muted);
+.client-name::after {
+  content: "•";
+  margin-left: 8px;
+  color: var(--line);
+  font-weight: 400;
+}
+.client-track {
+  font-weight: 500;
 }
 
 /* Interactive Calculator styling */
@@ -1236,5 +1250,41 @@ strong { color: var(--ink); font-weight: 700; }
   width: 50%;
   border-radius: 99px;
   transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Touch-optimized calculator mobile rules */
+@media (max-width: 768px) {
+  .goal-option, .activity-option {
+    min-height: 56px;
+    padding: 16px 20px;
+    flex-direction: row !important;
+    text-align: left !important;
+    align-items: center !important;
+    gap: 16px !important;
+  }
+  .goal-option__icon {
+    font-size: 24px !important;
+    flex-shrink: 0;
+  }
+  .goal-option__text {
+    text-align: left;
+  }
+  .goal-option__text strong, .activity-option strong {
+    font-size: 15px !important;
+  }
+  .activity-option {
+    align-items: flex-start !important;
+    text-align: left !important;
+    padding: 14px 20px !important;
+  }
+  
+  /* touch-optimized gaps and spacing */
+  .calculator-step {
+    gap: 20px !important;
+  }
+  .calculator-nav {
+    margin-top: 10px !important;
+    padding-top: 16px !important;
+  }
 }
 
