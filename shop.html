@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop Merchandise | The Butterfly Effect Wellness</title>
+
+  <meta name="description" content="Shop official The Butterfly Effect Wellness merchandise. Premium faith-based fitness t-shirts, mugs, water bottles, and hoodies." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=2" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html">
+        <img class="brand__logo" src="assets/images/logo.png" alt="The Butterfly Effect logo" width="56" height="56" />
+        <span class="brand__text">
+          <span class="brand__name">The Butterfly Effect</span>
+          <span class="brand__tag">A Wellness Evolution</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services &amp; Classes</a>
+        <a href="shop.html" class="active">Shop</a>
+        <a href="book.html" class="btn btn--small">Book Free Assessment</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <!-- SHOP HERO -->
+    <section class="shop-hero">
+      <div class="container">
+        <span class="pill">Official Gear</span>
+        <h2>Support the Evolution</h2>
+        <p class="lead">Premium wellness apparel and accessories decorated with our official brand logo. Choose your colors and sizes below.</p>
+      </div>
+    </section>
+
+    <!-- SHOPPING GRID -->
+    <section class="section section--shop-grid">
+      <div class="container">
+        <div class="shop-grid">
+
+          <!-- PRODUCT 1: T-Shirt -->
+          <div class="card product-card" data-id="tshirt" data-base-name="Emerge Premium T-Shirt" data-base-price="24.99">
+            <span class="product-badge">Best Seller</span>
+            <div class="product-image-container" id="tshirt-img-container" style="background-color: #fafbfc;">
+              <div class="product-mockup">
+                <!-- Tshirt SVG mockup -->
+                <svg class="tshirt-svg" id="tshirt-svg" viewBox="0 0 100 100">
+                  <path d="M20,10 L30,5 L38,15 L45,12 L50,15 L55,12 L62,15 L70,5 L80,10 L78,25 L70,23 L70,85 L30,85 L30,23 L22,25 Z" />
+                </svg>
+                <!-- Brand logo overlaid on the mockup chest -->
+                <img class="product-logo-overlay" src="assets/images/logo.png" style="top: 28px; width: 22px; height: 22px;" />
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">"Emerge" Premium T-Shirt</h3>
+              <p class="product-desc">Ultra-soft spun cotton shirt featuring the Butterfly Effect Wellness logo chest print.</p>
+              <span class="product-price">$24.99</span>
+            </div>
+            
+            <div class="product-options">
+              <div class="swatch-group">
+                <span class="swatch-label">Color: <span id="tshirt-color-readout" style="color: var(--brand); font-weight:700;">Navy Blue</span></span>
+                <div class="swatches" data-target="tshirt">
+                  <button class="swatch active" style="background-color: #0b1b3d;" data-color="Navy Blue" data-hex="#0b1b3d"></button>
+                  <button class="swatch" style="background-color: #00a859;" data-color="Emerald Green" data-hex="#00a859"></button>
+                  <button class="swatch" style="background-color: #18181b;" data-color="Classic Black" data-hex="#18181b"></button>
+                  <button class="swatch" style="background-color: #9ca3af;" data-color="Heather Gray" data-hex="#9ca3af"></button>
+                </div>
+              </div>
+
+              <div class="swatch-group">
+                <span class="swatch-label">Size:</span>
+                <div class="size-selector" data-target="tshirt">
+                  <button class="size-btn">S</button>
+                  <button class="size-btn active">M</button>
+                  <button class="size-btn">L</button>
+                  <button class="size-btn">XL</button>
+                  <button class="size-btn">XXL</button>
+                </div>
+              </div>
+
+              <button class="btn btn-add-cart" onclick="addToCart('tshirt')">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- PRODUCT 2: Ceramic Mug -->
+          <div class="card product-card" data-id="mug" data-base-name="Wellness Evolution Mug" data-base-price="14.99">
+            <div class="product-image-container" id="mug-img-container" style="background-color: #fafbfc;">
+              <div class="product-mockup">
+                <!-- Mug SVG mockup -->
+                <svg class="mug-svg" id="mug-svg" viewBox="0 0 100 100">
+                  <path d="M30,20 L70,20 A5,5 0 0,1 75,25 L75,75 A10,10 0 0,1 65,85 L35,85 A10,10 0 0,1 25,75 L25,25 A5,5 0 0,1 30,20 Z" />
+                  <path d="M75,32 C85,32 87,42 87,48 C87,58 83,62 75,62" fill="none" stroke-width="6" stroke-linecap="round" />
+                </svg>
+                <img class="product-logo-overlay" src="assets/images/logo.png" style="top: 36px; left: 33px; width: 30px; height: 30px;" />
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">"Evolution" Ceramic Mug</h3>
+              <p class="product-desc">15oz premium ceramic mug with a glossy finish and double-sided logo print.</p>
+              <span class="product-price">$14.99</span>
+            </div>
+
+            <div class="product-options">
+              <div class="swatch-group">
+                <span class="swatch-label">Color: <span id="mug-color-readout" style="color: var(--brand); font-weight:700;">Pearl White</span></span>
+                <div class="swatches" data-target="mug">
+                  <button class="swatch active" style="background-color: #f8fafc;" data-color="Pearl White" data-hex="#f8fafc"></button>
+                  <button class="swatch" style="background-color: #0b1b3d;" data-color="Deep Navy" data-hex="#0b1b3d"></button>
+                  <button class="swatch" style="background-color: #00a859;" data-color="Forest Green" data-hex="#00a859"></button>
+                  <button class="swatch" style="background-color: #18181b;" data-color="Matte Black" data-hex="#18181b"></button>
+                </div>
+              </div>
+
+              <!-- Dummy spacing to align buttons since mugs don't have sizes -->
+              <div class="swatch-group" style="height: 38px;"></div>
+
+              <button class="btn btn-add-cart" onclick="addToCart('mug')">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- PRODUCT 3: Insulated Water Bottle -->
+          <div class="card product-card" data-id="bottle" data-base-name="Insulated Stainless Bottle" data-base-price="19.99">
+            <div class="product-image-container" id="bottle-img-container" style="background-color: #fafbfc;">
+              <div class="product-mockup">
+                <!-- Bottle SVG mockup -->
+                <svg class="bottle-svg" id="bottle-svg" viewBox="0 0 100 120">
+                  <path d="M42,10 L58,10 L56,18 L44,18 Z M45,18 L55,18 L58,32 L68,38 L68,105 A10,10 0 0,1 58,115 L42,115 A10,10 0 0,1 32,105 L32,38 L42,32 Z" />
+                </svg>
+                <img class="product-logo-overlay" src="assets/images/logo.png" style="top: 50px; left: 34px; width: 32px; height: 32px;" />
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Insulated Stainless Bottle</h3>
+              <p class="product-desc">Vacuum insulated stainless steel water bottle. Keeps drinks cold for 24 hours.</p>
+              <span class="product-price">$19.99</span>
+            </div>
+
+            <div class="product-options">
+              <div class="swatch-group">
+                <span class="swatch-label">Color: <span id="bottle-color-readout" style="color: var(--brand); font-weight:700;">Emerald Green</span></span>
+                <div class="swatches" data-target="bottle">
+                  <button class="swatch active" style="background-color: #00a859;" data-color="Emerald Green" data-hex="#00a859"></button>
+                  <button class="swatch" style="background-color: #0b1b3d;" data-color="Ocean Navy" data-hex="#0b1b3d"></button>
+                  <button class="swatch" style="background-color: #18181b;" data-color="Matte Black" data-hex="#18181b"></button>
+                </div>
+              </div>
+
+              <div class="swatch-group" style="height: 38px;"></div>
+
+              <button class="btn btn-add-cart" onclick="addToCart('bottle')">Add to Cart</button>
+            </div>
+          </div>
+
+          <!-- PRODUCT 4: Hoodie -->
+          <div class="card product-card" data-id="hoodie" data-base-name="God-Given Potential Hoodie" data-base-price="44.99">
+            <span class="product-badge">Premium</span>
+            <div class="product-image-container" id="hoodie-img-container" style="background-color: #fafbfc;">
+              <div class="product-mockup">
+                <!-- Hoodie SVG mockup -->
+                <svg class="hoodie-svg" id="hoodie-svg" viewBox="0 0 100 100">
+                  <path d="M15,22 L24,18 L32,25 L40,16 L50,20 L60,16 L68,25 L76,18 L85,22 L82,45 L76,43 L76,85 L24,85 L24,43 L18,45 Z" />
+                  <!-- Hood overlap details -->
+                  <path d="M36,25 Q50,45 64,25" fill="none" stroke-width="2" />
+                  <!-- Pocket details -->
+                  <path d="M35,65 L65,65 L60,82 L40,82 Z" fill="none" stroke-width="2" />
+                </svg>
+                <img class="product-logo-overlay" src="assets/images/logo.png" style="top: 36px; left: 38px; width: 24px; height: 24px;" />
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">"Potential" Fleece Hoodie</h3>
+              <p class="product-desc">Heavyweight faith-centric fleece hoodie. Features a bold logo print on the chest.</p>
+              <span class="product-price">$44.99</span>
+            </div>
+
+            <div class="product-options">
+              <div class="swatch-group">
+                <span class="swatch-label">Color: <span id="hoodie-color-readout" style="color: var(--brand); font-weight:700;">Classic Black</span></span>
+                <div class="swatches" data-target="hoodie">
+                  <button class="swatch active" style="background-color: #18181b;" data-color="Classic Black" data-hex="#18181b"></button>
+                  <button class="swatch" style="background-color: #0b1b3d;" data-color="Deep Navy" data-hex="#0b1b3d"></button>
+                  <button class="swatch" style="background-color: #00a859;" data-color="Emerald Green" data-hex="#00a859"></button>
+                </div>
+              </div>
+
+              <div class="swatch-group">
+                <span class="swatch-label">Size:</span>
+                <div class="size-selector" data-target="hoodie">
+                  <button class="size-btn">S</button>
+                  <button class="size-btn active">M</button>
+                  <button class="size-btn">L</button>
+                  <button class="size-btn">XL</button>
+                  <button class="size-btn">XXL</button>
+                </div>
+              </div>
+
+              <button class="btn btn-add-cart" onclick="addToCart('hoodie')">Add to Cart</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>© <span id="year"></span> The Butterfly Effect — A Wellness Evolution</p>
+        <p class="footer-pillars">Faith • Fitness • Finance</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- FLOATING CART BUTTON -->
+  <button class="floating-cart-btn" onclick="toggleCart(true)">
+    <span>🛒</span>
+    <span class="floating-cart-badge" id="cart-badge-count">0</span>
+  </button>
+
+  <!-- CART OVERLAY & DRAWER -->
+  <div class="cart-overlay" id="cart-overlay" onclick="toggleCart(false)"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="btn-close-cart" onclick="toggleCart(false)">&times;</button>
+    </div>
+    
+    <div class="cart-body" id="cart-items-container">
+      <div class="cart-empty-message">
+        <div class="cart-empty-icon">🛒</div>
+        <p>Your cart is empty.</p>
+        <p style="font-size: 13px;">Add official Kena D. Scott gear to get started!</p>
+      </div>
+    </div>
+
+    <div class="cart-footer" id="cart-summary-footer" style="display: none;">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span class="cart-subtotal-price" id="cart-subtotal-price">$0.00</span>
+      </div>
+      
+      <!-- SIMPLE CHECKOUT FORM -->
+      <form onsubmit="checkout(event)" style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
+        <input required type="text" placeholder="Full Name" style="padding: 10px; border: 1px solid var(--line); border-radius: 8px; font-size: 13px;" />
+        <input required type="email" placeholder="Email Address" style="padding: 10px; border: 1px solid var(--line); border-radius: 8px; font-size: 13px;" />
+        <button type="submit" class="btn btn-checkout">Place Order</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- CHECKOUT SUCCESS MODAL -->
+  <div class="cart-overlay" id="modal-overlay" onclick="closeModal()"></div>
+  <div class="checkout-modal" id="checkout-modal">
+    <div class="checkout-modal-icon">🎉</div>
+    <h4>Order Placed Successfully!</h4>
+    <p>Thank you for supporting Kena D. Scott Wellness! A mock confirmation email and details have been sent to your inbox.</p>
+    <button class="btn" style="width: 100%;" onclick="closeModal()">Back to Shop</button>
+  </div>
+
+  <script src="script.js"></script>
+  
+  <script>
+    // SHOP PAGES COLOR SWATCHES INTERACTIVE PREVIEWS
+    document.querySelectorAll('.swatch').forEach(swatch => {
+      swatch.addEventListener('click', function() {
+        const parent = this.parentElement;
+        const targetProductId = parent.getAttribute('data-target');
+        const colorName = this.getAttribute('data-color');
+        const colorHex = this.getAttribute('data-hex');
+
+        // Deactivate siblings
+        parent.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+        this.classList.add('active');
+
+        // Update Text Readout
+        document.getElementById(`${targetProductId}-color-readout`).textContent = colorName;
+
+        // Change Mockup Fill Color
+        const svgElement = document.getElementById(`${targetProductId}-svg`);
+        if (svgElement) {
+          svgElement.style.fill = colorHex;
+        }
+      });
+    });
+
+    // SIZE BUTTON SELECTORS
+    document.querySelectorAll('.size-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const parent = this.parentElement;
+        parent.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    // SHOPPING CART STATE & LOGIC
+    let cart = [];
+
+    function toggleCart(open) {
+      document.getElementById('cart-overlay').classList.toggle('is-open', open);
+      document.getElementById('cart-drawer').classList.toggle('is-open', open);
+    }
+
+    function addToCart(productId) {
+      const card = document.querySelector(`.product-card[data-id="${productId}"]`);
+      const baseName = card.getAttribute('data-base-name');
+      const basePrice = parseFloat(card.getAttribute('data-base-price'));
+
+      // Get selected options
+      const colorActive = card.querySelector('.swatch.active');
+      const color = colorActive ? colorActive.getAttribute('data-color') : 'Standard';
+      
+      const sizeActive = card.querySelector('.size-btn.active');
+      const size = sizeActive ? sizeActive.textContent : null;
+
+      // Unique cart key
+      const itemKey = `${productId}-${color}-${size || 'N/A'}`;
+
+      // Check if already in cart
+      const existingItem = cart.find(item => item.key === itemKey);
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cart.push({
+          key: itemKey,
+          id: productId,
+          name: baseName,
+          price: basePrice,
+          color: color,
+          size: size,
+          quantity: 1
+        });
+      }
+
+      updateCartUI();
+      toggleCart(true);
+    }
+
+    function changeQuantity(itemKey, amount) {
+      const item = cart.find(item => item.key === itemKey);
+      if (item) {
+        item.quantity += amount;
+        if (item.quantity <= 0) {
+          cart = cart.filter(i => i.key !== itemKey);
+        }
+      }
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const container = document.getElementById('cart-items-container');
+      const footer = document.getElementById('cart-summary-footer');
+      const badge = document.getElementById('cart-badge-count');
+
+      // Clear container
+      container.innerHTML = '';
+
+      let totalItems = 0;
+      let subtotal = 0.00;
+
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="cart-empty-message">
+            <div class="cart-empty-icon">🛒</div>
+            <p>Your cart is empty.</p>
+            <p style="font-size: 13px;">Add official Kena D. Scott gear to get started!</p>
+          </div>
+        `;
+        footer.style.display = 'none';
+      } else {
+        cart.forEach(item => {
+          totalItems += item.quantity;
+          subtotal += item.price * item.quantity;
+
+          // Determine mockup path or SVG fill representation
+          let strokeHex = "#0b1b3d";
+          let svgSnippet = '';
+          if (item.id === 'tshirt') {
+            svgSnippet = `<svg viewBox="0 0 100 100" style="width:40px; height:40px; fill:${getColorHex(item.color)}"><path d="M20,10 L30,5 L38,15 L45,12 L50,15 L55,12 L62,15 L70,5 L80,10 L78,25 L70,23 L70,85 L30,85 L30,23 L22,25 Z" /></svg>`;
+          } else if (item.id === 'mug') {
+            svgSnippet = `<svg viewBox="0 0 100 100" style="width:36px; height:36px; fill:${getColorHex(item.color)}"><path d="M30,20 L70,20 A5,5 0 0,1 75,25 L75,75 A10,10 0 0,1 65,85 L35,85 A10,10 0 0,1 25,75 L25,25 A5,5 0 0,1 30,20 Z" /><path d="M75,32 C85,32 87,42 87,48 C87,58 83,62 75,62" fill="none" stroke-width="8" stroke-linecap="round" stroke="${strokeHex}" /></svg>`;
+          } else if (item.id === 'bottle') {
+            svgSnippet = `<svg viewBox="0 0 100 120" style="width:24px; height:36px; fill:${getColorHex(item.color)}"><path d="M42,10 L58,10 L56,18 L44,18 Z M45,18 L55,18 L58,32 L68,38 L68,105 A10,10 0 0,1 58,115 L42,115 A10,10 0 0,1 32,105 L32,38 L42,32 Z" /></svg>`;
+          } else if (item.id === 'hoodie') {
+            svgSnippet = `<svg viewBox="0 0 100 100" style="width:40px; height:40px; fill:${getColorHex(item.color)}"><path d="M15,22 L24,18 L32,25 L40,16 L50,20 L60,16 L68,25 L76,18 L85,22 L82,45 L76,43 L76,85 L24,85 L24,43 L18,45 Z" /><path d="M36,25 Q50,45 64,25" fill="none" stroke-width="2" stroke="${strokeHex}" /><path d="M35,65 L65,65 L60,82 L40,82 Z" fill="none" stroke-width="2" stroke="${strokeHex}" /></svg>`;
+          }
+
+          const cartItemDiv = document.createElement('div');
+          cartItemDiv.className = 'cart-item';
+          cartItemDiv.innerHTML = `
+            <div class="cart-item-image">
+              ${svgSnippet}
+              <img class="cart-item-logo" src="assets/images/logo.png" style="opacity: 0.65;" />
+            </div>
+            <div class="cart-item-details">
+              <span class="cart-item-title">${item.name}</span>
+              <span class="cart-item-meta">Color: ${item.color} ${item.size ? `| Size: ${item.size}` : ''}</span>
+              <span class="cart-item-price">$${item.price.toFixed(2)}</span>
+            </div>
+            <div class="cart-item-quantity">
+              <button class="qty-btn" onclick="changeQuantity('${item.key}', -1)">-</button>
+              <span class="qty-value">${item.quantity}</span>
+              <button class="qty-btn" onclick="changeQuantity('${item.key}', 1)">+</button>
+            </div>
+          `;
+          container.appendChild(cartItemDiv);
+        });
+        footer.style.display = 'flex';
+      }
+
+      badge.textContent = totalItems;
+      document.getElementById('cart-subtotal-price').textContent = `$${subtotal.toFixed(2)}`;
+    }
+
+    function getColorHex(colorName) {
+      const mapping = {
+        'Navy Blue': '#0b1b3d',
+        'Deep Navy': '#0b1b3d',
+        'Ocean Navy': '#0b1b3d',
+        'Emerald Green': '#00a859',
+        'Forest Green': '#00a859',
+        'Classic Black': '#18181b',
+        'Matte Black': '#18181b',
+        'Heather Gray': '#9ca3af',
+        'Pearl White': '#f8fafc'
+      };
+      return mapping[colorName] || '#0b1b3d';
+    }
+
+    function checkout(event) {
+      event.preventDefault();
+      // Reset cart
+      cart = [];
+      updateCartUI();
+      toggleCart(false);
+
+      // Open Success Modal
+      document.getElementById('modal-overlay').classList.add('is-open');
+      document.getElementById('checkout-modal').classList.add('is-open');
+    }
+
+    function closeModal() {
+      document.getElementById('modal-overlay').classList.remove('is-open');
+      document.getElementById('checkout-modal').classList.remove('is-open');
+    }
+  </script>
+</body>
+</html>
