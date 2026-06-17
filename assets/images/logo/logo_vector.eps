@@ -1,0 +1,141 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: Butterfly Effect Wellness Logo
+%%Creator: Antigravity AI
+%%BoundingBox: 0 0 500 500
+%%Pages: 1
+%%LanguageLevel: 2
+%%EndComments
+%%BeginProlog
+%%EndProlog
+%%Page: 1 1
+
+gsave
+
+% Define brand colors
+/navy { 11 255 div 27 255 div 61 255 div setrgbcolor } def
+/green { 0 255 div 168 255 div 89 255 div setrgbcolor } def
+/slate { 78 255 div 93 255 div 120 255 div setrgbcolor } def
+
+% Origin shift to (250, 290) - center of butterfly in EPS coordinates
+250 290 translate
+
+% Left Wing 1 (Upper Left)
+% SVG Path: M-10,-20 C-60,-80 -160,-70 -160,0 C-160,50 -100,70 -70,50 C-60,40 -50,20 -10,10 Z
+% SVG y goes down -> EPS y goes up (multiply relative y by -1)
+gsave
+navy
+newpath
+-10 20 moveto
+-60 80 -160 70 -160 0 curveto
+-160 -50 -100 -70 -70 -50 curveto
+-60 -40 -50 -20 -10 -10 curveto
+closepath
+fill
+grestore
+
+% Left Wing 2 (Lower Left)
+% SVG Path: M-8,15 C-40,40 -100,60 -100,100 C-100,130 -60,140 -40,110 C-30,95 -20,70 -8,45 Z
+gsave
+navy
+newpath
+-8 -15 moveto
+-40 -40 -100 -60 -100 -100 curveto
+-100 -130 -60 -140 -40 -110 curveto
+-30 -95 -20 -70 -8 -45 curveto
+closepath
+fill
+grestore
+
+% Right Wing 1 (Upper Right)
+% SVG Path: M10,-20 C60,-80 160,-70 160,0 C160,50 100,70 70,50 C60,40 50,20 10,10 Z
+gsave
+green
+newpath
+10 20 moveto
+60 80 160 70 160 0 curveto
+160 -50 100 -70 70 -50 curveto
+60 -40 50 -20 10 -10 curveto
+closepath
+fill
+grestore
+
+% Right Wing 2 (Lower Right)
+% SVG Path: M8,15 C40,40 100,60 100,100 C100,130 60,140 40,110 C30,95 20,70 8,45 Z
+gsave
+green
+newpath
+8 -15 moveto
+40 -40 100 -60 100 -100 curveto
+100 -130 60 -140 40 -110 curveto
+30 -95 20 -70 8 -45 curveto
+closepath
+fill
+grestore
+
+% Central Body / Cross Vertical Pillar
+% SVG Path: M-6,-60 C-6,-65 6,-65 6,-60 L6,70 C6,75 -6,75 -6,70 Z
+gsave
+navy
+newpath
+-6 60 moveto
+-6 65 6 65 6 60 curveto
+6 -70 lineto
+6 -75 -6 -75 -6 -70 curveto
+closepath
+fill
+grestore
+
+% Central Body / Crossbar
+% SVG Path: M-30,-25 C-35,-25 -35,-33 -30,-33 L30,-33 C35,-33 35,-25 30,-25 Z
+gsave
+green
+newpath
+-30 25 moveto
+-35 25 -35 33 -30 33 curveto
+30 33 lineto
+35 33 35 25 30 25 curveto
+closepath
+fill
+grestore
+
+% Sparkles & Circles
+gsave
+green
+newpath -120 60 4 0 360 arc fill
+newpath 120 60 4 0 360 arc fill
+newpath 0 85 5 0 360 arc fill
+
+% Star Sparkle
+newpath
+0 110 moveto
+2 95 lineto
+17 93 lineto
+2 91 lineto
+0 76 lineto
+-2 91 lineto
+-17 93 lineto
+-2 95 lineto
+closepath
+fill
+grestore
+
+grestore
+
+% Draw Text Typography
+% Move coordinate system back to draw text
+% Navy Title
+navy
+/Helvetica-Bold findfont 24 scalefont setfont
+130 120 moveto (BUTTERFLY EFFECT) show
+
+% Green Subtitle
+green
+/Helvetica-Bold findfont 14 scalefont setfont
+200 85 moveto (WELLNESS) show
+
+% Slate Line
+slate
+/Helvetica findfont 11 scalefont setfont
+175 60 moveto (A WELLNESS EVOLUTION) show
+
+showpage
