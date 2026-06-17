@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
       // Reset needle rotation
       if (needle) {
-        needle.setAttribute("transform", "translate(100, 100) rotate(0)");
+        needle.setAttribute("transform", "translate(100, 100) rotate(-90)");
       }
       
       updateStepDisplay();
@@ -206,8 +206,8 @@ document.addEventListener("DOMContentLoaded", () => {
         readoutText.innerHTML = readoutMessage;
       }
 
-      // Animate Gauge Needle
-      const angle = (totalScore / 100) * 180;
+      // Animate Gauge Needle (sweep from -90deg to +90deg)
+      const angle = -90 + (totalScore / 100) * 180;
       if (needle) {
         needle.setAttribute("transform", `translate(100, 100) rotate(${angle})`);
       }
