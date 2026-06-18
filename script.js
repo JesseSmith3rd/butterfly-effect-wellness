@@ -57,3 +57,54 @@ if (form && note) {
     form.reset();
   });
 }
+
+// Welcome Video Modal Logic
+const openVideoBtn = document.getElementById("openVideoBtn");
+const videoModal = document.getElementById("videoModal");
+const closeVideoBtn = document.getElementById("closeVideoBtn");
+const videoModalOverlay = document.getElementById("videoModalOverlay");
+const welcomeVideo = document.getElementById("welcomeVideo");
+const startMockVideoBtn = document.getElementById("startMockVideoBtn");
+const mockVideoOverlay = document.getElementById("mockVideoOverlay");
+
+if (openVideoBtn && videoModal) {
+  const openModal = () => {
+    videoModal.classList.add("is-open");
+    videoModal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden"; // Prevent page scrolling
+  };
+
+  const closeModal = () => {
+    videoModal.classList.remove("is-open");
+    videoModal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = ""; // Restore page scrolling
+    if (welcomeVideo) {
+      welcomeVideo.pause();
+    }
+    if (mockVideoOverlay) {
+      mockVideoOverlay.classList.remove("is-playing");
+    }
+  };
+
+  openVideoBtn.addEventListener("click", openModal);
+
+  if (closeVideoBtn) closeVideoBtn.addEventListener("click", closeModal);
+  if (videoModalOverlay) videoModalOverlay.addEventListener("click", closeModal);
+
+  // ESC key to close modal
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && videoModal.classList.contains("is-open")) {
+      closeModal();
+    }
+  });
+
+  // Mock overlay play logic
+  if (startMockVideoBtn && mockVideoOverlay && welcomeVideo) {
+    startMockVideoBtn.addEventListener("click", () => {
+      mockVideoOverlay.classList.add("is-playing");
+      welcomeVideo.play().catch(err => {
+        console.log("Video auto-play failed, waiting for user manual action: ", err);
+      });
+    });
+  }
+}
