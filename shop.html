@@ -59,15 +59,8 @@
           <!-- PRODUCT 1: T-Shirt -->
           <div class="card product-card" data-id="tshirt" data-base-name="Emerge Premium T-Shirt" data-base-price="24.99">
             <span class="product-badge">Best Seller</span>
-            <div class="product-image-container" id="tshirt-img-container" style="background-color: #fafbfc;">
-              <div class="product-mockup">
-                <!-- Tshirt SVG mockup -->
-                <svg class="tshirt-svg" id="tshirt-svg" viewBox="0 0 100 100">
-                  <path d="M20,10 L30,5 L38,15 L45,12 L50,15 L55,12 L62,15 L70,5 L80,10 L78,25 L70,23 L70,85 L30,85 L30,23 L22,25 Z" />
-                </svg>
-                <!-- Brand logo overlaid on the mockup chest -->
-                <img class="product-logo-overlay" src="assets/images/logo.png" style="top: 28px; width: 22px; height: 22px;" />
-              </div>
+            <div class="product-image-container" id="tshirt-img-container">
+              <img class="product-catalog-image" id="tshirt-img" src="assets/images/emerge_tshirt.png" alt="Emerge Premium T-Shirt" />
             </div>
             <div class="product-info">
               <h3 class="product-title">"Emerge" Premium T-Shirt</h3>
@@ -103,15 +96,8 @@
 
           <!-- PRODUCT 2: Ceramic Mug -->
           <div class="card product-card" data-id="mug" data-base-name="Wellness Evolution Mug" data-base-price="14.99">
-            <div class="product-image-container" id="mug-img-container" style="background-color: #fafbfc;">
-              <div class="product-mockup">
-                <!-- Mug SVG mockup -->
-                <svg class="mug-svg" id="mug-svg" viewBox="0 0 100 100">
-                  <path d="M30,20 L70,20 A5,5 0 0,1 75,25 L75,75 A10,10 0 0,1 65,85 L35,85 A10,10 0 0,1 25,75 L25,25 A5,5 0 0,1 30,20 Z" />
-                  <path d="M75,32 C85,32 87,42 87,48 C87,58 83,62 75,62" fill="none" stroke-width="6" stroke-linecap="round" />
-                </svg>
-                <img class="product-logo-overlay" src="assets/images/logo.png" style="top: 36px; left: 33px; width: 30px; height: 30px;" />
-              </div>
+            <div class="product-image-container" id="mug-img-container">
+              <img class="product-catalog-image" id="mug-img" src="assets/images/wellness_mug.png" alt="Wellness Evolution Mug" />
             </div>
             <div class="product-info">
               <h3 class="product-title">"Evolution" Ceramic Mug</h3>
@@ -139,14 +125,8 @@
 
           <!-- PRODUCT 3: Insulated Water Bottle -->
           <div class="card product-card" data-id="bottle" data-base-name="Insulated Stainless Bottle" data-base-price="19.99">
-            <div class="product-image-container" id="bottle-img-container" style="background-color: #fafbfc;">
-              <div class="product-mockup">
-                <!-- Bottle SVG mockup -->
-                <svg class="bottle-svg" id="bottle-svg" viewBox="0 0 100 120">
-                  <path d="M42,10 L58,10 L56,18 L44,18 Z M45,18 L55,18 L58,32 L68,38 L68,105 A10,10 0 0,1 58,115 L42,115 A10,10 0 0,1 32,105 L32,38 L42,32 Z" />
-                </svg>
-                <img class="product-logo-overlay" src="assets/images/logo.png" style="top: 50px; left: 34px; width: 32px; height: 32px;" />
-              </div>
+            <div class="product-image-container" id="bottle-img-container">
+              <img class="product-catalog-image" id="bottle-img" src="assets/images/wellness_bottle.png" alt="Insulated Stainless Bottle" />
             </div>
             <div class="product-info">
               <h3 class="product-title">Insulated Stainless Bottle</h3>
@@ -173,18 +153,8 @@
           <!-- PRODUCT 4: Hoodie -->
           <div class="card product-card" data-id="hoodie" data-base-name="God-Given Potential Hoodie" data-base-price="44.99">
             <span class="product-badge">Premium</span>
-            <div class="product-image-container" id="hoodie-img-container" style="background-color: #fafbfc;">
-              <div class="product-mockup">
-                <!-- Hoodie SVG mockup -->
-                <svg class="hoodie-svg" id="hoodie-svg" viewBox="0 0 100 100">
-                  <path d="M15,22 L24,18 L32,25 L40,16 L50,20 L60,16 L68,25 L76,18 L85,22 L82,45 L76,43 L76,85 L24,85 L24,43 L18,45 Z" />
-                  <!-- Hood overlap details -->
-                  <path d="M36,25 Q50,45 64,25" fill="none" stroke-width="2" />
-                  <!-- Pocket details -->
-                  <path d="M35,65 L65,65 L60,82 L40,82 Z" fill="none" stroke-width="2" />
-                </svg>
-                <img class="product-logo-overlay" src="assets/images/logo.png" style="top: 36px; left: 38px; width: 24px; height: 24px;" />
-              </div>
+            <div class="product-image-container" id="hoodie-img-container">
+              <img class="product-catalog-image" id="hoodie-img" src="assets/images/potential_hoodie.png" alt="Potential Fleece Hoodie" />
             </div>
             <div class="product-info">
               <h3 class="product-title">"Potential" Fleece Hoodie</h3>
@@ -391,25 +361,23 @@
           totalItems += item.quantity;
           subtotal += item.price * item.quantity;
 
-          // Determine mockup path or SVG fill representation
-          let strokeHex = "#0b1b3d";
-          let svgSnippet = '';
+          // Determine mockup path
+          let imgPath = '';
           if (item.id === 'tshirt') {
-            svgSnippet = `<svg viewBox="0 0 100 100" style="width:40px; height:40px; fill:${getColorHex(item.color)}"><path d="M20,10 L30,5 L38,15 L45,12 L50,15 L55,12 L62,15 L70,5 L80,10 L78,25 L70,23 L70,85 L30,85 L30,23 L22,25 Z" /></svg>`;
+            imgPath = 'assets/images/emerge_tshirt.png';
           } else if (item.id === 'mug') {
-            svgSnippet = `<svg viewBox="0 0 100 100" style="width:36px; height:36px; fill:${getColorHex(item.color)}"><path d="M30,20 L70,20 A5,5 0 0,1 75,25 L75,75 A10,10 0 0,1 65,85 L35,85 A10,10 0 0,1 25,75 L25,25 A5,5 0 0,1 30,20 Z" /><path d="M75,32 C85,32 87,42 87,48 C87,58 83,62 75,62" fill="none" stroke-width="8" stroke-linecap="round" stroke="${strokeHex}" /></svg>`;
+            imgPath = 'assets/images/wellness_mug.png';
           } else if (item.id === 'bottle') {
-            svgSnippet = `<svg viewBox="0 0 100 120" style="width:24px; height:36px; fill:${getColorHex(item.color)}"><path d="M42,10 L58,10 L56,18 L44,18 Z M45,18 L55,18 L58,32 L68,38 L68,105 A10,10 0 0,1 58,115 L42,115 A10,10 0 0,1 32,105 L32,38 L42,32 Z" /></svg>`;
+            imgPath = 'assets/images/wellness_bottle.png';
           } else if (item.id === 'hoodie') {
-            svgSnippet = `<svg viewBox="0 0 100 100" style="width:40px; height:40px; fill:${getColorHex(item.color)}"><path d="M15,22 L24,18 L32,25 L40,16 L50,20 L60,16 L68,25 L76,18 L85,22 L82,45 L76,43 L76,85 L24,85 L24,43 L18,45 Z" /><path d="M36,25 Q50,45 64,25" fill="none" stroke-width="2" stroke="${strokeHex}" /><path d="M35,65 L65,65 L60,82 L40,82 Z" fill="none" stroke-width="2" stroke="${strokeHex}" /></svg>`;
+            imgPath = 'assets/images/potential_hoodie.png';
           }
 
           const cartItemDiv = document.createElement('div');
           cartItemDiv.className = 'cart-item';
           cartItemDiv.innerHTML = `
-            <div class="cart-item-image">
-              ${svgSnippet}
-              <img class="cart-item-logo" src="assets/images/logo.png" style="opacity: 0.65;" />
+            <div class="cart-item-image" style="background: transparent;">
+              <img src="${imgPath}" alt="${item.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px;" />
             </div>
             <div class="cart-item-details">
               <span class="cart-item-title">${item.name}</span>
