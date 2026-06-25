@@ -5,6 +5,7 @@
 
   --brand: #0b1b3d;      /* Navy */
   --brand2: #00a859;     /* Green */
+  --brand-accent: var(--brand2); /* Accent color */
   --brand-gradient: linear-gradient(135deg, var(--brand), var(--brand2));
 
   --card: #ffffff;
@@ -2263,6 +2264,28 @@ strong { color: var(--ink); font-weight: 700; }
   color: var(--brand);
   outline: none;
   cursor: pointer;
+}
+
+/* Placeholder styling architecture */
+.trusted-badge-placeholder {
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+.trusted-badge-placeholder:hover {
+    opacity: 1;
+}
+
+.avatar-initials {
+    width: 50px;
+    height: 50px;
+    background-color: var(--brand-accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
 }
 
 
