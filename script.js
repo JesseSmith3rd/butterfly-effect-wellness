@@ -16,6 +16,29 @@ window.addEventListener("DOMContentLoaded", () => {
       window.selectService(serviceParam);
     }, 100);
   }
+
+  // Pre-fill the booking message with wellness assessment metrics if available
+  const score = params.get("score");
+  if (score !== null) {
+    const sleep = params.get("sleep") || "N/A";
+    const exercise = params.get("exercise") || "N/A";
+    const calories = params.get("calories") || "N/A";
+    const water = params.get("water") || "N/A";
+    const stress = params.get("stress") || "N/A";
+    const goal = params.get("goal") || "N/A";
+
+    const msgTextarea = document.getElementById("booking-message");
+    if (msgTextarea) {
+      msgTextarea.value = `Hi Kena,\n\nI just completed the interactive Wellness Assessment and scored ${score}/100. Here are my metrics:\n` +
+                          `- Sleep: ${sleep}\n` +
+                          `- Exercise: ${exercise}\n` +
+                          `- Nutrition (Calorie Intake): ${calories}\n` +
+                          `- Hydration: ${water}\n` +
+                          `- Stress Level: ${stress}\n` +
+                          `- Primary Goal: ${goal}\n\n` +
+                          `I would love to review my results with you during my Free Assessment.`;
+    }
+  }
 });
 
 // Mobile nav toggle
