@@ -312,57 +312,76 @@ strong { color: var(--ink); font-weight: 700; }
 }
 
 .matrix-card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 28px 20px;
+  position: relative;
+  background: linear-gradient(135deg, #fffdfa 0%, #f7ecd4 60%, #eedaa7 100%);
+  border: 6px solid #4a2f1b; /* Mahogany wood frame */
+  border-radius: 10px;
+  padding: 28px 16px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
-  box-shadow: 0 4px 12px rgba(11, 27, 61, 0.02);
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.15),
+    inset 0 0 15px rgba(74, 47, 27, 0.12);
+}
+.matrix-card::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border: 1px double rgba(197, 168, 106, 0.7);
+  border-radius: 4px;
+  pointer-events: none;
 }
 .matrix-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(11, 27, 61, 0.08);
-  border-color: rgba(0, 168, 89, 0.2);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 
+    0 16px 36px rgba(0, 0, 0, 0.2),
+    inset 0 0 15px rgba(74, 47, 27, 0.08);
+  border-color: #5d3b22;
 }
 .matrix-card__icon {
-  font-size: 28px;
-  background: rgba(0, 168, 89, 0.06);
-  color: var(--brand2);
-  width: 56px;
-  height: 56px;
+  font-size: 26px;
+  background: linear-gradient(135deg, #4a2f1b, #2b170c);
+  color: #eedaa7;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
   flex-shrink: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .matrix-card:hover .matrix-card__icon {
-  background: rgba(0, 168, 89, 0.12);
+  background: linear-gradient(135deg, #5d3b22, #391e0f);
+  transform: scale(1.05);
 }
 .matrix-card__content {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
+  z-index: 2;
 }
 .matrix-card__title {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 17px;
   font-weight: 700;
-  color: var(--brand);
+  color: #2b170c; /* Engraved deep charcoal brown */
 }
 .matrix-card__subtitle {
   font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  color: var(--muted);
+  font-size: 11px;
+  color: #5c3c26; /* Engraved slate brown */
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-weight: 700;
 }
 
 /* SECTION 2: SERVICES & CLASSES */
