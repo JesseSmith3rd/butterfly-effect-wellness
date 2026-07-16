@@ -43,6 +43,323 @@
 
   <main class="page">
 
+    <!-- NEW FITNESS & WELLNESS ASSESSMENT SECTION -->
+    <section id="wellness-assessment" class="section assessment-section">
+      <div class="container">
+        <div class="calculator-container" id="wellness-calculator">
+          <div class="calculator-header">
+            <span class="pill">Assessment</span>
+            <h3>Find Your Wellness Starting Point in Less Than 2 Minutes</h3>
+            <p class="assessment-callout">Not sure where to begin? Take our free 2-minute wellness assessment and receive personalized guidance based on your current habits and goals.</p>
+            <p class="assessment-disclaimer">Complete this brief assessment to better understand your current wellness habits and identify practical areas for improvement. Your results are intended for general wellness guidance and are not a medical diagnosis.</p>
+          </div>
+          
+          <div class="calculator-steps">
+            <!-- STEP 1: Sleep -->
+            <div class="calculator-step active" data-step="1">
+              <div class="progress-container">
+                <span class="progress-text">Question 1 of 6 (17% Complete)</span>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width: 16.67%;"></div>
+                </div>
+              </div>
+              <h4>1. Sleep</h4>
+              <p class="step-desc">How many hours of sleep do you usually get each night?</p>
+              <div class="assessment-options">
+                <label class="option-card-label">
+                  <input type="radio" name="sleep" value="less-than-5" class="option-radio">
+                  <span class="option-card-content">Less than 5 hours</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="sleep" value="5-6" class="option-radio">
+                  <span class="option-card-content">5–6 hours</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="sleep" value="7-8" class="option-radio">
+                  <span class="option-card-content">7–8 hours</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="sleep" value="9+" class="option-radio">
+                  <span class="option-card-content">9 or more hours</span>
+                </label>
+              </div>
+              <p class="validation-message" hidden aria-live="polite"></p>
+              <div class="calculator-nav">
+                <button type="button" class="btn btn-calc-next">Next Step &rarr;</button>
+              </div>
+            </div>
+
+            <!-- STEP 2: Exercise frequency -->
+            <div class="calculator-step" data-step="2">
+              <div class="progress-container">
+                <span class="progress-text">Question 2 of 6 (33% Complete)</span>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width: 33.33%;"></div>
+                </div>
+              </div>
+              <h4>2. Exercise Frequency</h4>
+              <p class="step-desc">How often do you currently exercise?</p>
+              <div class="assessment-options">
+                <label class="option-card-label">
+                  <input type="radio" name="exercise" value="rarely-never" class="option-radio">
+                  <span class="option-card-content">Rarely or never</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="exercise" value="1-2" class="option-radio">
+                  <span class="option-card-content">1–2 days per week</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="exercise" value="3-4" class="option-radio">
+                  <span class="option-card-content">3–4 days per week</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="exercise" value="5+" class="option-radio">
+                  <span class="option-card-content">5 or more days per week</span>
+                </label>
+              </div>
+              <p class="validation-message" hidden aria-live="polite"></p>
+              <div class="calculator-nav">
+                <button type="button" class="btn btn--ghost btn-calc-prev">&larr; Back</button>
+                <button type="button" class="btn btn-calc-next">Next Step &rarr;</button>
+              </div>
+            </div>
+
+            <!-- STEP 3: Nutrition habits -->
+            <div class="calculator-step" data-step="3">
+              <div class="progress-container">
+                <span class="progress-text">Question 3 of 6 (50% Complete)</span>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width: 50%;"></div>
+                </div>
+              </div>
+              <h4>3. Nutrition Habits</h4>
+              <p class="step-desc">How would you describe your current nutrition habits?</p>
+              <div class="assessment-options">
+                <label class="option-card-label">
+                  <input type="radio" name="nutrition" value="processed" class="option-radio">
+                  <span class="option-card-content">I often skip meals or rely heavily on processed foods</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="nutrition" value="inconsistent" class="option-radio">
+                  <span class="option-card-content">My eating habits are inconsistent</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="nutrition" value="balanced" class="option-radio">
+                  <span class="option-card-content">I usually eat balanced meals</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="nutrition" value="intentional" class="option-radio">
+                  <span class="option-card-content">I consistently follow a balanced and intentional nutrition plan</span>
+                </label>
+              </div>
+              <div class="optional-nutrition-text" style="margin-top: 16px; width: 100%;">
+                <label for="nutrition-details" style="display: block; font-size: 14px; font-weight: 600; color: var(--brand); margin-bottom: 8px;">Tell us more about your current nutrition habits (optional)</label>
+                <textarea id="nutrition-details" name="nutrition_details" rows="3" class="calc-textarea" placeholder="Share any specific dietary goals, challenges, or patterns..." style="width: 100%; border-radius: 12px; border: 1px solid var(--line); padding: 12px; font-family: inherit; font-size: 14px; outline: none;"></textarea>
+              </div>
+              <p class="validation-message" hidden aria-live="polite"></p>
+              <div class="calculator-nav">
+                <button type="button" class="btn btn--ghost btn-calc-prev">&larr; Back</button>
+                <button type="button" class="btn btn-calc-next">Next Step &rarr;</button>
+              </div>
+            </div>
+
+            <!-- STEP 4: Water intake -->
+            <div class="calculator-step" data-step="4">
+              <div class="progress-container">
+                <span class="progress-text">Question 4 of 6 (67% Complete)</span>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width: 66.67%;"></div>
+                </div>
+              </div>
+              <h4>4. Water Intake</h4>
+              <p class="step-desc">How much water do you usually drink each day?</p>
+              <div class="assessment-options">
+                <label class="option-card-label">
+                  <input type="radio" name="water" value="less-than-2" class="option-radio">
+                  <span class="option-card-content">Less than 2 cups</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="water" value="2-4" class="option-radio">
+                  <span class="option-card-content">2–4 cups</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="water" value="5-7" class="option-radio">
+                  <span class="option-card-content">5–7 cups</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="water" value="8+" class="option-radio">
+                  <span class="option-card-content">8 or more cups</span>
+                </label>
+              </div>
+              <p class="validation-message" hidden aria-live="polite"></p>
+              <div class="calculator-nav">
+                <button type="button" class="btn btn--ghost btn-calc-prev">&larr; Back</button>
+                <button type="button" class="btn btn-calc-next">Next Step &rarr;</button>
+              </div>
+            </div>
+
+            <!-- STEP 5: Stress level -->
+            <div class="calculator-step" data-step="5">
+              <div class="progress-container">
+                <span class="progress-text">Question 5 of 6 (83% Complete)</span>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width: 83.33%;"></div>
+                </div>
+              </div>
+              <h4>5. Stress Level</h4>
+              <p class="step-desc">How would you describe your current stress level?</p>
+              <div class="assessment-options">
+                <label class="option-card-label">
+                  <input type="radio" name="stress" value="very-high" class="option-radio">
+                  <span class="option-card-content">Very high</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="stress" value="high" class="option-radio">
+                  <span class="option-card-content">High</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="stress" value="moderate" class="option-radio">
+                  <span class="option-card-content">Moderate</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="stress" value="low" class="option-radio">
+                  <span class="option-card-content">Low</span>
+                </label>
+              </div>
+              <p class="validation-message" hidden aria-live="polite"></p>
+              <div class="calculator-nav">
+                <button type="button" class="btn btn--ghost btn-calc-prev">&larr; Back</button>
+                <button type="button" class="btn btn-calc-next">Next Step &rarr;</button>
+              </div>
+            </div>
+
+            <!-- STEP 6: Primary Goal -->
+            <div class="calculator-step" data-step="6">
+              <div class="progress-container">
+                <span class="progress-text">Question 6 of 6 (100% Complete)</span>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width: 100%;"></div>
+                </div>
+              </div>
+              <h4>6. Primary Goal</h4>
+              <p class="step-desc">What is your primary wellness goal?</p>
+              <div class="calc-select-container">
+                <label for="quiz-goal" class="sr-only">Primary Goal</label>
+                <select id="quiz-goal" class="calc-select" style="width: 100%; border-radius: 12px; border: 1px solid var(--line); padding: 14px 16px; font-family: inherit; font-size: 15px; color: var(--brand); outline: none;">
+                  <option value="" disabled selected>Select your primary goal...</option>
+                  <option value="weight-loss">Lose weight</option>
+                  <option value="strength">Build strength</option>
+                  <option value="mobility">Improve mobility</option>
+                  <option value="energy">Increase energy</option>
+                  <option value="nutrition">Improve nutrition</option>
+                  <option value="stress">Reduce stress</option>
+                  <option value="habits">Build consistent habits</option>
+                  <option value="overall">Improve overall wellness</option>
+                </select>
+              </div>
+              <p class="validation-message" hidden aria-live="polite"></p>
+              <div class="calculator-nav">
+                <button type="button" class="btn btn--ghost btn-calc-prev">&larr; Back</button>
+                <button type="button" class="btn btn-calc-submit">View My Results</button>
+              </div>
+            </div>
+
+            <!-- RESULTS -->
+            <div class="calculator-step" data-step="results">
+              <h4>Your Fitness &amp; Wellness Assessment</h4>
+              <div class="results-layout">
+                <!-- Visual Gauge Card -->
+                <div class="blueprint-card gauge-card">
+                  <h5>Fitness &amp; Wellness Scale</h5>
+                  <div class="gauge-wrapper">
+                    <svg class="gauge-svg" viewBox="0 0 200 120" width="100%">
+                      <!-- Outer Base Track -->
+                      <path d="M20,100 A80,80 0 0,1 180,100" fill="none" stroke="rgba(11, 27, 61, 0.06)" stroke-width="14" stroke-linecap="round" />
+                      <!-- Red Arc (Needs Focus: 0-40) -->
+                      <path d="M20,100 A80,80 0 0,1 73,43" fill="none" stroke="#ef4444" stroke-width="14" stroke-linecap="butt" />
+                      <!-- Orange Arc (Progressing: 41-75) -->
+                      <path d="M73,43 A80,80 0 0,1 133,47" fill="none" stroke="#f59e0b" stroke-width="14" stroke-linecap="butt" />
+                      <!-- Green Arc (Optimal Wellness: 76-100) -->
+                      <path d="M133,47 A80,80 0 0,1 180,100" fill="none" stroke="#00a859" stroke-width="14" stroke-linecap="round" />
+                      
+                      <!-- Rotating Needle -->
+                      <g id="gauge-needle" class="gauge-needle" transform="translate(100, 100) rotate(-90)">
+                        <path d="M-8,0 L0,-76 L8,0 Z" fill="#0b1b3d" />
+                        <circle cx="0" cy="0" r="12" fill="#0b1b3d" />
+                        <circle cx="0" cy="0" r="4" fill="#ffffff" />
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="gauge-readout-values">
+                    <span class="gauge-value scale-score-display" id="total-score-text">0 / 100</span>
+                  </div>
+                  <span class="gauge-label" id="wellness-label">Processing...</span>
+                </div>
+
+                <!-- Text Readout Card -->
+                <div class="blueprint-card readout-card">
+                  <h5 id="result-tier-heading">Building Your Foundation</h5>
+                  <div class="readout-body">
+                    <p id="readout-text" class="readout-text" style="margin-bottom: 12px;">
+                      Processing your results...
+                    </p>
+                    <p id="goal-feedback-text" class="readout-text" style="font-weight: 600; color: var(--brand); margin-bottom: 16px;">
+                      Goal feedback...
+                    </p>
+                    
+                    <!-- Recommendations Box -->
+                    <div id="recommendations-box" class="recommendations-box" style="margin-top: 16px; display: none;">
+                      <h6 style="margin-bottom: 8px; font-weight: 700; color: var(--brand);">Personalized Recommendations:</h6>
+                      <ul id="recommendations-list" style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.6; color: var(--muted);">
+                        <!-- Dynamic recommendations go here -->
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div class="breakdown-list">
+                    <div class="breakdown-item">
+                      <span class="breakdown-bullet" style="background-color: #4e5d78;"></span>
+                      <span class="breakdown-name">Sleep Score:</span>
+                      <strong id="sleep-score-val">0 / 20</strong>
+                    </div>
+                    <div class="breakdown-item">
+                      <span class="breakdown-bullet" style="background-color: #f59e0b;"></span>
+                      <span class="breakdown-name">Exercise Score:</span>
+                      <strong id="exercise-score-val">0 / 20</strong>
+                    </div>
+                    <div class="breakdown-item">
+                      <span class="breakdown-bullet" style="background-color: #00a859;"></span>
+                      <span class="breakdown-name">Nutrition Score:</span>
+                      <strong id="nutrition-score-val">0 / 20</strong>
+                    </div>
+                    <div class="breakdown-item">
+                      <span class="breakdown-bullet" style="background-color: #3b82f6;"></span>
+                      <span class="breakdown-name">Water Score:</span>
+                      <strong id="water-score-val">0 / 20</strong>
+                    </div>
+                    <div class="breakdown-item">
+                      <span class="breakdown-bullet" style="background-color: #a855f7;"></span>
+                      <span class="breakdown-name">Stress Score:</span>
+                      <strong id="stress-score-val">0 / 20</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="disclaimer-text" style="font-size: 12px; color: var(--muted); text-align: center; margin-top: 16px; font-style: italic;">
+                This assessment is provided for general wellness education and does not replace advice from a qualified healthcare professional.
+              </div>
+              
+              <div class="calculator-nav calculator-nav--results" id="quiz-result-container">
+                <button type="button" class="btn btn--ghost btn-calc-reset">Recalculate</button>
+                <a href="book.html" class="btn btn--secondary btn-book-assessment">Book Your Free Wellness Assessment</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- SERVICES LISTING SECTION -->
     <section class="section section--services">
       <div class="container">
@@ -201,208 +518,6 @@
           </div>
         </div>
 
-        <!-- INTERACTIVE WELLNESS STARTING POINT WIDGET -->
-        <div class="calculator-wrapper interactive-tools-container" id="calculator">
-          <div class="calculator-container" id="wellness-calculator">
-            <div class="calculator-header">
-              <span class="pill">Interactive Tools</span>
-              <h3>Find Your Wellness Starting Point</h3>
-              <p>Assess your primary sleep, activity, and nutrition habits against clinical wellness baselines.</p>
-            </div>
-            
-            <div class="calculator-steps">
-              <!-- STEP 1: Sleep Analysis -->
-              <div class="calculator-step active" data-step="1">
-                <h4>1. Sleep Analysis</h4>
-                <p class="step-desc">How many hours of sleep do you average per night?</p>
-                <div class="range-container">
-                  <input type="range" id="sleep-input" min="4" max="12" value="7" step="0.5" class="calc-slider" />
-                  <div class="range-readout">
-                    <span id="sleep-readout">7</span> <span class="range-unit">hours / night</span>
-                  </div>
-                </div>
-                <div class="calculator-nav">
-                  <button class="btn btn-calc-next">Next Step &rarr;</button>
-                </div>
-              </div>
-
-              <!-- STEP 2: Exercise Habits -->
-              <div class="calculator-step" data-step="2">
-                <h4>2. Exercise Frequency</h4>
-                <p class="step-desc">How many days do you exercise during a 7-day period?</p>
-                <input type="hidden" id="exercise-input" value="3" />
-                <div class="exercise-container">
-                  <div class="exercise-selector">
-                    <button class="exercise-option" data-value="0">0</button>
-                    <button class="exercise-option" data-value="1">1</button>
-                    <button class="exercise-option" data-value="2">2</button>
-                    <button class="exercise-option active" data-value="3">3</button>
-                    <button class="exercise-option" data-value="4">4</button>
-                    <button class="exercise-option" data-value="5">5</button>
-                    <button class="exercise-option" data-value="6">6</button>
-                    <button class="exercise-option" data-value="7">7</button>
-                  </div>
-                </div>
-                <div class="calculator-nav">
-                  <button class="btn btn--ghost btn-calc-prev">&larr; Back</button>
-                  <button class="btn btn-calc-next">Next Step &rarr;</button>
-                </div>
-              </div>
-
-              <!-- STEP 3: Calorie Intake -->
-              <div class="calculator-step" data-step="3">
-                <h4>3. Daily Nutrition</h4>
-                <p class="step-desc">What is your average daily calorie intake?</p>
-                <div class="calorie-form-group">
-                  <div class="calorie-input-container">
-                    <input type="number" id="calorie-input" value="2000" min="500" max="6000" step="50" class="calc-input" />
-                    <span class="input-unit">kcal / day</span>
-                  </div>
-                  <div class="calorie-presets">
-                    <button type="button" class="preset-badge" data-value="1500">1500 kcal</button>
-                    <button type="button" class="preset-badge" data-value="2000">2000 kcal</button>
-                    <button type="button" class="preset-badge" data-value="2500">2500 kcal</button>
-                    <button type="button" class="preset-badge" data-value="3000">3000 kcal</button>
-                  </div>
-                </div>
-                <div class="calculator-nav">
-                  <button class="btn btn--ghost btn-calc-prev">&larr; Back</button>
-                  <button class="btn btn-calc-next">Next Step &rarr;</button>
-                </div>
-              </div>
-
-              <!-- STEP 4: Hydration -->
-              <div class="calculator-step" data-step="4">
-                <h4>4. Hydration</h4>
-                <p class="step-desc">How many ounces of water do you drink per day?</p>
-                <div class="range-container">
-                  <input type="range" id="quiz-water" min="0" max="120" value="64" step="8" class="calc-slider" />
-                  <div class="range-readout">
-                    <span id="water-readout">64</span> <span class="range-unit">oz / day</span>
-                  </div>
-                </div>
-                <div class="calculator-nav">
-                  <button class="btn btn--ghost btn-calc-prev">&larr; Back</button>
-                  <button class="btn btn-calc-next">Next Step &rarr;</button>
-                </div>
-              </div>
-
-              <!-- STEP 5: Stress Level -->
-              <div class="calculator-step" data-step="5">
-                <h4>5. Stress Level</h4>
-                <p class="step-desc">How would you rate your daily stress level?</p>
-                <div class="calc-select-container">
-                  <select id="quiz-stress" class="calc-select">
-                    <option value="low">Low (Relaxed &amp; Manageable)</option>
-                    <option value="medium" selected>Medium (Moderate &amp; Typical)</option>
-                    <option value="high">High (Overwhelming / Chronic)</option>
-                  </select>
-                </div>
-                <div class="calculator-nav">
-                  <button class="btn btn--ghost btn-calc-prev">&larr; Back</button>
-                  <button class="btn btn-calc-next">Next Step &rarr;</button>
-                </div>
-              </div>
-
-              <!-- STEP 6: Primary Goal -->
-              <div class="calculator-step" data-step="6">
-                <h4>6. Primary Goal</h4>
-                <p class="step-desc">What is your primary fitness or wellness goal?</p>
-                <div class="calc-select-container">
-                  <select id="quiz-goal" class="calc-select">
-                    <option value="general" selected>General Fitness &amp; Wellness</option>
-                    <option value="weight-loss">Weight Loss / Body Fat Reduction</option>
-                    <option value="muscle-gain">Muscle Gain &amp; Tone</option>
-                    <option value="athletic-performance">Athletic Performance / Endurance</option>
-                    <option value="nutrition">Nutrition &amp; Healthy Eating Habits</option>
-                    <option value="finance">Faith-Based Financial Stewardship</option>
-                  </select>
-                </div>
-                <div class="calculator-nav">
-                  <button class="btn btn--ghost btn-calc-prev">&larr; Back</button>
-                  <button class="btn btn-calc-submit">Generate My Assessment</button>
-                </div>
-              </div>
-
-              <!-- RESULTS -->
-              <div class="calculator-step" data-step="results">
-                <h4>Your Fitness &amp; Wellness Scale Assessment</h4>
-                <div class="results-layout">
-                  <!-- Visual Gauge Card -->
-                  <div class="blueprint-card gauge-card">
-                    <h5>Fitness &amp; Wellness Scale</h5>
-                    <div class="gauge-wrapper">
-                      <svg class="gauge-svg" viewBox="0 0 200 120" width="100%">
-                        <!-- Outer Base Track -->
-                        <path d="M20,100 A80,80 0 0,1 180,100" fill="none" stroke="rgba(11, 27, 61, 0.06)" stroke-width="14" stroke-linecap="round" />
-                        <!-- Red Arc (Needs Focus: 0-40) -->
-                        <path d="M20,100 A80,80 0 0,1 73,43" fill="none" stroke="#ef4444" stroke-width="14" stroke-linecap="butt" />
-                        <!-- Orange Arc (Progressing: 41-75) -->
-                        <path d="M73,43 A80,80 0 0,1 133,47" fill="none" stroke="#f59e0b" stroke-width="14" stroke-linecap="butt" />
-                        <!-- Green Arc (Optimal Wellness: 76-100) -->
-                        <path d="M133,47 A80,80 0 0,1 180,100" fill="none" stroke="#00a859" stroke-width="14" stroke-linecap="round" />
-                        
-                        <!-- Rotating Needle -->
-                        <g id="gauge-needle" class="gauge-needle" transform="translate(100, 100) rotate(-90)">
-                          <path d="M-8,0 L0,-76 L8,0 Z" fill="#0b1b3d" />
-                          <circle cx="0" cy="0" r="12" fill="#0b1b3d" />
-                          <circle cx="0" cy="0" r="4" fill="#ffffff" />
-                        </g>
-                      </svg>
-                    </div>
-                    <div class="gauge-readout-values">
-                      <span class="gauge-value scale-score-display" id="total-score-text">0 / 100</span>
-                    </div>
-                    <span class="gauge-label" id="wellness-label">Processing...</span>
-                  </div>
-
-                  <!-- Text Readout Card -->
-                  <div class="blueprint-card readout-card">
-                    <h5>Actionable Readout</h5>
-                    <div class="readout-body">
-                      <p id="readout-text" class="readout-text">
-                        Processing your results...
-                      </p>
-                    </div>
-                    
-                    <div class="breakdown-list">
-                      <div class="breakdown-item">
-                        <span class="breakdown-bullet" style="background-color: #4e5d78;"></span>
-                        <span class="breakdown-name">Sleep Score:</span>
-                        <strong id="sleep-score-val">0 / 20</strong>
-                      </div>
-                      <div class="breakdown-item">
-                        <span class="breakdown-bullet" style="background-color: #f59e0b;"></span>
-                        <span class="breakdown-name">Exercise Score:</span>
-                        <strong id="exercise-score-val">0 / 20</strong>
-                      </div>
-                      <div class="breakdown-item">
-                        <span class="breakdown-bullet" style="background-color: #00a859;"></span>
-                        <span class="breakdown-name">Calorie Score:</span>
-                        <strong id="calorie-score-val">0 / 20</strong>
-                      </div>
-                      <div class="breakdown-item">
-                        <span class="breakdown-bullet" style="background-color: #3b82f6;"></span>
-                        <span class="breakdown-name">Water Score:</span>
-                        <strong id="water-score-val">0 / 20</strong>
-                      </div>
-                      <div class="breakdown-item">
-                        <span class="breakdown-bullet" style="background-color: #a855f7;"></span>
-                        <span class="breakdown-name">Stress Score:</span>
-                        <strong id="stress-score-val">0 / 20</strong>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="calculator-nav calculator-nav--results" id="quiz-result-container">
-                  <button class="btn btn--ghost btn-calc-reset">Recalculate</button>
-                  <a href="book.html" class="btn btn--secondary">Book Your Free Wellness Assessment</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <!-- FEATURED SATURDAY CLASS DETAILS (FROM FLYER) -->
         <div id="saturday-class" class="saturday-featured-card">
