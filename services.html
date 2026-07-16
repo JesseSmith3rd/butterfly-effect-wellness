@@ -236,9 +236,9 @@
             <!-- STEP 6: Primary Goal -->
             <div class="calculator-step" data-step="6">
               <div class="progress-container">
-                <span class="progress-text">Question 6 of 6 (100% Complete)</span>
+                <span class="progress-text">Step 6 of 7 (86% Complete)</span>
                 <div class="progress-bar-bg">
-                  <div class="progress-bar-fill" style="width: 100%;"></div>
+                  <div class="progress-bar-fill" style="width: 86%;"></div>
                 </div>
               </div>
               <h4>6. Primary Goal</h4>
@@ -260,97 +260,223 @@
               <p class="validation-message" hidden aria-live="polite"></p>
               <div class="calculator-nav">
                 <button type="button" class="btn btn--ghost btn-calc-prev">&larr; Back</button>
-                <button type="button" class="btn btn-calc-submit">View My Results</button>
+                <button type="button" class="btn btn-calc-next">Next Step &rarr;</button>
+              </div>
+            </div>
+
+            <!-- STEP 7: BMI (Optional) -->
+            <div class="calculator-step" data-step="7">
+              <div class="progress-container">
+                <span class="progress-text">Step 7 of 7 (Optional) (100% Complete)</span>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width: 100%;"></div>
+                </div>
+              </div>
+              <h4>7. Calculate Your BMI (Optional)</h4>
+              <p class="step-desc">Would you like to calculate your Body Mass Index (BMI) as a screening measure?</p>
+              
+              <p class="bmi-notice" style="font-size: 13.5px; color: var(--muted); margin-bottom: 16px; font-style: italic; line-height: 1.5; text-align: left;">
+                This adult BMI calculator is intended for people age 20 and older. BMI for children and teenagers must be interpreted using age- and sex-specific percentiles.
+              </p>
+
+              <!-- Unit System Toggler -->
+              <div class="unit-selector-container" style="margin-bottom: 24px; display: flex; gap: 24px; align-items: center; justify-content: center;">
+                <label class="unit-tab-label" style="cursor: pointer; font-size: 14.5px; font-weight: 600; color: var(--brand); display: flex; align-items: center; gap: 8px;">
+                  <input type="radio" name="bmi-unit" value="us" checked style="accent-color: var(--brand2);"> US Customary (ft/in, lbs)
+                </label>
+                <label class="unit-tab-label" style="cursor: pointer; font-size: 14.5px; font-weight: 600; color: var(--brand); display: flex; align-items: center; gap: 8px;">
+                  <input type="radio" name="bmi-unit" value="metric" style="accent-color: var(--brand2);"> Metric (cm, kg)
+                </label>
+              </div>
+
+              <!-- US Customary Fields -->
+              <div id="bmi-us-fields" style="display: block; width: 100%;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                  <div>
+                    <label for="bmi-height-ft" style="display: block; font-size: 14px; font-weight: 700; color: var(--brand); margin-bottom: 8px; text-align: left;">Height (Feet)</label>
+                    <input type="number" id="bmi-height-ft" placeholder="e.g. 5" min="3" max="8" class="calc-input" style="width: 100%; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;">
+                  </div>
+                  <div>
+                    <label for="bmi-height-in" style="display: block; font-size: 14px; font-weight: 700; color: var(--brand); margin-bottom: 8px; text-align: left;">Height (Inches)</label>
+                    <input type="number" id="bmi-height-in" placeholder="e.g. 9" min="0" max="11" class="calc-input" style="width: 100%; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;">
+                  </div>
+                </div>
+                <div style="margin-bottom: 16px;">
+                  <label for="bmi-weight-lb" style="display: block; font-size: 14px; font-weight: 700; color: var(--brand); margin-bottom: 8px; text-align: left;">Weight (Pounds)</label>
+                  <input type="number" id="bmi-weight-lb" placeholder="e.g. 165" min="50" max="1000" class="calc-input" style="width: 100%; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;">
+                </div>
+              </div>
+
+              <!-- Metric Fields -->
+              <div id="bmi-metric-fields" style="display: none; width: 100%;">
+                <div style="margin-bottom: 16px;">
+                  <label for="bmi-height-cm" style="display: block; font-size: 14px; font-weight: 700; color: var(--brand); margin-bottom: 8px; text-align: left;">Height (Centimeters)</label>
+                  <input type="number" id="bmi-height-cm" placeholder="e.g. 175" min="90" max="250" class="calc-input" style="width: 100%; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;">
+                </div>
+                <div style="margin-bottom: 16px;">
+                  <label for="bmi-weight-kg" style="display: block; font-size: 14px; font-weight: 700; color: var(--brand); margin-bottom: 8px; text-align: left;">Weight (Kilograms)</label>
+                  <input type="number" id="bmi-weight-kg" placeholder="e.g. 75" min="20" max="450" class="calc-input" style="width: 100%; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;">
+                </div>
+              </div>
+
+              <p class="validation-message" hidden aria-live="polite"></p>
+              
+              <div class="calculator-nav" style="display: flex; justify-content: space-between; width: 100%;">
+                <button type="button" class="btn btn--ghost btn-calc-prev">&larr; Back</button>
+                <div style="display: flex; gap: 12px;">
+                  <button type="button" class="btn btn--ghost btn-calc-skip">Skip This Step</button>
+                  <button type="button" class="btn btn-calc-submit btn-bmi-calc">Calculate BMI</button>
+                </div>
               </div>
             </div>
 
             <!-- RESULTS -->
             <div class="calculator-step" data-step="results">
               <h4>Your Fitness &amp; Wellness Assessment</h4>
-              <div class="results-layout">
-                <!-- Visual Gauge Card -->
-                <div class="blueprint-card gauge-card">
-                  <h5>Fitness &amp; Wellness Scale</h5>
-                  <div class="gauge-wrapper">
-                    <svg class="gauge-svg" viewBox="0 0 200 120" width="100%">
-                      <!-- Outer Base Track -->
-                      <path d="M20,100 A80,80 0 0,1 180,100" fill="none" stroke="rgba(11, 27, 61, 0.06)" stroke-width="14" stroke-linecap="round" />
-                      <!-- Red Arc (Needs Focus: 0-40) -->
-                      <path d="M20,100 A80,80 0 0,1 73,43" fill="none" stroke="#ef4444" stroke-width="14" stroke-linecap="butt" />
-                      <!-- Orange Arc (Progressing: 41-75) -->
-                      <path d="M73,43 A80,80 0 0,1 133,47" fill="none" stroke="#f59e0b" stroke-width="14" stroke-linecap="butt" />
-                      <!-- Green Arc (Optimal Wellness: 76-100) -->
-                      <path d="M133,47 A80,80 0 0,1 180,100" fill="none" stroke="#00a859" stroke-width="14" stroke-linecap="round" />
+              
+              <div style="display: flex; flex-direction: column; gap: 24px; width: 100%;">
+                <!-- Card 1: Wellness Habits Score (Split Layout Grid) -->
+                <div class="results-layout" style="margin: 0; width: 100%;">
+                  <!-- Visual Gauge Card -->
+                  <div class="blueprint-card gauge-card">
+                    <h5>Your Wellness Habits Score</h5>
+                    <div class="gauge-wrapper">
+                      <svg class="gauge-svg" viewBox="0 0 200 120" width="100%">
+                        <!-- Outer Base Track -->
+                        <path d="M20,100 A80,80 0 0,1 180,100" fill="none" stroke="rgba(11, 27, 61, 0.06)" stroke-width="14" stroke-linecap="round" />
+                        <!-- Red Arc (Needs Focus: 0-40) -->
+                        <path d="M20,100 A80,80 0 0,1 73,43" fill="none" stroke="#ef4444" stroke-width="14" stroke-linecap="butt" />
+                        <!-- Orange Arc (Progressing: 41-75) -->
+                        <path d="M73,43 A80,80 0 0,1 133,47" fill="none" stroke="#f59e0b" stroke-width="14" stroke-linecap="butt" />
+                        <!-- Green Arc (Optimal Wellness: 76-100) -->
+                        <path d="M133,47 A80,80 0 0,1 180,100" fill="none" stroke="#00a859" stroke-width="14" stroke-linecap="round" />
+                        
+                        <!-- Rotating Needle -->
+                        <g id="gauge-needle" class="gauge-needle" transform="translate(100, 100) rotate(-90)">
+                          <path d="M-8,0 L0,-76 L8,0 Z" fill="#0b1b3d" />
+                          <circle cx="0" cy="0" r="12" fill="#0b1b3d" />
+                          <circle cx="0" cy="0" r="4" fill="#ffffff" />
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="gauge-readout-values">
+                      <span class="gauge-value scale-score-display" id="total-score-text">0 / 100</span>
+                    </div>
+                    <span class="gauge-label" id="wellness-label">Processing...</span>
+                  </div>
+
+                  <!-- Text Readout Card -->
+                  <div class="blueprint-card readout-card">
+                    <h5 id="result-tier-heading">Building Your Foundation</h5>
+                    <div class="readout-body">
+                      <p id="readout-text" class="readout-text" style="margin-bottom: 12px;">
+                        Processing your results...
+                      </p>
+                      <p id="goal-feedback-text" class="readout-text" style="font-weight: 600; color: var(--brand); margin-bottom: 16px;">
+                        Goal feedback...
+                      </p>
                       
-                      <!-- Rotating Needle -->
-                      <g id="gauge-needle" class="gauge-needle" transform="translate(100, 100) rotate(-90)">
-                        <path d="M-8,0 L0,-76 L8,0 Z" fill="#0b1b3d" />
-                        <circle cx="0" cy="0" r="12" fill="#0b1b3d" />
-                        <circle cx="0" cy="0" r="4" fill="#ffffff" />
-                      </g>
-                    </svg>
+                      <!-- Recommendations Box -->
+                      <div id="recommendations-box" class="recommendations-box" style="margin-top: 16px; display: none;">
+                        <h6 style="margin-bottom: 8px; font-weight: 700; color: var(--brand);">Personalized Recommendations:</h6>
+                        <ul id="recommendations-list" style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.6; color: var(--muted);">
+                          <!-- Dynamic recommendations go here -->
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div class="breakdown-list">
+                      <div class="breakdown-item">
+                        <span class="breakdown-bullet" style="background-color: #4e5d78;"></span>
+                        <span class="breakdown-name">Sleep Score:</span>
+                        <strong id="sleep-score-val">0 / 20</strong>
+                      </div>
+                      <div class="breakdown-item">
+                        <span class="breakdown-bullet" style="background-color: #f59e0b;"></span>
+                        <span class="breakdown-name">Exercise Score:</span>
+                        <strong id="exercise-score-val">0 / 20</strong>
+                      </div>
+                      <div class="breakdown-item">
+                        <span class="breakdown-bullet" style="background-color: #00a859;"></span>
+                        <span class="breakdown-name">Nutrition Score:</span>
+                        <strong id="nutrition-score-val">0 / 20</strong>
+                      </div>
+                      <div class="breakdown-item">
+                        <span class="breakdown-bullet" style="background-color: #3b82f6;"></span>
+                        <span class="breakdown-name">Water Score:</span>
+                        <strong id="water-score-val">0 / 20</strong>
+                      </div>
+                      <div class="breakdown-item">
+                        <span class="breakdown-bullet" style="background-color: #a855f7;"></span>
+                        <span class="breakdown-name">Stress Score:</span>
+                        <strong id="stress-score-val">0 / 20</strong>
+                      </div>
+                    </div>
                   </div>
-                  <div class="gauge-readout-values">
-                    <span class="gauge-value scale-score-display" id="total-score-text">0 / 100</span>
-                  </div>
-                  <span class="gauge-label" id="wellness-label">Processing...</span>
                 </div>
 
-                <!-- Text Readout Card -->
-                <div class="blueprint-card readout-card">
-                  <h5 id="result-tier-heading">Building Your Foundation</h5>
-                  <div class="readout-body">
-                    <p id="readout-text" class="readout-text" style="margin-bottom: 12px;">
-                      Processing your results...
-                    </p>
-                    <p id="goal-feedback-text" class="readout-text" style="font-weight: 600; color: var(--brand); margin-bottom: 16px;">
-                      Goal feedback...
-                    </p>
-                    
-                    <!-- Recommendations Box -->
-                    <div id="recommendations-box" class="recommendations-box" style="margin-top: 16px; display: none;">
-                      <h6 style="margin-bottom: 8px; font-weight: 700; color: var(--brand);">Personalized Recommendations:</h6>
-                      <ul id="recommendations-list" style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.6; color: var(--muted);">
-                        <!-- Dynamic recommendations go here -->
-                      </ul>
+                <!-- Card 2: BMI Screening Result (Full-Width Card, Hidden if Skipped) -->
+                <div class="blueprint-card bmi-result-card" id="bmi-result-card" style="display: none; width: 100%; text-align: left; align-items: stretch; padding: 32px 28px !important; flex-direction: column;">
+                  <h5 style="align-self: flex-start; margin-bottom: 16px;">Your BMI Screening Result</h5>
+                  
+                  <div class="bmi-results-split" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 32px; align-items: center; margin-bottom: 20px;">
+                    <!-- Left: Score Readout -->
+                    <div class="bmi-score-box" style="text-align: center; background: rgba(11, 27, 61, 0.02); border: 1px solid var(--line); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                      <span class="bmi-value-display" id="bmi-value-text" style="font-size: 52px; font-weight: 800; color: var(--brand);">--</span>
+                      <span class="bmi-category-display" id="bmi-category-text" style="font-size: 18px; font-weight: 700; color: var(--brand2); margin-top: 8px;">Processing...</span>
+                      <span class="bmi-inputs-display" id="bmi-inputs-text" style="font-size: 13.5px; color: var(--muted); margin-top: 6px;">Height: -- | Weight: --</span>
+                    </div>
+
+                    <!-- Right: Horizontal Visual Scale -->
+                    <div class="bmi-scale-box" style="display: flex; flex-direction: column; justify-content: center; position: relative;">
+                      <span style="font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px;">BMI Category Scale</span>
+                      
+                      <div class="bmi-scale-visual-container" style="position: relative; margin-bottom: 8px; width: 100%;">
+                        <!-- Colored Bar -->
+                        <div class="bmi-scale-bar" style="height: 12px; border-radius: 6px; display: flex; width: 100%; position: relative; background: var(--line);">
+                          <div style="width: 28.33%; background: #3498db; border-radius: 6px 0 0 6px;" title="Underweight (<18.5)"></div>
+                          <div style="width: 21.67%; background: #00a859;" title="Healthy Weight (18.5-24.9)"></div>
+                          <div style="width: 16.67%; background: #f39c12;" title="Overweight (25.0-29.9)"></div>
+                          <div style="width: 33.33%; background: #e74c3c; border-radius: 0 6px 6px 0;" title="Obesity (>=30.0)"></div>
+                          
+                          <!-- Needle/Pointer Marker -->
+                          <div id="bmi-pointer" style="position: absolute; top: -6px; width: 4px; height: 24px; background: var(--brand); border-radius: 2px; transition: left 0.5s ease-out; box-shadow: 0 0 4px rgba(0,0,0,0.3); left: 50%;">
+                            <!-- small tooltip bubble for BMI value inside the needle -->
+                            <div id="bmi-pointer-tooltip" style="position: absolute; top: -26px; left: 50%; transform: translateX(-50%); background: var(--brand); color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 700; white-space: nowrap; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">--</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Labels under the bar -->
+                      <div class="bmi-scale-labels" style="display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); font-weight: 700; margin-top: 4px; position: relative; width: 100%; height: 16px;">
+                        <span style="position: absolute; left: 0;">10</span>
+                        <span style="position: absolute; left: 28.33%; transform: translateX(-50%);">18.5</span>
+                        <span style="position: absolute; left: 50%; transform: translateX(-50%);">25</span>
+                        <span style="position: absolute; left: 66.67%; transform: translateX(-50%);">30</span>
+                        <span style="position: absolute; right: 0;">40+</span>
+                      </div>
+
+                      <!-- Legend labels below scale -->
+                      <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 600; margin-top: 8px;">
+                        <span style="color: #3498db;">Underweight</span>
+                        <span style="color: #00a859;">Healthy</span>
+                        <span style="color: #f39c12;">Overweight</span>
+                        <span style="color: #e74c3c;">Obesity</span>
+                      </div>
                     </div>
                   </div>
-                  
-                  <div class="breakdown-list">
-                    <div class="breakdown-item">
-                      <span class="breakdown-bullet" style="background-color: #4e5d78;"></span>
-                      <span class="breakdown-name">Sleep Score:</span>
-                      <strong id="sleep-score-val">0 / 20</strong>
-                    </div>
-                    <div class="breakdown-item">
-                      <span class="breakdown-bullet" style="background-color: #f59e0b;"></span>
-                      <span class="breakdown-name">Exercise Score:</span>
-                      <strong id="exercise-score-val">0 / 20</strong>
-                    </div>
-                    <div class="breakdown-item">
-                      <span class="breakdown-bullet" style="background-color: #00a859;"></span>
-                      <span class="breakdown-name">Nutrition Score:</span>
-                      <strong id="nutrition-score-val">0 / 20</strong>
-                    </div>
-                    <div class="breakdown-item">
-                      <span class="breakdown-bullet" style="background-color: #3b82f6;"></span>
-                      <span class="breakdown-name">Water Score:</span>
-                      <strong id="water-score-val">0 / 20</strong>
-                    </div>
-                    <div class="breakdown-item">
-                      <span class="breakdown-bullet" style="background-color: #a855f7;"></span>
-                      <span class="breakdown-name">Stress Score:</span>
-                      <strong id="stress-score-val">0 / 20</strong>
-                    </div>
+
+                  <div class="bmi-disclaimer" style="font-size: 13.5px; color: var(--muted); line-height: 1.6; border-top: 1px solid var(--line); padding-top: 16px; margin-top: 8px;">
+                    BMI is one screening measure based on height and weight. It does not directly measure body fat, muscle mass, fitness, or overall health. Consider discussing your result with a qualified healthcare professional.
                   </div>
                 </div>
               </div>
               
-              <div class="disclaimer-text" style="font-size: 12px; color: var(--muted); text-align: center; margin-top: 16px; font-style: italic;">
+              <div class="disclaimer-text" style="font-size: 12px; color: var(--muted); text-align: center; margin-top: 24px; font-style: italic; width: 100%;">
                 This assessment is provided for general wellness education and does not replace advice from a qualified healthcare professional.
               </div>
               
-              <div class="calculator-nav calculator-nav--results" id="quiz-result-container">
+              <div class="calculator-nav calculator-nav--results" id="quiz-result-container" style="width: 100%;">
                 <button type="button" class="btn btn--ghost btn-calc-reset">Recalculate</button>
                 <a href="book.html" class="btn btn--secondary btn-book-assessment">Book Your Free Wellness Assessment</a>
               </div>

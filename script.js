@@ -42,6 +42,12 @@ window.addEventListener("DOMContentLoaded", () => {
     const stress = assessmentData.stress || "N/A";
     const goal = assessmentData.goal || "N/A";
 
+    let bmiDetails = "";
+    if (assessmentData.bmi) {
+      const bmi = assessmentData.bmi;
+      bmiDetails = `\n- BMI Screening: ${bmi.value} (${bmi.category} - Height: ${bmi.heightDisplay}, Weight: ${bmi.weightDisplay})`;
+    }
+
     if (msgTextarea) {
       msgTextarea.value = `Hi Kena,\n\nI just completed the interactive Wellness Assessment and scored ${score}/100. Here are my metrics:\n` +
                           `- Sleep: ${sleep}\n` +
@@ -49,7 +55,8 @@ window.addEventListener("DOMContentLoaded", () => {
                           `- Nutrition (Habits): ${nutrition}\n` +
                           `- Hydration: ${water}\n` +
                           `- Stress Level: ${stress}\n` +
-                          `- Primary Goal: ${goal}\n\n` +
+                          `- Primary Goal: ${goal}` +
+                          bmiDetails + `\n\n` +
                           `I would love to review my results with you during my Free Assessment.`;
     }
 

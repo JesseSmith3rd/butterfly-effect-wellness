@@ -27,10 +27,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const waterScoreText = document.getElementById('water-score-val');
     const stressScoreText = document.getElementById('stress-score-val');
 
+    // BMI Elements
+    const usFields = document.getElementById('bmi-us-fields');
+    const metricFields = document.getElementById('bmi-metric-fields');
+    const heightFtInput = document.getElementById('bmi-height-ft');
+    const heightInInput = document.getElementById('bmi-height-in');
+    const weightLbInput = document.getElementById('bmi-weight-lb');
+    const heightCmInput = document.getElementById('bmi-height-cm');
+    const weightKgInput = document.getElementById('bmi-weight-kg');
+
     const steps = calculator.querySelectorAll('.calculator-step');
     const nextBtns = calculator.querySelectorAll('.btn-calc-next');
     const prevBtns = calculator.querySelectorAll('.btn-calc-prev');
-    const submitBtn = calculator.querySelector('.btn-calc-submit');
     const resetBtn = calculator.querySelector('.btn-calc-reset');
     const bookingBtn = calculator.querySelector('.btn-book-assessment');
 
@@ -38,9 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
         step: 1
     };
 
+    const totalSteps = 7;
+
     // --- Navigation and Auto-Save Progress ---
 
     function saveProgress() {
+        const selectedUnit = document.querySelector('input[name="bmi-unit"]:checked')?.value || 'us';
         const answers = {
             sleep: document.querySelector('input[name="sleep"]:checked')?.value || null,
             exercise: document.querySelector('input[name="exercise"]:checked')?.value || null,
@@ -48,7 +59,13 @@ document.addEventListener('DOMContentLoaded', () => {
             water: document.querySelector('input[name="water"]:checked')?.value || null,
             stress: document.querySelector('input[name="stress"]:checked')?.value || null,
             goal: goalSelect?.value || null,
-            nutritionDetails: nutritionDetails?.value || ''
+            nutritionDetails: nutritionDetails?.value || '',
+            bmiUnit: selectedUnit,
+            bmiFt: heightFtInput?.value || '',
+            bmiIn: heightInInput?.value || '',
+            bmiLb: weightLbInput?.value || '',
+            bmiCm: heightCmInput?.value || '',
+            bmiKg: weightKgInput?.value || ''
         };
 
         sessionStorage.setItem("wellness_assessment_progress", JSON.stringify({
@@ -85,6 +102,27 @@ document.addEventListener('DOMContentLoaded', () => {
                         nutritionDetails.value = ans.nutritionDetails;
                     }
 
+                    // Restore BMI Inputs & Unit Switcher
+                    if (ans.bmiUnit) {
+                        const unitRadio = calculator.querySelector(`input[name="bmi-unit"][value="${ans.bmiUnit}"]`);
+                        if (unitRadio) {
+                            unitRadio.checked = true;
+                            if (ans.bmiUnit === 'us') {
+                                if (usFields) usFields.style.display = 'block';
+                                if (metricFields) metricFields.style.display = 'none';
+                            } else {
+                                if (usFields) usFields.style.display = 'none';
+                                if (metricFields) metricFields.style.display = 'block';
+                            }
+                        }
+                    }
+
+                    if (ans.bmiFt && heightFtInput) heightFtInput.value = ans.bmiFt;
+                    if (ans.bmiIn && heightInInput) heightInInput.value = ans.bmiIn;
+                    if (ans.bmiLb && weightLbInput) weightLbInput.value = ans.bmiLb;
+                    if (ans.bmiCm && heightCmInput) heightCmInput.value = ans.bmiCm;
+                    if (ans.bmiKg && weightKgInput) weightKgInput.value = ans.bmiKg;
+
                     updateStepDisplay();
                 } else {
                     // Stale data older than 24 hours
@@ -100,12 +138,34 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateStepDisplay() {
         steps.forEach(step => {
             const stepNum = step.getAttribute('data-step');
-            if (stepNum == state.step || (stepNum === 'results' && state.step === 7)) {
+            if (stepNum == state.step || (stepNum === 'results' && state.step === 8)) {
                 step.classList.add('active');
             } else {
                 step.classList.remove('active');
             }
         });
+
+        // Update progress bar and text dynamically for active input steps
+        if (state.step <= totalSteps) {
+            const activeStepEl = calculator.querySelector(`.calculator-step[data-step="${state.step}"]`);
+            if (activeStepEl) {
+                const progressTextEl = activeStepEl.querySelector('.progress-text');
+                const progressBarFillEl = activeStepEl.querySelector('.progress-bar-fill');
+                
+                const progressPercent = Math.round((state.step / totalSteps) * 100);
+
+                if (progressTextEl) {
+                    if (state.step === totalSteps) {
+                        progressTextEl.textContent = `Step ${state.step} of ${totalSteps} (Optional) (${progressPercent}% Complete)`;
+                    } else {
+                        progressTextEl.textContent = `Step ${state.step} of ${totalSteps} (${progressPercent}% Complete)`;
+                    }
+                }
+                if (progressBarFillEl) {
+                    progressBarFillEl.style.width = `${progressPercent}%`;
+                }
+            }
+        }
 
         // Hide back button on step 1
         const backBtnOnStep1 = calculator.querySelector('.calculator-step[data-step="1"] .btn-calc-prev');
@@ -169,15 +229,96 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 return false;
             }
+        } else if (stepNum === 6) {
+            if (!goalSelect || !goalSelect.value) {
+                if (msgEl) {
+                    msgEl.textContent = "Please select your primary wellness goal to continue.";
+                    msgEl.hidden = false;
+                }
+                return false;
+            }
         }
         return true;
     }
+
+    function validateBmi() {
+        const stepEl = calculator.querySelector('.calculator-step[data-step="7"]');
+        const msgEl = stepEl?.querySelector('.validation-message');
+        if (msgEl) {
+            msgEl.hidden = true;
+            msgEl.textContent = '';
+        }
+
+        const selectedUnit = document.querySelector('input[name="bmi-unit"]:checked')?.value || 'us';
+
+        if (selectedUnit === 'us') {
+            const ft = parseFloat(heightFtInput?.value);
+            const inch = parseFloat(heightInInput?.value);
+            const lb = parseFloat(weightLbInput?.value);
+
+            if (isNaN(ft) || ft < 3 || ft > 8) {
+                if (msgEl) {
+                    msgEl.textContent = "Please enter a height between 3 and 8 feet.";
+                    msgEl.hidden = false;
+                }
+                return false;
+            }
+            if (isNaN(inch) || inch < 0 || inch > 11) {
+                if (msgEl) {
+                    msgEl.textContent = "Please enter height inches between 0 and 11.";
+                    msgEl.hidden = false;
+                }
+                return false;
+            }
+            if (isNaN(lb) || lb < 50 || lb > 1000) {
+                if (msgEl) {
+                    msgEl.textContent = "Please enter a weight between 50 and 1,000 lbs.";
+                    msgEl.hidden = false;
+                }
+                return false;
+            }
+        } else {
+            const cm = parseFloat(heightCmInput?.value);
+            const kg = parseFloat(weightKgInput?.value);
+
+            if (isNaN(cm) || cm < 90 || cm > 250) {
+                if (msgEl) {
+                    msgEl.textContent = "Please enter a height between 90 and 250 cm.";
+                    msgEl.hidden = false;
+                }
+                return false;
+            }
+            if (isNaN(kg) || kg < 20 || kg > 450) {
+                if (msgEl) {
+                    msgEl.textContent = "Please enter a weight between 20 and 450 kg.";
+                    msgEl.hidden = false;
+                }
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Attach Unit System toggling listeners
+    const unitRadios = calculator.querySelectorAll('input[name="bmi-unit"]');
+    unitRadios.forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            if (e.target.value === 'us') {
+                if (usFields) usFields.style.display = 'block';
+                if (metricFields) metricFields.style.display = 'none';
+            } else {
+                if (usFields) usFields.style.display = 'none';
+                if (metricFields) metricFields.style.display = 'block';
+            }
+            saveProgress();
+        });
+    });
 
     // Attach Next / Prev event listeners
     nextBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             if (validateStep(state.step)) {
-                if (state.step < 6) {
+                if (state.step < totalSteps) {
                     state.step += 1;
                     updateStepDisplay();
                     saveProgress();
@@ -196,42 +337,54 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Handle Optional Step 7 submit/skip actions specifically
+    const bmiCalcBtn = calculator.querySelector('.btn-bmi-calc');
+    if (bmiCalcBtn) {
+        bmiCalcBtn.addEventListener('click', () => {
+            if (validateBmi()) {
+                state.step = 8; // Results View
+                calculateWellnessScale(true); // Compute with BMI
+                updateStepDisplay();
+            }
+        });
+    }
+
+    const bmiSkipBtn = calculator.querySelector('.btn-calc-skip');
+    if (bmiSkipBtn) {
+        bmiSkipBtn.addEventListener('click', () => {
+            state.step = 8; // Results View
+            calculateWellnessScale(false); // Skip BMI
+            updateStepDisplay();
+        });
+    }
+
     // Save progress when change events fire on inputs
     calculator.querySelectorAll('input[type="radio"], select, textarea').forEach(input => {
         input.addEventListener('change', saveProgress);
     });
 
-    // Submit Action
-    if (submitBtn) {
-        submitBtn.addEventListener('click', () => {
-            const stepEl = calculator.querySelector('.calculator-step[data-step="6"]');
-            const msgEl = stepEl?.querySelector('.validation-message');
-            if (msgEl) {
-                msgEl.hidden = true;
-                msgEl.textContent = '';
-            }
-
-            if (!goalSelect || !goalSelect.value) {
-                if (msgEl) {
-                    msgEl.textContent = "Please select your primary wellness goal to view results.";
-                    msgEl.hidden = false;
-                }
-                return;
-            }
-
-            state.step = 7; // Results view
-            calculateWellnessScale();
-            updateStepDisplay();
-        });
-    }
-
     // Reset / Recalculate Action
     if (resetBtn) {
         resetBtn.addEventListener('click', () => {
             // Restore inputs back to default
-            calculator.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+            calculator.querySelectorAll('input[type="radio"]').forEach(r => {
+                if (r.name !== 'bmi-unit') r.checked = false;
+            });
+
+            // Default to US units
+            const usRadio = calculator.querySelector('input[name="bmi-unit"][value="us"]');
+            if (usRadio) usRadio.checked = true;
+            if (usFields) usFields.style.display = 'block';
+            if (metricFields) metricFields.style.display = 'none';
+
             if (goalSelect) goalSelect.selectedIndex = 0;
             if (nutritionDetails) nutritionDetails.value = '';
+
+            if (heightFtInput) heightFtInput.value = '';
+            if (heightInInput) heightInInput.value = '';
+            if (weightLbInput) weightLbInput.value = '';
+            if (heightCmInput) heightCmInput.value = '';
+            if (weightKgInput) weightKgInput.value = '';
 
             // Clear sessionStorage
             sessionStorage.removeItem("wellness_assessment");
@@ -250,7 +403,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Scoring, Gauge Rotation, Ranges and Feedback ---
 
-    function calculateWellnessScale() {
+    function calculateWellnessScale(hasBmi) {
         const sleepVal = calculator.querySelector('input[name="sleep"]:checked')?.value;
         const exerciseVal = calculator.querySelector('input[name="exercise"]:checked')?.value;
         const nutritionVal = calculator.querySelector('input[name="nutrition"]:checked')?.value;
@@ -261,7 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const goalText = goalSelect?.options[goalSelect.selectedIndex]?.text || '';
         const nutDetailsText = nutritionDetails?.value || '';
 
-        // Compute individual category scores (Max 20 each)
+        // Compute individual category habits scores (Max 20 each)
         let sleepScore = 0;
         let sleepLabel = "N/A";
         if (sleepVal === 'less-than-5') { sleepScore = 5; sleepLabel = "Less than 5 hours"; }
@@ -342,7 +495,7 @@ document.addEventListener('DOMContentLoaded', () => {
             goalFeedback = "Because your primary goal is to improve overall wellness, consider taking a balanced approach that integrates physical fitness, nutritional nourishment, mental relaxation, and spiritual grounding.";
         }
 
-        // --- Render UI Results ---
+        // --- Render UI Habits Results ---
 
         if (totalScoreText) totalScoreText.innerText = `${totalScore} / 100`;
         if (labelVal) {
@@ -420,6 +573,94 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        // --- BMI Calculations & UI Rendering ---
+        let bmiPayload = null;
+
+        if (hasBmi) {
+            const selectedUnit = document.querySelector('input[name="bmi-unit"]:checked')?.value || 'us';
+            let bmiValue = 0;
+            let heightDisplay = "";
+            let weightDisplay = "";
+
+            if (selectedUnit === 'us') {
+                const ft = parseFloat(heightFtInput?.value || 0);
+                const inches = parseFloat(heightInInput?.value || 0);
+                const weightLb = parseFloat(weightLbInput?.value || 0);
+
+                const totalInches = (ft * 12) + inches;
+                bmiValue = (weightLb / (totalInches * totalInches)) * 703;
+
+                heightDisplay = `${ft}'${inches}"`;
+                weightDisplay = `${weightLb} lbs`;
+            } else {
+                const heightCm = parseFloat(heightCmInput?.value || 0);
+                const weightKg = parseFloat(weightKgInput?.value || 0);
+
+                bmiValue = weightKg / ((heightCm / 100) * (heightCm / 100));
+
+                heightDisplay = `${heightCm} cm`;
+                weightDisplay = `${weightKg} kg`;
+            }
+
+            bmiValue = Math.round(bmiValue * 10) / 10; // Round to 1 decimal place
+
+            // CDC Adult BMI Wording (Neutral, person-first language)
+            let category = "";
+            if (bmiValue < 18.5) {
+                category = "Underweight";
+            } else if (bmiValue <= 24.9) {
+                category = "Healthy Weight";
+            } else if (bmiValue <= 29.9) {
+                category = "Overweight";
+            } else if (bmiValue <= 34.9) {
+                category = "Obesity, Class 1";
+            } else if (bmiValue <= 39.9) {
+                category = "Obesity, Class 2";
+            } else {
+                category = "Class 3 Obesity (Severe Obesity)";
+            }
+
+            bmiPayload = {
+                value: bmiValue,
+                category: category,
+                unitSystem: selectedUnit,
+                heightDisplay: heightDisplay,
+                weightDisplay: weightDisplay
+            };
+
+            // Render BMI Card elements
+            const bmiResultCard = document.getElementById('bmi-result-card');
+            const bmiValText = document.getElementById('bmi-value-text');
+            const bmiCatText = document.getElementById('bmi-category-text');
+            const bmiInpsText = document.getElementById('bmi-inputs-text');
+            const bmiPointer = document.getElementById('bmi-pointer');
+            const bmiPointerTooltip = document.getElementById('bmi-pointer-tooltip');
+
+            if (bmiValText) bmiValText.textContent = bmiValue.toFixed(1);
+            if (bmiCatText) bmiCatText.textContent = `${category} range`;
+            if (bmiInpsText) bmiInpsText.textContent = `Height: ${heightDisplay} | Weight: ${weightDisplay}`;
+
+            // Clamp pointer visual position between BMI 10 and 40
+            const clampedBmi = Math.max(10, Math.min(40, bmiValue));
+            const pointerPercent = ((clampedBmi - 10) / 30) * 100;
+            if (bmiPointer) {
+                bmiPointer.style.left = `${pointerPercent}%`;
+            }
+            if (bmiPointerTooltip) {
+                bmiPointerTooltip.textContent = bmiValue.toFixed(1);
+            }
+
+            if (bmiResultCard) {
+                bmiResultCard.style.display = 'flex';
+            }
+        } else {
+            // Hide BMI Result Card if skipped
+            const bmiResultCard = document.getElementById('bmi-result-card');
+            if (bmiResultCard) {
+                bmiResultCard.style.display = 'none';
+            }
+        }
+
         // --- SessionStorage Data Payload Transfer ---
         const assessmentPayload = {
             score: totalScore,
@@ -430,7 +671,8 @@ document.addEventListener('DOMContentLoaded', () => {
             stress: stressLabel,
             goal: goalText,
             rangeTitle: rangeHeading,
-            feedback: rangeFeedbackText + "\n" + goalFeedback
+            feedback: rangeFeedbackText + "\n" + goalFeedback,
+            bmi: bmiPayload
         };
 
         sessionStorage.setItem("wellness_assessment", JSON.stringify(assessmentPayload));

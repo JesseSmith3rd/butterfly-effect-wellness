@@ -1802,6 +1802,38 @@ strong { color: var(--ink); font-weight: 700; }
   text-align: left;
 }
 
+/* Card Styling Guarantee */
+.blueprint-card {
+  background: #fafcfb;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 32px 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.bmi-result-card {
+  margin-top: 24px;
+}
+
+.bmi-results-split {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .bmi-results-split {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
 /* TARGET AUDIENCE SECTION: WHO THIS IS FOR */
 .section--who-for {
   background: #ffffff;
