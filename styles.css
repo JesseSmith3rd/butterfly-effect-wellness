@@ -1111,6 +1111,62 @@ strong { color: var(--ink); font-weight: 700; }
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+
+/* Meet Kena Mobile Layout Adjustment */
+@media (max-width: 768px) {
+  .section--bio .meet-kena-grid--bio {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .section--bio .meet-kena__content {
+    display: contents;
+  }
+
+  .section--bio .meet-kena__content .pill {
+    order: 1;
+    align-self: center;
+    margin-bottom: 20px; /* Comfortable vertical spacing between heading and video */
+  }
+
+  .section--bio .meet-kena__media-container {
+    order: 2;
+    align-self: center;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 28px; /* Comfortable vertical spacing between video and Why I Coach title */
+    gap: 0;
+  }
+
+  .section--bio .welcome-video-card {
+    width: 100%;
+    max-width: 450px;
+    margin-inline: auto;
+  }
+
+  .section--bio .meet-kena__content h2 {
+    order: 3;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 18px; /* Comfortable vertical spacing between title and paragraph */
+    width: 100%;
+  }
+
+  .section--bio .meet-kena__content p {
+    order: 4;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+
+  .section--bio .meet-kena__content p:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .video-modal.is-open {
   opacity: 1;
   visibility: visible;
