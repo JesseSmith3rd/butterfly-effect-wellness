@@ -12,6 +12,164 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css?v=2" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://butterfly-effect-wellness.com/#organization",
+      "name": "The Butterfly Effect Wellness",
+      "url": "https://butterfly-effect-wellness.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://butterfly-effect-wellness.com/assets/images/logo.png",
+        "width": "56",
+        "height": "56"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-404-217-4467",
+        "contactType": "customer service",
+        "email": "Emerge2rise@gmail.com"
+      },
+      "brand": {
+        "@type": "Brand",
+        "name": "The Butterfly Effect Wellness"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://butterfly-effect-wellness.com/#localbusiness",
+      "name": "The Butterfly Effect Wellness",
+      "image": "https://butterfly-effect-wellness.com/assets/images/logo.png",
+      "url": "https://butterfly-effect-wellness.com",
+      "telephone": "+1-404-217-4467",
+      "email": "Emerge2rise@gmail.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Atlanta",
+        "addressRegion": "GA",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Atlanta, GA and surrounding areas"
+      },
+      "knowsAbout": ["Functional Personal Training", "Online Fitness Coaching", "Group Fitness", "Nutrition Coaching"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://butterfly-effect-wellness.com/#person",
+      "name": "Kena D. Scott",
+      "jobTitle": "ACE Certified Personal Trainer, PN Certified Nutrition Coach, Group Fitness Instructor",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "The Butterfly Effect Wellness",
+        "url": "https://butterfly-effect-wellness.com"
+      },
+      "image": "https://butterfly-effect-wellness.com/assets/images/lifestyle.png",
+      "url": "https://butterfly-effect-wellness.com",
+      "knowsLanguage": "English",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "ACE Certified Personal Trainer",
+          "credentialCategory": "certification"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "PN Certified Nutrition Coach",
+          "credentialCategory": "certification"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Group Fitness Instructor",
+          "credentialCategory": "certification"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://butterfly-effect-wellness.com/#website",
+      "url": "https://butterfly-effect-wellness.com",
+      "name": "The Butterfly Effect Wellness",
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Butterfly Effect Wellness",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://butterfly-effect-wellness.com/assets/images/logo.png"
+        }
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "LocalBusiness",
+        "name": "The Butterfly Effect Wellness",
+        "image": "https://butterfly-effect-wellness.com/assets/images/logo.png",
+        "telephone": "+1-404-217-4467"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Jesse S."
+      },
+      "reviewBody": "I lost 15 pounds in 3 months while working full-time and caring for two kids. The nutrition coaching was practical, not restrictive, and fit into my busy family routine perfectly."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "LocalBusiness",
+        "name": "The Butterfly Effect Wellness",
+        "image": "https://butterfly-effect-wellness.com/assets/images/logo.png",
+        "telephone": "+1-404-217-4467"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Jessica R."
+      },
+      "reviewBody": "Saturday classes are the highlight of my week. High-energy, joint-friendly, and Kena's modifications made it easy to get back into working out in my 50s."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "LocalBusiness",
+        "name": "The Butterfly Effect Wellness",
+        "image": "https://butterfly-effect-wellness.com/assets/images/logo.png",
+        "telephone": "+1-404-217-4467"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Sarah L."
+      },
+      "reviewBody": "I struggled with yoyo dieting for years. Kena taught me sustainable nutrition and strength building. I've stayed consistent and kept 20 lbs off for over 6 months now!"
+    }
+  ]
+  </script>
 </head>
 
 <body>
@@ -123,20 +281,13 @@
           </div>
         </div>
 
-        <!-- Credentials Badge Matrix (Responsive 4-column Grid) -->
+        <!-- Credentials Badge Matrix (Responsive 3-column Grid) -->
         <div class="credentials-matrix">
           <div class="matrix-card">
             <div class="matrix-card__icon">🏆</div>
             <div class="matrix-card__content">
               <span class="matrix-card__title">ACE Certified</span>
               <span class="matrix-card__subtitle">Personal Trainer</span>
-            </div>
-          </div>
-          <div class="matrix-card">
-            <div class="matrix-card__icon">🌱</div>
-            <div class="matrix-card__content">
-              <span class="matrix-card__title">Certified</span>
-              <span class="matrix-card__subtitle">Life Coach</span>
             </div>
           </div>
           <div class="matrix-card">
@@ -151,13 +302,6 @@
             <div class="matrix-card__content">
               <span class="matrix-card__title">PN Certified</span>
               <span class="matrix-card__subtitle">Nutrition Coach</span>
-            </div>
-          </div>
-          <div class="matrix-card">
-            <div class="matrix-card__icon">✝️</div>
-            <div class="matrix-card__content">
-              <span class="matrix-card__title">Faith-Based</span>
-              <span class="matrix-card__subtitle">Financial Coach</span>
             </div>
           </div>
         </div>
@@ -228,31 +372,11 @@
               <img src="assets/images/client_jesse.png" alt="Jesse S. Portrait" class="client-avatar" />
               <div class="client-info">
                 <span class="client-name">Jesse S., 36</span>
-                <span class="client-track">Functional Personal Training</span>
+                <span class="client-track">Functional In-Home Concierge Training</span>
               </div>
             </div>
           </div>
           
-          <!-- CARD 2: David K. -->
-          <div class="card transformation-card">
-            <div class="transformation-card__top">
-              <div class="transformation-badge">
-                <span class="badge-icon">🗓️</span>
-                <span class="badge-text">12-Week Transformation</span>
-              </div>
-            </div>
-            <h4 class="transformation-anchor-quote">
-              "The life coaching and habit loops we structured changed my daily routine completely. Aligned my fitness with my spiritual goals, giving me the discipline to stay consistent."
-            </h4>
-            <div class="transformation-footer">
-              <img src="assets/images/client_david.png" alt="David K. Portrait" class="client-avatar" />
-              <div class="client-info">
-                <span class="client-name">David K., 31</span>
-                <span class="client-track">Life Coaching</span>
-              </div>
-            </div>
-          </div>
-
           <!-- CARD 3: Jessica R. -->
           <div class="card transformation-card">
             <div class="transformation-card__top">
@@ -268,7 +392,7 @@
               <img src="assets/images/client_jessica.png" alt="Jessica R. Portrait" class="client-avatar" />
               <div class="client-info">
                 <span class="client-name">Jessica R., 54</span>
-                <span class="client-track">Group Fitness</span>
+                <span class="client-track">Group Fitness (3 or More Participants)</span>
               </div>
             </div>
           </div>
@@ -288,27 +412,7 @@
               <img src="assets/images/client_sarah.png" alt="Sarah L. Portrait" class="client-avatar" />
               <div class="client-info">
                 <span class="client-name">Sarah L., 28</span>
-                <span class="client-track">Personal Training &amp; Nutrition</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- CARD 5: Marcus T. -->
-          <div class="card transformation-card">
-            <div class="transformation-card__top">
-              <div class="transformation-badge">
-                <span class="badge-icon">🙌</span>
-                <span class="badge-text">Faith &amp; Discipline</span>
-              </div>
-            </div>
-            <h4 class="transformation-anchor-quote">
-              "Kena helped me integrate my spiritual life with physical discipline. Found my physical strength, renewed my mindset, and built lasting habits that improved my family life."
-            </h4>
-            <div class="transformation-footer">
-              <img src="assets/images/client_marcus.png" alt="Marcus T. Portrait" class="client-avatar" />
-              <div class="client-info">
-                <span class="client-name">Marcus T., 44</span>
-                <span class="client-track">Life &amp; Wellness Coaching</span>
+                <span class="client-track">In-Home Concierge &amp; Nutrition Coaching</span>
               </div>
             </div>
           </div>

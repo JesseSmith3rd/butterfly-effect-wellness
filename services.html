@@ -5,13 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Services &amp; Classes | The Butterfly Effect Wellness</title>
 
-  <meta name="description" content="Explore functional personal training, life coaching, group fitness, nutrition coaching, and online coaching programs led by Kena D. Scott." />
+  <meta name="description" content="Explore functional online training, in-home concierge training, group fitness, and nutrition coaching programs led by Kena D. Scott." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css?v=2" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://butterfly-effect-wellness.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services & Classes",
+          "item": "https://butterfly-effect-wellness.com/services.html"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Functional Training – Online",
+      "description": "Virtual coaching and training sessions. Designed for busy individuals or remote clients seeking maximum scheduling flexibility. This program includes a customized training plan delivered digitally, virtual check-ins, and ongoing accountability.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "The Butterfly Effect Wellness",
+        "url": "https://butterfly-effect-wellness.com"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Functional In-Home Concierge Training",
+      "description": "Personalized training at the client's home. We bring the equipment, customized programs, and hands-on guidance directly to your living room. The primary benefits include personalized attention, saved travel time, and guided safety.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "The Butterfly Effect Wellness",
+        "url": "https://butterfly-effect-wellness.com"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Atlanta, GA and surrounding areas"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Group Fitness (3 or More Participants)",
+      "description": "Group fitness training to build strength, mobility, and community. Perfect for small groups of friends, family members, or co-workers looking to stay active together.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "The Butterfly Effect Wellness",
+        "url": "https://butterfly-effect-wellness.com"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Nutrition Coaching",
+      "description": "Practical eating strategies and portion guidance focused on consistency, habit development, and sustainable choices. Ideal for anyone looking to build a healthy relationship with food.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "The Butterfly Effect Wellness",
+        "url": "https://butterfly-effect-wellness.com"
+      }
+    }
+  ]
+  </script>
 </head>
 
 <body>
@@ -496,30 +568,28 @@
         </div>
 
         <div class="services-grid">
-          <!-- CARD 1: Functional Personal Training -->
+          <!-- CARD 1: Functional Training – Online -->
           <div class="card service-card">
             <div class="service-icon">
               <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="18" y1="12" x2="22" y2="12"></line>
-                <line x1="2" y1="12" x2="6" y2="12"></line>
-                <line x1="6" y1="12" x2="18" y2="12"></line>
-                <rect x="18" y="5" width="2" height="14" rx="1"></rect>
-                <rect x="4" y="5" width="2" height="14" rx="1"></rect>
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="2" y1="20" x2="22" y2="20"></line>
+                <line x1="12" y1="17" x2="12" y2="20"></line>
               </svg>
             </div>
-            <h3>Functional Personal Training</h3>
-            <p>Purpose-driven strength, mobility, and conditioning. In-Home Concierge options available to bring the workout directly to you.</p>
+            <h3>Functional Training – Online</h3>
+            <p>For busy individuals looking for remote fitness guidance. Includes custom digital workout programming, virtual check-ins, and direct message support. Benefits include training on your schedule, from anywhere, with full coach accountability.</p>
             <div class="service-pricing">
               <div class="price-container">
-                <span class="price-value">$60.00</span>
-                <span class="price-unit">/ session (starting)</span>
+                <span class="price-value">$149</span>
+                <span class="price-unit">/ month</span>
               </div>
-              <span class="price-sub">or $550 / 10-session package</span>
+              <span class="price-sub">or $399 / 3-month plan</span>
             </div>
-            <a href="book.html?service=Personal+Training" class="card-link-inline">Book Training <span class="cta-arrow">&rarr;</span></a>
+            <a href="book.html?service=Online" class="card-link-inline">Book Online Training <span class="cta-arrow">&rarr;</span></a>
           </div>
 
-          <!-- CARD 2: In-Home Concierge -->
+          <!-- CARD 2: Functional In-Home Concierge Training -->
           <div class="card service-card">
             <div class="service-icon">
               <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -527,8 +597,8 @@
                 <polyline points="9 22 9 12 15 12 15 22"></polyline>
               </svg>
             </div>
-            <h3>In-Home Concierge</h3>
-            <p>Premium in-home personal training. We bring the equipment, custom guidance, and accountability directly to your living room.</p>
+            <h3>Functional In-Home Concierge Training</h3>
+            <p>For local clients seeking personalized, face-to-face instruction in their own space. Includes custom exercise programs and hands-on guidance with all workout equipment brought to you. Benefits include ultimate convenience, saved travel time, and guided safety.</p>
             <div class="service-pricing">
               <div class="price-container">
                 <span class="price-value">$100.00</span>
@@ -536,10 +606,10 @@
               </div>
               <span class="price-sub">available as a standalone service</span>
             </div>
-            <a href="book.html?service=In-Home+Concierge" class="card-link-inline">Book Concierge <span class="cta-arrow">&rarr;</span></a>
+            <a href="book.html?service=In-Home+Concierge" class="card-link-inline">Book In-Home Concierge <span class="cta-arrow">&rarr;</span></a>
           </div>
 
-          <!-- CARD 3: Group Fitness (Saturday Class) -->
+          <!-- CARD 3: Group Fitness (3 or More Participants) -->
           <div class="card service-card">
             <div class="service-icon">
               <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -549,8 +619,8 @@
                 <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
               </svg>
             </div>
-            <h3>Group Fitness (Saturday Class)</h3>
-            <p>High-energy workouts to build strength, mobility, and community. Requires two 5lbs dumbbells. <a href="#saturday-class" class="card-link-inline">View class details &rarr;</a></p>
+            <h3>Group Fitness (3 or More Participants)</h3>
+            <p>For friends or small groups wanting to build strength and conditioning together. Includes high-energy group fitness sessions targeting key muscle groups and functional mobility. Benefits include community motivation, group accountability, and affordable group rates.</p>
             <div class="service-pricing">
               <div class="price-container">
                 <span class="price-value">$15</span>
@@ -561,28 +631,7 @@
             <a href="book.html?service=Group+Fitness" class="card-link-inline">Book Group Fitness <span class="cta-arrow">&rarr;</span></a>
           </div>
 
-          <!-- CARD 4: Life Coaching -->
-          <div class="card service-card">
-            <div class="service-icon">
-              <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <circle cx="12" cy="12" r="6"></circle>
-                <circle cx="12" cy="12" r="2"></circle>
-              </svg>
-            </div>
-            <h3>Life Coaching</h3>
-            <p>Holistic mindset coaching, goal setting, routine structuring, and lifestyle design. Build positive habits and achieve clarity.</p>
-            <div class="service-pricing">
-              <div class="price-container">
-                <span class="price-value">$95</span>
-                <span class="price-unit">/ session</span>
-              </div>
-              <span class="price-sub">or $270 / 3-session starter</span>
-            </div>
-            <a href="book.html?service=Wellness+Coaching" class="card-link-inline">Book Life Coaching <span class="cta-arrow">&rarr;</span></a>
-          </div>
-
-          <!-- CARD 5: Nutrition Coaching -->
+          <!-- CARD 4: Nutrition Coaching -->
           <div class="card service-card">
             <div class="service-icon">
               <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -591,7 +640,7 @@
               </svg>
             </div>
             <h3>Nutrition Coaching</h3>
-            <p>Practical eating strategies and portion guidance focused on consistency, habit development, and sustainable choices.</p>
+            <p>For anyone looking to establish a healthy relationship with food without restrictive diets. Includes habit-based nutrition coaching, portion guide, and weekly check-ins. Benefits include sustainable eating patterns, constant support, and realistic daily choices.</p>
             <div class="service-pricing">
               <div class="price-container">
                 <span class="price-value">$50.00</span>
@@ -599,48 +648,7 @@
               </div>
               <span class="price-sub">or $180 / 4-week reset</span>
             </div>
-            <a href="book.html?service=Nutrition+Coaching" class="card-link-inline">Book Nutrition Coaching <span class="cta-arrow">&rarr;</span></a>
-          </div>
-
-          <!-- CARD 6: Online Coaching -->
-          <div class="card service-card">
-            <div class="service-icon">
-              <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <line x1="2" y1="20" x2="22" y2="20"></line>
-                <line x1="12" y1="17" x2="12" y2="20"></line>
-              </svg>
-            </div>
-            <h3>Online Coaching</h3>
-            <p>Flexible scheduling, custom remote programming, and digital check-ins. Keep up with your workouts from anywhere.</p>
-            <div class="service-pricing">
-              <div class="price-container">
-                <span class="price-value">$149</span>
-                <span class="price-unit">/ month</span>
-              </div>
-              <span class="price-sub">or $399 / 3-month plan</span>
-            </div>
-            <a href="book.html?service=Online+Coaching" class="card-link-inline">Book Online Coaching <span class="cta-arrow">&rarr;</span></a>
-          </div>
-
-          <!-- CARD 8: Faith-Based Financial Coaching -->
-          <div class="card service-card">
-            <div class="service-icon">
-              <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                <path d="M7 10h10"></path>
-              </svg>
-            </div>
-            <h3>Faith-Based Financial Coaching</h3>
-            <p>Biblical stewardship coaching. Align earnings, savings, and giving with scripture to unlock your potential.</p>
-            <div class="service-pricing">
-              <div class="price-container">
-                <span class="price-value">$150.00</span>
-                <span class="price-unit">/ session</span>
-              </div>
-              <span class="price-sub">stewardship blueprint included</span>
-            </div>
-            <a href="book.html?service=Faith-Based+Financial+Coaching" class="card-link-inline">Book Faith-Based Coaching <span class="cta-arrow">&rarr;</span></a>
+            <a href="book.html?service=Nutrition" class="card-link-inline">Book Nutrition Coaching <span class="cta-arrow">&rarr;</span></a>
           </div>
         </div>
 
@@ -701,7 +709,7 @@
     <footer class="footer">
       <div class="container footer__inner">
         <p>© <span id="year"></span> The Butterfly Effect — A Wellness Evolution</p>
-        <p class="footer-pillars">Faith • Fitness • Finance</p>
+        <p class="footer-pillars">Faith • Fitness • Wellness</p>
       </div>
     </footer>
 
