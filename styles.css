@@ -290,10 +290,10 @@ strong { color: var(--ink); font-weight: 700; }
   }
 }
 
-/* Credentials Badge Matrix (Responsive 4-column Grid) */
+/* Credentials Badge Matrix (Responsive 3-column Grid) */
 .credentials-matrix {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-top: 64px;
   width: 100%;
@@ -438,12 +438,12 @@ strong { color: var(--ink); font-weight: 700; }
 }
 .service-card p {
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 24px;
-  height: 5.25em; /* 3 lines * 1.75 line-height */
+  height: 10.5em; /* 6 lines * 1.75 line-height */
 }
 .card-link-inline {
   color: var(--brand2);
@@ -1686,6 +1686,154 @@ strong { color: var(--ink); font-weight: 700; }
   gap: 16px;
 }
 
+/* Assessment Radio Option Cards */
+.assessment-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  width: 100%;
+  margin-top: 12px;
+}
+.option-card-label {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+}
+.option-radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.option-card-content {
+  display: block;
+  padding: 16px 20px;
+  background: #fafcfb;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  color: var(--brand);
+  font-weight: 500;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: left;
+}
+.option-card-label:hover .option-card-content {
+  border-color: rgba(0, 168, 89, 0.3);
+  background: rgba(0, 168, 89, 0.02);
+  transform: translateY(-1px);
+}
+.option-radio:checked + .option-card-content {
+  border-color: var(--brand2);
+  background: var(--brand2);
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 168, 89, 0.15);
+}
+.option-radio:focus + .option-card-content {
+  outline: 2px solid var(--brand2);
+  outline-offset: 2px;
+}
+
+/* Progress Indicators */
+.progress-container {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.progress-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 8px;
+}
+.progress-bar-bg {
+  width: 100%;
+  height: 6px;
+  background: var(--line);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.progress-bar-fill {
+  height: 100%;
+  background: var(--brand2);
+  border-radius: 99px;
+  transition: width 0.3s ease;
+}
+
+/* Validation Messages */
+.validation-message {
+  color: #ef4444;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+/* Assessment Header Callouts */
+.assessment-callout {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--brand);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.assessment-disclaimer {
+  font-size: 14.5px;
+  color: var(--muted);
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* Recommendations styling */
+.recommendations-box {
+  background: rgba(11, 27, 61, 0.02);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 16px;
+  text-align: left;
+}
+
+/* Card Styling Guarantee */
+.blueprint-card {
+  background: #fafcfb;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 32px 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.bmi-result-card {
+  margin-top: 24px;
+}
+
+.bmi-results-split {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .bmi-results-split {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
 /* TARGET AUDIENCE SECTION: WHO THIS IS FOR */
 .section--who-for {
   background: #ffffff;
@@ -1799,7 +1947,6 @@ strong { color: var(--ink); font-weight: 700; }
   font-size: 13.5px;
   color: var(--muted);
   font-weight: 600;
-}
 }
 
 /* ===== SHOP & MERCHANDISE SECTION STYLES ===== */
@@ -2307,5 +2454,189 @@ strong { color: var(--ink); font-weight: 700; }
     font-weight: bold;
 }
 
+<<<<<<< HEAD
+=======
+/* GOALS CHECKLIST STYLE SHEET (BOOK.HTML) */
+.goals-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 6px;
+  width: 100%;
+}
+.goal-checkbox-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  user-select: none;
+  min-height: 48px; /* minimum target size */
+}
+.goal-checkbox-card:hover {
+  background-color: rgba(0, 168, 89, 0.02);
+  border-color: rgba(0, 168, 89, 0.3);
+}
+.goal-checkbox-card input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.goal-checkbox-custom {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #cbd5e1;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  flex-shrink: 0;
+}
+.goal-checkbox-custom::after {
+  content: "";
+  width: 6px;
+  height: 11px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) scale(0);
+  transition: transform 0.2s ease;
+  margin-bottom: 2px;
+}
+.goal-checkbox-card input[type="checkbox"]:checked ~ .goal-checkbox-custom {
+  background-color: var(--brand2);
+  border-color: var(--brand2);
+}
+.goal-checkbox-card input[type="checkbox"]:checked ~ .goal-checkbox-custom::after {
+  transform: rotate(45deg) scale(1);
+}
+.goal-checkbox-card input[type="checkbox"]:focus-visible ~ .goal-checkbox-custom {
+  outline: 2px solid var(--brand2);
+  outline-offset: 2px;
+}
+.goal-card-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand);
+}
+
+/* CHIPS FOR SELECTED GOALS */
+.selected-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+.goal-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 168, 89, 0.08);
+  color: var(--brand2);
+  border: 1px solid rgba(0, 168, 89, 0.2);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  min-height: 32px;
+}
+.goal-chip:hover, .goal-chip:focus-visible {
+  background-color: rgba(0, 168, 89, 0.15);
+  border-color: rgba(0, 168, 89, 0.4);
+  outline: none;
+}
+.chip-close {
+  font-size: 14px;
+  line-height: 1;
+  color: rgba(0, 168, 89, 0.6);
+  transition: color 0.2s ease;
+}
+.goal-chip:hover .chip-close {
+  color: var(--brand2);
+}
+
+/* PRIORITIZATION LIST LAYOUT */
+.priority-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 6px;
+  width: 100%;
+}
+.priority-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  cursor: grab;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  min-height: 48px;
+}
+.priority-item.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.priority-item-drag-handle {
+  font-size: 20px;
+  color: #94a3b8;
+  cursor: grab;
+  user-select: none;
+  padding: 4px;
+}
+.priority-item-name {
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--brand);
+}
+.priority-item-rank-selector {
+  display: flex;
+  align-items: center;
+}
+.priority-rank-select {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: var(--card);
+  color: var(--brand);
+  cursor: pointer;
+  outline: none;
+  min-height: 38px;
+}
+.priority-rank-select:focus-visible {
+  border-color: var(--brand2);
+}
+
+/* WATER BOTTLE SWATCH ACCESSORIES */
+.swatch.active {
+  box-shadow: 0 0 0 3px rgba(0, 168, 89, 0.4);
+}
+.swatch:focus-visible {
+  outline: 2px solid var(--brand2);
+  outline-offset: 2px;
+}
+
+
+>>>>>>> main
 
 

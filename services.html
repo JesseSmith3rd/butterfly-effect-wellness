@@ -5,13 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Services &amp; Classes | The Butterfly Effect Wellness</title>
 
-  <meta name="description" content="Explore functional personal training, life coaching, group fitness, nutrition coaching, and online coaching programs led by Kena D. Scott." />
+  <meta name="description" content="Explore functional online training, in-home concierge training, group fitness, and nutrition coaching programs led by Kena D. Scott." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css?v=2" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://butterfly-effect-wellness.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services & Classes",
+          "item": "https://butterfly-effect-wellness.com/services.html"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Functional Training – Online",
+      "description": "Virtual coaching and training sessions. Designed for busy individuals or remote clients seeking maximum scheduling flexibility. This program includes a customized training plan delivered digitally, virtual check-ins, and ongoing accountability.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "The Butterfly Effect Wellness",
+        "url": "https://butterfly-effect-wellness.com"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Functional In-Home Concierge Training",
+      "description": "Personalized training at the client's home. We bring the equipment, customized programs, and hands-on guidance directly to your living room. The primary benefits include personalized attention, saved travel time, and guided safety.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "The Butterfly Effect Wellness",
+        "url": "https://butterfly-effect-wellness.com"
+      },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Atlanta, GA and surrounding areas"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Group Fitness (3 or More Participants)",
+      "description": "Group fitness training to build strength, mobility, and community. Perfect for small groups of friends, family members, or co-workers looking to stay active together.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "The Butterfly Effect Wellness",
+        "url": "https://butterfly-effect-wellness.com"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Nutrition Coaching",
+      "description": "Practical eating strategies and portion guidance focused on consistency, habit development, and sustainable choices. Ideal for anyone looking to build a healthy relationship with food.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "The Butterfly Effect Wellness",
+        "url": "https://butterfly-effect-wellness.com"
+      }
+    }
+  ]
+  </script>
 </head>
 
 <body>
@@ -43,164 +115,88 @@
 
   <main class="page">
 
-    <!-- SERVICES LISTING SECTION -->
-    <section class="section section--services">
+    <!-- NEW FITNESS & WELLNESS ASSESSMENT SECTION -->
+    <section id="wellness-assessment" class="section assessment-section">
       <div class="container">
-        <div class="section__head text-center">
-          <span class="pill">Programs &amp; Offerings</span>
-          <h2>Services I Offer</h2>
-          <p>Holistic coaching and training programs tailored to meet you where you are.</p>
-        </div>
-
-        <div class="services-grid">
-          <!-- CARD 1: Functional Personal Training -->
-          <div class="card service-card">
-            <div class="service-icon">
-              <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="18" y1="12" x2="22" y2="12"></line>
-                <line x1="2" y1="12" x2="6" y2="12"></line>
-                <line x1="6" y1="12" x2="18" y2="12"></line>
-                <rect x="18" y="5" width="2" height="14" rx="1"></rect>
-                <rect x="4" y="5" width="2" height="14" rx="1"></rect>
-              </svg>
-            </div>
-            <h3>Functional Personal Training</h3>
-            <p>Purpose-driven strength, mobility, and conditioning. In-Home Concierge options available to bring the workout directly to you.</p>
-            <div class="service-pricing">
-              <div class="price-container">
-                <span class="price-value">$60.00</span>
-                <span class="price-unit">/ session (starting)</span>
-              </div>
-              <span class="price-sub">or $550 / 10-session package</span>
-            </div>
-            <a href="book.html?service=Personal+Training" class="card-link-inline">Book Training <span class="cta-arrow">&rarr;</span></a>
+        <div class="calculator-container" id="wellness-calculator">
+          <div class="calculator-header">
+            <span class="pill">Assessment</span>
+            <h3>Find Your Wellness Starting Point in Less Than 2 Minutes</h3>
+            <p class="assessment-callout">Not sure where to begin? Take our free 2-minute wellness assessment and receive personalized guidance based on your current habits and goals.</p>
+            <p class="assessment-disclaimer">Complete this brief assessment to better understand your current wellness habits and identify practical areas for improvement. Your results are intended for general wellness guidance and are not a medical diagnosis.</p>
           </div>
-
-          <!-- CARD 2: In-Home Concierge -->
-          <div class="card service-card">
-            <div class="service-icon">
-              <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-              </svg>
-            </div>
-            <h3>In-Home Concierge</h3>
-            <p>Premium in-home personal training. We bring the equipment, custom guidance, and accountability directly to your living room.</p>
-            <div class="service-pricing">
-              <div class="price-container">
-                <span class="price-value">$100.00</span>
-                <span class="price-unit">/ session</span>
+          
+          <div class="calculator-steps">
+            <!-- STEP 1: Sleep -->
+            <div class="calculator-step active" data-step="1">
+              <div class="progress-container">
+                <span class="progress-text">Question 1 of 6 (17% Complete)</span>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width: 16.67%;"></div>
+                </div>
               </div>
-              <span class="price-sub">available as a standalone service</span>
-            </div>
-            <a href="book.html?service=In-Home+Concierge" class="card-link-inline">Book Concierge <span class="cta-arrow">&rarr;</span></a>
-          </div>
-
-          <!-- CARD 3: Group Fitness (Saturday Class) -->
-          <div class="card service-card">
-            <div class="service-icon">
-              <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
-            <h3>Group Fitness (Saturday Class)</h3>
-            <p>High-energy workouts to build strength, mobility, and community. Requires two 5lbs dumbbells. <a href="#saturday-class" class="card-link-inline">View class details &rarr;</a></p>
-            <div class="service-pricing">
-              <div class="price-container">
-                <span class="price-value">$15</span>
-                <span class="price-unit">/ session</span>
+              <h4>1. Sleep</h4>
+              <p class="step-desc">How many hours of sleep do you usually get each night?</p>
+              <div class="assessment-options">
+                <label class="option-card-label">
+                  <input type="radio" name="sleep" value="less-than-5" class="option-radio">
+                  <span class="option-card-content">Less than 5 hours</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="sleep" value="5-6" class="option-radio">
+                  <span class="option-card-content">5–6 hours</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="sleep" value="7-8" class="option-radio">
+                  <span class="option-card-content">7–8 hours</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="sleep" value="9+" class="option-radio">
+                  <span class="option-card-content">9 or more hours</span>
+                </label>
               </div>
-              <span class="price-sub">or $50 / monthly pass</span>
-            </div>
-            <a href="book.html?service=Group+Fitness" class="card-link-inline">Book Group Fitness <span class="cta-arrow">&rarr;</span></a>
-          </div>
-
-          <!-- CARD 4: Life Coaching -->
-          <div class="card service-card">
-            <div class="service-icon">
-              <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <circle cx="12" cy="12" r="6"></circle>
-                <circle cx="12" cy="12" r="2"></circle>
-              </svg>
-            </div>
-            <h3>Life Coaching</h3>
-            <p>Holistic mindset coaching, goal setting, routine structuring, and lifestyle design. Build positive habits and achieve clarity.</p>
-            <div class="service-pricing">
-              <div class="price-container">
-                <span class="price-value">$95</span>
-                <span class="price-unit">/ session</span>
+              <p class="validation-message" hidden aria-live="polite"></p>
+              <div class="calculator-nav">
+                <button type="button" class="btn btn-calc-next">Next Step &rarr;</button>
               </div>
-              <span class="price-sub">or $270 / 3-session starter</span>
             </div>
-            <a href="book.html?service=Wellness+Coaching" class="card-link-inline">Book Life Coaching <span class="cta-arrow">&rarr;</span></a>
-          </div>
 
-          <!-- CARD 5: Nutrition Coaching -->
-          <div class="card service-card">
-            <div class="service-icon">
-              <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 0 8.5C17 15 15 20 11 20z"></path>
-                <path d="M19 2L9.8 11.2"></path>
-              </svg>
-            </div>
-            <h3>Nutrition Coaching</h3>
-            <p>Practical eating strategies and portion guidance focused on consistency, habit development, and sustainable choices.</p>
-            <div class="service-pricing">
-              <div class="price-container">
-                <span class="price-value">$50.00</span>
-                <span class="price-unit">/ session</span>
+            <!-- STEP 2: Exercise frequency -->
+            <div class="calculator-step" data-step="2">
+              <div class="progress-container">
+                <span class="progress-text">Question 2 of 6 (33% Complete)</span>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width: 33.33%;"></div>
+                </div>
               </div>
-              <span class="price-sub">or $180 / 4-week reset</span>
-            </div>
-            <a href="book.html?service=Nutrition+Coaching" class="card-link-inline">Book Nutrition Coaching <span class="cta-arrow">&rarr;</span></a>
-          </div>
-
-          <!-- CARD 6: Online Coaching -->
-          <div class="card service-card">
-            <div class="service-icon">
-              <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <line x1="2" y1="20" x2="22" y2="20"></line>
-                <line x1="12" y1="17" x2="12" y2="20"></line>
-              </svg>
-            </div>
-            <h3>Online Coaching</h3>
-            <p>Flexible scheduling, custom remote programming, and digital check-ins. Keep up with your workouts from anywhere.</p>
-            <div class="service-pricing">
-              <div class="price-container">
-                <span class="price-value">$149</span>
-                <span class="price-unit">/ month</span>
+              <h4>2. Exercise Frequency</h4>
+              <p class="step-desc">How often do you currently exercise?</p>
+              <div class="assessment-options">
+                <label class="option-card-label">
+                  <input type="radio" name="exercise" value="rarely-never" class="option-radio">
+                  <span class="option-card-content">Rarely or never</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="exercise" value="1-2" class="option-radio">
+                  <span class="option-card-content">1–2 days per week</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="exercise" value="3-4" class="option-radio">
+                  <span class="option-card-content">3–4 days per week</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="exercise" value="5+" class="option-radio">
+                  <span class="option-card-content">5 or more days per week</span>
+                </label>
               </div>
-              <span class="price-sub">or $399 / 3-month plan</span>
-            </div>
-            <a href="book.html?service=Online+Coaching" class="card-link-inline">Book Online Coaching <span class="cta-arrow">&rarr;</span></a>
-          </div>
-
-          <!-- CARD 8: Faith-Based Financial Coaching -->
-          <div class="card service-card">
-            <div class="service-icon">
-              <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                <path d="M7 10h10"></path>
-              </svg>
-            </div>
-            <h3>Faith-Based Financial Coaching</h3>
-            <p>Biblical stewardship coaching. Align earnings, savings, and giving with scripture to unlock your potential.</p>
-            <div class="service-pricing">
-              <div class="price-container">
-                <span class="price-value">$150.00</span>
-                <span class="price-unit">/ session</span>
+              <p class="validation-message" hidden aria-live="polite"></p>
+              <div class="calculator-nav">
+                <button type="button" class="btn btn--ghost btn-calc-prev">&larr; Back</button>
+                <button type="button" class="btn btn-calc-next">Next Step &rarr;</button>
               </div>
-              <span class="price-sub">stewardship blueprint included</span>
             </div>
-            <a href="book.html?service=Faith-Based+Financial+Coaching" class="card-link-inline">Book Faith-Based Coaching <span class="cta-arrow">&rarr;</span></a>
-          </div>
-        </div>
 
+<<<<<<< HEAD
         <!-- INTERACTIVE WELLNESS STARTING POINT WIDGET -->
         <div class="calculator-wrapper interactive-tools-container" id="calculator">
           <div class="calculator-container" id="wellness-calculator">
@@ -219,13 +215,192 @@
                   <input type="range" id="sleep-input" min="4" max="12" value="7" step="0.5" class="calc-slider" />
                   <div class="range-readout">
                     <span id="sleep-readout">7</span> <span class="range-unit">hours / night</span>
+=======
+            <!-- STEP 3: Nutrition habits -->
+            <div class="calculator-step" data-step="3">
+              <div class="progress-container">
+                <span class="progress-text">Question 3 of 6 (50% Complete)</span>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width: 50%;"></div>
+                </div>
+              </div>
+              <h4>3. Nutrition Habits</h4>
+              <p class="step-desc">How would you describe your current nutrition habits?</p>
+              <div class="assessment-options">
+                <label class="option-card-label">
+                  <input type="radio" name="nutrition" value="processed" class="option-radio">
+                  <span class="option-card-content">I often skip meals or rely heavily on processed foods</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="nutrition" value="inconsistent" class="option-radio">
+                  <span class="option-card-content">My eating habits are inconsistent</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="nutrition" value="balanced" class="option-radio">
+                  <span class="option-card-content">I usually eat balanced meals</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="nutrition" value="intentional" class="option-radio">
+                  <span class="option-card-content">I consistently follow a balanced and intentional nutrition plan</span>
+                </label>
+              </div>
+              <div class="optional-nutrition-text" style="margin-top: 16px; width: 100%;">
+                <label for="nutrition-details" style="display: block; font-size: 14px; font-weight: 600; color: var(--brand); margin-bottom: 8px;">Tell us more about your current nutrition habits (optional)</label>
+                <textarea id="nutrition-details" name="nutrition_details" rows="3" class="calc-textarea" placeholder="Share any specific dietary goals, challenges, or patterns..." style="width: 100%; border-radius: 12px; border: 1px solid var(--line); padding: 12px; font-family: inherit; font-size: 14px; outline: none;"></textarea>
+              </div>
+              <p class="validation-message" hidden aria-live="polite"></p>
+              <div class="calculator-nav">
+                <button type="button" class="btn btn--ghost btn-calc-prev">&larr; Back</button>
+                <button type="button" class="btn btn-calc-next">Next Step &rarr;</button>
+              </div>
+            </div>
+
+            <!-- STEP 4: Water intake -->
+            <div class="calculator-step" data-step="4">
+              <div class="progress-container">
+                <span class="progress-text">Question 4 of 6 (67% Complete)</span>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width: 66.67%;"></div>
+                </div>
+              </div>
+              <h4>4. Water Intake</h4>
+              <p class="step-desc">How much water do you usually drink each day?</p>
+              <div class="assessment-options">
+                <label class="option-card-label">
+                  <input type="radio" name="water" value="less-than-2" class="option-radio">
+                  <span class="option-card-content">Less than 2 cups</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="water" value="2-4" class="option-radio">
+                  <span class="option-card-content">2–4 cups</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="water" value="5-7" class="option-radio">
+                  <span class="option-card-content">5–7 cups</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="water" value="8+" class="option-radio">
+                  <span class="option-card-content">8 or more cups</span>
+                </label>
+              </div>
+              <p class="validation-message" hidden aria-live="polite"></p>
+              <div class="calculator-nav">
+                <button type="button" class="btn btn--ghost btn-calc-prev">&larr; Back</button>
+                <button type="button" class="btn btn-calc-next">Next Step &rarr;</button>
+              </div>
+            </div>
+
+            <!-- STEP 5: Stress level -->
+            <div class="calculator-step" data-step="5">
+              <div class="progress-container">
+                <span class="progress-text">Question 5 of 6 (83% Complete)</span>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width: 83.33%;"></div>
+                </div>
+              </div>
+              <h4>5. Stress Level</h4>
+              <p class="step-desc">How would you describe your current stress level?</p>
+              <div class="assessment-options">
+                <label class="option-card-label">
+                  <input type="radio" name="stress" value="very-high" class="option-radio">
+                  <span class="option-card-content">Very high</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="stress" value="high" class="option-radio">
+                  <span class="option-card-content">High</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="stress" value="moderate" class="option-radio">
+                  <span class="option-card-content">Moderate</span>
+                </label>
+                <label class="option-card-label">
+                  <input type="radio" name="stress" value="low" class="option-radio">
+                  <span class="option-card-content">Low</span>
+                </label>
+              </div>
+              <p class="validation-message" hidden aria-live="polite"></p>
+              <div class="calculator-nav">
+                <button type="button" class="btn btn--ghost btn-calc-prev">&larr; Back</button>
+                <button type="button" class="btn btn-calc-next">Next Step &rarr;</button>
+              </div>
+            </div>
+
+            <!-- STEP 6: Primary Goal -->
+            <div class="calculator-step" data-step="6">
+              <div class="progress-container">
+                <span class="progress-text">Step 6 of 7 (86% Complete)</span>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width: 86%;"></div>
+                </div>
+              </div>
+              <h4>6. Primary Goal</h4>
+              <p class="step-desc">What is your primary wellness goal?</p>
+              <div class="calc-select-container">
+                <label for="quiz-goal" class="sr-only">Primary Goal</label>
+                <select id="quiz-goal" class="calc-select" style="width: 100%; border-radius: 12px; border: 1px solid var(--line); padding: 14px 16px; font-family: inherit; font-size: 15px; color: var(--brand); outline: none;">
+                  <option value="" disabled selected>Select your primary goal...</option>
+                  <option value="weight-loss">Lose weight</option>
+                  <option value="strength">Build strength</option>
+                  <option value="mobility">Improve mobility</option>
+                  <option value="energy">Increase energy</option>
+                  <option value="nutrition">Improve nutrition</option>
+                  <option value="stress">Reduce stress</option>
+                  <option value="habits">Build consistent habits</option>
+                  <option value="overall">Improve overall wellness</option>
+                </select>
+              </div>
+              <p class="validation-message" hidden aria-live="polite"></p>
+              <div class="calculator-nav">
+                <button type="button" class="btn btn--ghost btn-calc-prev">&larr; Back</button>
+                <button type="button" class="btn btn-calc-next">Next Step &rarr;</button>
+              </div>
+            </div>
+
+            <!-- STEP 7: BMI (Optional) -->
+            <div class="calculator-step" data-step="7">
+              <div class="progress-container">
+                <span class="progress-text">Step 7 of 7 (Optional) (100% Complete)</span>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width: 100%;"></div>
+                </div>
+              </div>
+              <h4>7. Calculate Your BMI (Optional)</h4>
+              <p class="step-desc">Would you like to calculate your Body Mass Index (BMI) as a screening measure?</p>
+              
+              <p class="bmi-notice" style="font-size: 13.5px; color: var(--muted); margin-bottom: 16px; font-style: italic; line-height: 1.5; text-align: left;">
+                This adult BMI calculator is intended for people age 20 and older. BMI for children and teenagers must be interpreted using age- and sex-specific percentiles.
+              </p>
+
+              <!-- Unit System Toggler -->
+              <div class="unit-selector-container" style="margin-bottom: 24px; display: flex; gap: 24px; align-items: center; justify-content: center;">
+                <label class="unit-tab-label" style="cursor: pointer; font-size: 14.5px; font-weight: 600; color: var(--brand); display: flex; align-items: center; gap: 8px;">
+                  <input type="radio" name="bmi-unit" value="us" checked style="accent-color: var(--brand2);"> US Customary (ft/in, lbs)
+                </label>
+                <label class="unit-tab-label" style="cursor: pointer; font-size: 14.5px; font-weight: 600; color: var(--brand); display: flex; align-items: center; gap: 8px;">
+                  <input type="radio" name="bmi-unit" value="metric" style="accent-color: var(--brand2);"> Metric (cm, kg)
+                </label>
+              </div>
+
+              <!-- US Customary Fields -->
+              <div id="bmi-us-fields" style="display: block; width: 100%;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                  <div>
+                    <label for="bmi-height-ft" style="display: block; font-size: 14px; font-weight: 700; color: var(--brand); margin-bottom: 8px; text-align: left;">Height (Feet)</label>
+                    <input type="number" id="bmi-height-ft" placeholder="e.g. 5" min="3" max="8" class="calc-input" style="width: 100%; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;">
+                  </div>
+                  <div>
+                    <label for="bmi-height-in" style="display: block; font-size: 14px; font-weight: 700; color: var(--brand); margin-bottom: 8px; text-align: left;">Height (Inches)</label>
+                    <input type="number" id="bmi-height-in" placeholder="e.g. 9" min="0" max="11" class="calc-input" style="width: 100%; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;">
+>>>>>>> main
                   </div>
                 </div>
-                <div class="calculator-nav">
-                  <button class="btn btn-calc-next">Next Step &rarr;</button>
+                <div style="margin-bottom: 16px;">
+                  <label for="bmi-weight-lb" style="display: block; font-size: 14px; font-weight: 700; color: var(--brand); margin-bottom: 8px; text-align: left;">Weight (Pounds)</label>
+                  <input type="number" id="bmi-weight-lb" placeholder="e.g. 165" min="50" max="1000" class="calc-input" style="width: 100%; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;">
                 </div>
               </div>
 
+<<<<<<< HEAD
               <!-- STEP 2: Exercise Habits -->
               <div class="calculator-step" data-step="2">
                 <h4>2. Exercise Frequency</h4>
@@ -242,13 +417,21 @@
                     <button class="exercise-option" data-value="6">6</button>
                     <button class="exercise-option" data-value="7">7</button>
                   </div>
+=======
+              <!-- Metric Fields -->
+              <div id="bmi-metric-fields" style="display: none; width: 100%;">
+                <div style="margin-bottom: 16px;">
+                  <label for="bmi-height-cm" style="display: block; font-size: 14px; font-weight: 700; color: var(--brand); margin-bottom: 8px; text-align: left;">Height (Centimeters)</label>
+                  <input type="number" id="bmi-height-cm" placeholder="e.g. 175" min="90" max="250" class="calc-input" style="width: 100%; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;">
+>>>>>>> main
                 </div>
-                <div class="calculator-nav">
-                  <button class="btn btn--ghost btn-calc-prev">&larr; Back</button>
-                  <button class="btn btn-calc-next">Next Step &rarr;</button>
+                <div style="margin-bottom: 16px;">
+                  <label for="bmi-weight-kg" style="display: block; font-size: 14px; font-weight: 700; color: var(--brand); margin-bottom: 8px; text-align: left;">Weight (Kilograms)</label>
+                  <input type="number" id="bmi-weight-kg" placeholder="e.g. 75" min="20" max="450" class="calc-input" style="width: 100%; border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;">
                 </div>
               </div>
 
+<<<<<<< HEAD
               <!-- STEP 3: Calorie Intake -->
               <div class="calculator-step" data-step="3">
                 <h4>3. Daily Nutrition</h4>
@@ -321,16 +504,29 @@
                 <div class="calculator-nav">
                   <button class="btn btn--ghost btn-calc-prev">&larr; Back</button>
                   <button class="btn btn-calc-submit">Generate My Assessment</button>
+=======
+              <p class="validation-message" hidden aria-live="polite"></p>
+              
+              <div class="calculator-nav" style="display: flex; justify-content: space-between; width: 100%;">
+                <button type="button" class="btn btn--ghost btn-calc-prev">&larr; Back</button>
+                <div style="display: flex; gap: 12px;">
+                  <button type="button" class="btn btn--ghost btn-calc-skip">Skip This Step</button>
+                  <button type="button" class="btn btn-calc-submit btn-bmi-calc">Calculate BMI</button>
+>>>>>>> main
                 </div>
               </div>
+            </div>
 
-              <!-- RESULTS -->
-              <div class="calculator-step" data-step="results">
-                <h4>Your Fitness &amp; Wellness Scale Assessment</h4>
-                <div class="results-layout">
+            <!-- RESULTS -->
+            <div class="calculator-step" data-step="results">
+              <h4>Your Fitness &amp; Wellness Assessment</h4>
+              
+              <div style="display: flex; flex-direction: column; gap: 24px; width: 100%;">
+                <!-- Card 1: Wellness Habits Score (Split Layout Grid) -->
+                <div class="results-layout" style="margin: 0; width: 100%;">
                   <!-- Visual Gauge Card -->
                   <div class="blueprint-card gauge-card">
-                    <h5>Fitness &amp; Wellness Scale</h5>
+                    <h5>Your Wellness Habits Score</h5>
                     <div class="gauge-wrapper">
                       <svg class="gauge-svg" viewBox="0 0 200 120" width="100%">
                         <!-- Outer Base Track -->
@@ -358,11 +554,26 @@
 
                   <!-- Text Readout Card -->
                   <div class="blueprint-card readout-card">
-                    <h5>Actionable Readout</h5>
+                    <h5 id="result-tier-heading">Building Your Foundation</h5>
                     <div class="readout-body">
+<<<<<<< HEAD
                       <p id="readout-text" class="readout-text">
+=======
+                      <p id="readout-text" class="readout-text" style="margin-bottom: 12px;">
+>>>>>>> main
                         Processing your results...
                       </p>
+                      <p id="goal-feedback-text" class="readout-text" style="font-weight: 600; color: var(--brand); margin-bottom: 16px;">
+                        Goal feedback...
+                      </p>
+                      
+                      <!-- Recommendations Box -->
+                      <div id="recommendations-box" class="recommendations-box" style="margin-top: 16px; display: none;">
+                        <h6 style="margin-bottom: 8px; font-weight: 700; color: var(--brand);">Personalized Recommendations:</h6>
+                        <ul id="recommendations-list" style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.6; color: var(--muted);">
+                          <!-- Dynamic recommendations go here -->
+                        </ul>
+                      </div>
                     </div>
                     
                     <div class="breakdown-list">
@@ -378,8 +589,13 @@
                       </div>
                       <div class="breakdown-item">
                         <span class="breakdown-bullet" style="background-color: #00a859;"></span>
+<<<<<<< HEAD
                         <span class="breakdown-name">Calorie Score:</span>
                         <strong id="calorie-score-val">0 / 20</strong>
+=======
+                        <span class="breakdown-name">Nutrition Score:</span>
+                        <strong id="nutrition-score-val">0 / 20</strong>
+>>>>>>> main
                       </div>
                       <div class="breakdown-item">
                         <span class="breakdown-bullet" style="background-color: #3b82f6;"></span>
@@ -394,15 +610,179 @@
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
                 
                 <div class="calculator-nav calculator-nav--results" id="quiz-result-container">
                   <button class="btn btn--ghost btn-calc-reset">Recalculate</button>
                   <a href="book.html" class="btn btn--secondary">Book Your Free Wellness Assessment</a>
+=======
+
+                <!-- Card 2: BMI Screening Result (Full-Width Card, Hidden if Skipped) -->
+                <div class="blueprint-card bmi-result-card" id="bmi-result-card" style="display: none; width: 100%; text-align: left; align-items: stretch; padding: 32px 28px !important; flex-direction: column;">
+                  <h5 style="align-self: flex-start; margin-bottom: 16px;">Your BMI Screening Result</h5>
+                  
+                  <div class="bmi-results-split" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 32px; align-items: center; margin-bottom: 20px;">
+                    <!-- Left: Score Readout -->
+                    <div class="bmi-score-box" style="text-align: center; background: rgba(11, 27, 61, 0.02); border: 1px solid var(--line); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                      <span class="bmi-value-display" id="bmi-value-text" style="font-size: 52px; font-weight: 800; color: var(--brand);">--</span>
+                      <span class="bmi-category-display" id="bmi-category-text" style="font-size: 18px; font-weight: 700; color: var(--brand2); margin-top: 8px;">Processing...</span>
+                      <span class="bmi-inputs-display" id="bmi-inputs-text" style="font-size: 13.5px; color: var(--muted); margin-top: 6px;">Height: -- | Weight: --</span>
+                    </div>
+
+                    <!-- Right: Horizontal Visual Scale -->
+                    <div class="bmi-scale-box" style="display: flex; flex-direction: column; justify-content: center; position: relative;">
+                      <span style="font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px;">BMI Category Scale</span>
+                      
+                      <div class="bmi-scale-visual-container" style="position: relative; margin-bottom: 8px; width: 100%;">
+                        <!-- Colored Bar -->
+                        <div class="bmi-scale-bar" style="height: 12px; border-radius: 6px; display: flex; width: 100%; position: relative; background: var(--line);">
+                          <div style="width: 28.33%; background: #3498db; border-radius: 6px 0 0 6px;" title="Underweight (<18.5)"></div>
+                          <div style="width: 21.67%; background: #00a859;" title="Healthy Weight (18.5-24.9)"></div>
+                          <div style="width: 16.67%; background: #f39c12;" title="Overweight (25.0-29.9)"></div>
+                          <div style="width: 33.33%; background: #e74c3c; border-radius: 0 6px 6px 0;" title="Obesity (>=30.0)"></div>
+                          
+                          <!-- Needle/Pointer Marker -->
+                          <div id="bmi-pointer" style="position: absolute; top: -6px; width: 4px; height: 24px; background: var(--brand); border-radius: 2px; transition: left 0.5s ease-out; box-shadow: 0 0 4px rgba(0,0,0,0.3); left: 50%;">
+                            <!-- small tooltip bubble for BMI value inside the needle -->
+                            <div id="bmi-pointer-tooltip" style="position: absolute; top: -26px; left: 50%; transform: translateX(-50%); background: var(--brand); color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 700; white-space: nowrap; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">--</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Labels under the bar -->
+                      <div class="bmi-scale-labels" style="display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); font-weight: 700; margin-top: 4px; position: relative; width: 100%; height: 16px;">
+                        <span style="position: absolute; left: 0;">10</span>
+                        <span style="position: absolute; left: 28.33%; transform: translateX(-50%);">18.5</span>
+                        <span style="position: absolute; left: 50%; transform: translateX(-50%);">25</span>
+                        <span style="position: absolute; left: 66.67%; transform: translateX(-50%);">30</span>
+                        <span style="position: absolute; right: 0;">40+</span>
+                      </div>
+
+                      <!-- Legend labels below scale -->
+                      <div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 600; margin-top: 8px;">
+                        <span style="color: #3498db;">Underweight</span>
+                        <span style="color: #00a859;">Healthy</span>
+                        <span style="color: #f39c12;">Overweight</span>
+                        <span style="color: #e74c3c;">Obesity</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bmi-disclaimer" style="font-size: 13.5px; color: var(--muted); line-height: 1.6; border-top: 1px solid var(--line); padding-top: 16px; margin-top: 8px;">
+                    BMI is one screening measure based on height and weight. It does not directly measure body fat, muscle mass, fitness, or overall health. Consider discussing your result with a qualified healthcare professional.
+                  </div>
+>>>>>>> main
                 </div>
+              </div>
+              
+              <div class="disclaimer-text" style="font-size: 12px; color: var(--muted); text-align: center; margin-top: 24px; font-style: italic; width: 100%;">
+                This assessment is provided for general wellness education and does not replace advice from a qualified healthcare professional.
+              </div>
+              
+              <div class="calculator-nav calculator-nav--results" id="quiz-result-container" style="width: 100%;">
+                <button type="button" class="btn btn--ghost btn-calc-reset">Recalculate</button>
+                <a href="book.html" class="btn btn--secondary btn-book-assessment">Book Your Free Wellness Assessment</a>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- SERVICES LISTING SECTION -->
+    <section class="section section--services">
+      <div class="container">
+        <div class="section__head text-center">
+          <span class="pill">Programs &amp; Offerings</span>
+          <h2>Services I Offer</h2>
+          <p>Holistic coaching and training programs tailored to meet you where you are.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- CARD 1: Functional Training – Online -->
+          <div class="card service-card">
+            <div class="service-icon">
+              <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="2" y1="20" x2="22" y2="20"></line>
+                <line x1="12" y1="17" x2="12" y2="20"></line>
+              </svg>
+            </div>
+            <h3>Functional Training – Online</h3>
+            <p>For busy individuals looking for remote fitness guidance. Includes custom digital workout programming, virtual check-ins, and direct message support. Benefits include training on your schedule, from anywhere, with full coach accountability.</p>
+            <div class="service-pricing">
+              <div class="price-container">
+                <span class="price-value">$149</span>
+                <span class="price-unit">/ month</span>
+              </div>
+              <span class="price-sub">or $399 / 3-month plan</span>
+            </div>
+            <a href="book.html?service=Online" class="card-link-inline">Book Online Training <span class="cta-arrow">&rarr;</span></a>
+          </div>
+
+          <!-- CARD 2: Functional In-Home Concierge Training -->
+          <div class="card service-card">
+            <div class="service-icon">
+              <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </div>
+            <h3>Functional In-Home Concierge Training</h3>
+            <p>For local clients seeking personalized, face-to-face instruction in their own space. Includes custom exercise programs and hands-on guidance with all workout equipment brought to you. Benefits include ultimate convenience, saved travel time, and guided safety.</p>
+            <div class="service-pricing">
+              <div class="price-container">
+                <span class="price-value">$100.00</span>
+                <span class="price-unit">/ session</span>
+              </div>
+              <span class="price-sub">available as a standalone service</span>
+            </div>
+            <a href="book.html?service=In-Home+Concierge" class="card-link-inline">Book In-Home Concierge <span class="cta-arrow">&rarr;</span></a>
+          </div>
+
+          <!-- CARD 3: Group Fitness (3 or More Participants) -->
+          <div class="card service-card">
+            <div class="service-icon">
+              <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3>Group Fitness (3 or More Participants)</h3>
+            <p>For friends or small groups wanting to build strength and conditioning together. Includes high-energy group fitness sessions targeting key muscle groups and functional mobility. Benefits include community motivation, group accountability, and affordable group rates.</p>
+            <div class="service-pricing">
+              <div class="price-container">
+                <span class="price-value">$15</span>
+                <span class="price-unit">/ session</span>
+              </div>
+              <span class="price-sub">or $50 / monthly pass</span>
+            </div>
+            <a href="book.html?service=Group+Fitness" class="card-link-inline">Book Group Fitness <span class="cta-arrow">&rarr;</span></a>
+          </div>
+
+          <!-- CARD 4: Nutrition Coaching -->
+          <div class="card service-card">
+            <div class="service-icon">
+              <svg class="service-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 0 8.5C17 15 15 20 11 20z"></path>
+                <path d="M19 2L9.8 11.2"></path>
+              </svg>
+            </div>
+            <h3>Nutrition Coaching</h3>
+            <p>For anyone looking to establish a healthy relationship with food without restrictive diets. Includes habit-based nutrition coaching, portion guide, and weekly check-ins. Benefits include sustainable eating patterns, constant support, and realistic daily choices.</p>
+            <div class="service-pricing">
+              <div class="price-container">
+                <span class="price-value">$50.00</span>
+                <span class="price-unit">/ session</span>
+              </div>
+              <span class="price-sub">or $180 / 4-week reset</span>
+            </div>
+            <a href="book.html?service=Nutrition" class="card-link-inline">Book Nutrition Coaching <span class="cta-arrow">&rarr;</span></a>
+          </div>
+        </div>
+
 
         <!-- FEATURED SATURDAY CLASS DETAILS (FROM FLYER) -->
         <div id="saturday-class" class="saturday-featured-card">
@@ -460,7 +840,7 @@
     <footer class="footer">
       <div class="container footer__inner">
         <p>© <span id="year"></span> The Butterfly Effect — A Wellness Evolution</p>
-        <p class="footer-pillars">Faith • Fitness • Finance</p>
+        <p class="footer-pillars">Faith • Fitness • Wellness</p>
       </div>
     </footer>
 

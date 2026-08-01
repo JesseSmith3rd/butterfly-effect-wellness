@@ -5,13 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Book a Consultation | The Butterfly Effect Wellness</title>
 
-  <meta name="description" content="Get in touch with Kena D. Scott to book a personal training session, life coaching consultation, or register for Saturday Group Fitness." />
+  <meta name="description" content="Book a free assessment or consultation for functional online training, in-home concierge training, group fitness, and nutrition coaching with Kena D. Scott." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css?v=2" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://butterfly-effect-wellness.com/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Book Free Assessment",
+        "item": "https://butterfly-effect-wellness.com/book.html"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -86,6 +108,7 @@
             </label>
           </div>
 
+<<<<<<< HEAD
           <label>
             I'm interested in:
             <select id="serviceSelect" name="service">
@@ -100,6 +123,50 @@
               <option value="Faith-Based Financial Coaching">Faith-Based Financial Coaching</option>
             </select>
           </label>
+=======
+          <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+            <span class="form-label" style="font-size: 13.5px; font-weight: 700; color: var(--brand);">Goals (Select all that apply)</span>
+            <div class="goals-checklist" role="group" aria-label="Goals selection">
+              <label class="goal-checkbox-card">
+                <input type="checkbox" name="goals" value="Functional Training – Online" class="goal-checkbox" />
+                <span class="goal-checkbox-custom"></span>
+                <span class="goal-card-text">Functional Training – Online</span>
+              </label>
+              <label class="goal-checkbox-card">
+                <input type="checkbox" name="goals" value="Functional In-Home Concierge Training" class="goal-checkbox" />
+                <span class="goal-checkbox-custom"></span>
+                <span class="goal-card-text">Functional In-Home Concierge Training</span>
+              </label>
+              <label class="goal-checkbox-card">
+                <input type="checkbox" name="goals" value="Group Fitness (3 or More Participants)" class="goal-checkbox" />
+                <span class="goal-checkbox-custom"></span>
+                <span class="goal-card-text">Group Fitness (3 or More Participants)</span>
+              </label>
+              <label class="goal-checkbox-card">
+                <input type="checkbox" name="goals" value="Nutrition Coaching" class="goal-checkbox" />
+                <span class="goal-checkbox-custom"></span>
+                <span class="goal-card-text">Nutrition Coaching</span>
+              </label>
+              <label class="goal-checkbox-card">
+                <input type="checkbox" name="goals" value="General Inquiry" class="goal-checkbox" />
+                <span class="goal-checkbox-custom"></span>
+                <span class="goal-card-text">General Inquiry</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Selected Goals Chips Container -->
+          <div id="selected-goals-container" style="display: none; flex-direction: column; gap: 4px; margin-top: 8px;">
+            <span class="form-label" style="font-size: 12.5px; font-weight: 700; color: var(--brand);">Selected:</span>
+            <div id="selected-goals-chips" class="selected-chips" aria-live="polite"></div>
+          </div>
+
+          <!-- Goal Prioritization List Container -->
+          <div id="prioritization-container" style="display: none; flex-direction: column; gap: 10px; margin-top: 16px;">
+            <span class="form-label" style="font-size: 13.5px; font-weight: 700; color: var(--brand);">Prioritize Your Goals (Drag to reorder or use rankings)</span>
+            <div id="prioritized-goals-list" class="priority-list" role="list"></div>
+          </div>
+>>>>>>> main
 
           <label>
             Message
@@ -116,7 +183,7 @@
     <footer class="footer">
       <div class="container footer__inner">
         <p>© <span id="year"></span> The Butterfly Effect — A Wellness Evolution</p>
-        <p class="footer-pillars">Faith • Fitness • Finance</p>
+        <p class="footer-pillars">Faith • Fitness • Wellness</p>
       </div>
     </footer>
 
